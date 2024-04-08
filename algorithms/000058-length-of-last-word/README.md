@@ -33,6 +33,4 @@ A **word** is a maximal substring[^1] consisting of non-space characters only.
 - `s` consists of only English letters and spaces ` `.
 - There will be at least one word in `s`.
 
-[^1]: Substring
-
-A substring is a contiguous non-empty sequence of characters within a string.
+[^1]: Substring A substring is a contiguous non-empty sequence of characters within a string.
