@@ -1,38 +1,43 @@
-1\. Two Sum
+1700\. Number of Students Unable to Eat Lunch
 
 Easy
 
-Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
+The school cafeteria offers circular and square sandwiches at lunch break, referred to by numbers `0` and `1` respectively. All students stand in a queue. Each student either prefers square or circular sandwiches.
 
-You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
+The number of sandwiches in the cafeteria is equal to the number of students. The sandwiches are placed in a **stack**. At each step:
 
-You can return the answer in any order.
+- If the student at the front of the queue **prefers** the sandwich on the top of the stack, they will **take it** and leave the queue.
+- Otherwise, they will **leave it** and go to the queue's end.
+
+This continues until none of the queue students want to take the top sandwich and are thus unable to eat.
+
+You are given two integer arrays `students` and `sandwiches` where `sandwiches[i]` is the type of the i<sup>th</sup> sandwich in the stack (`i = 0` is the top of the stack) and `students[j]` is the preference of the j<sup>th</sup> student in the initial queue (`j = 0` is the front of the queue). Return the number of students that are unable to eat.
 
 **Example 1:**
 
-**Input:** nums = [2,7,11,15], target = 9
-
-**Output:** [0,1]
-
-**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1]. 
+- **Input:** **`students = [1,1,0,0], sandwiches = [0,1,0,1]`**
+- **Output:** **`0`**
+- **Explanation:**
+    - **`Front student leaves the top sandwich and returns to the end of the line making students = [1,0,0,1].`**
+    - **`Front student leaves the top sandwich and returns to the end of the line making students = [0,0,1,1].`**
+    - **`Front student takes the top sandwich and leaves the line making students = [0,1,1] and sandwiches = [1,0,1].`**
+    - **`Front student leaves the top sandwich and returns to the end of the line making students = [1,1,0].`**
+    - **`Front student takes the top sandwich and leaves the line making students = [1,0] and sandwiches = [0,1].`**
+    - **`Front student leaves the top sandwich and returns to the end of the line making students = [0,1].`**
+    - **`Front student takes the top sandwich and leaves the line making students = [1] and sandwiches = [1].`**
+    - **`Front student takes the top sandwich and leaves the line making students = [] and sandwiches = [].
+      Hence all students are able to eat.`**
 
 **Example 2:**
 
-**Input:** nums = [3,2,4], target = 6
+- **Input:** **`students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1]`**
+- **Output:** **`3`**
 
-**Output:** [1,2] 
 
-**Example 3:**
-
-**Input:** nums = [3,3], target = 6
-
-**Output:** [0,1] 
 
 **Constraints:**
 
-*   <code>2 <= nums.length <= 10<sup>4</sup></code>
-*   <code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code>
-*   <code>-10<sup>9</sup> <= target <= 10<sup>9</sup></code>
-*   **Only one valid answer exists.**
-
-**Follow-up:** Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code> time complexity?
+- <code>1 <= students.length, sandwiches.length <= 100</code>
+- <code>students.length == sandwiches.length</code>
+- `sandwiches[i]` is `0` or `1`.
+- `students[i]` is `0` or `1`.
