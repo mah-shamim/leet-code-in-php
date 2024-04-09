@@ -25,7 +25,7 @@ Given a **VPS** represented as string `s`, return the <code><i>nesting depth</i>
 
 - **Input:** <code>**s = "(1+(2*3)+((8)/4))+1"**</code>
 - **Output:** <code>**3**</code>
-- **Explanation:** <code>**Digit 8 is inside of 3 nested parentheses in the string.**</code>
+- **Explanation:** <code>**Digit `8` is inside of `3` nested parentheses in the string.**</code>
 
 **Example 2:**
 
