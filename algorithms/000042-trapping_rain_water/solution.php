@@ -1,10 +1,14 @@
-class Solution {
+<?php
+
+class Solution
+{
 
     /**
      * @param Integer[] $height
      * @return Integer
      */
-    function trap($height) {
+    function trap(array $height): int
+    {
         $result = 0;
         $leftIndex = 0;
         $rightIndex = count($height) - 1;

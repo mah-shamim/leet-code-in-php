@@ -1,11 +1,15 @@
-class Solution {
+<?php
+
+class Solution
+{
 
     /**
      * @param Integer[] $nums1
      * @param Integer[] $nums2
-     * @return Float
+     * @return float|int
      */
-    function findMedianSortedArrays($nums1, $nums2) {
+    function findMedianSortedArrays(array $nums1, array $nums2): float|int
+    {
         $mergedArray = [];
         $totalLength = count($nums1) + count($nums2);
         $median = ($totalLength / 2);

@@ -1,23 +1,31 @@
+<?php
+
 /**
  * Definition for a binary tree node.
- * class TreeNode {
- *     public $val = null;
- *     public $left = null;
- *     public $right = null;
- *     function __construct($val = 0, $left = null, $right = null) {
- *         $this->val = $val;
- *         $this->left = $left;
- *         $this->right = $right;
- *     }
- * }
  */
-class Solution {
+class TreeNode
+{
+    public mixed $val = null;
+    public mixed $left = null;
+    public mixed $right = null;
+
+    function __construct($val = 0, $left = null, $right = null)
+    {
+        $this->val = $val;
+        $this->left = $left;
+        $this->right = $right;
+    }
+}
+
+class Solution
+{
 
     /**
      * @param TreeNode $root
      * @return Integer
      */
-    function sumOfLeftLeaves($root) {
+    function sumOfLeftLeaves(TreeNode $root): int
+    {
         if (!$root) {
             return 0;
         }

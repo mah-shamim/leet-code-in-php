@@ -1,11 +1,15 @@
-class Solution {
+<?php
 
-/**
- * @param Integer[] $nums
- * @param Integer $k
- * @return Integer
- */
-function maxKelements($nums, $k) {
-    
-}
+class Solution
+{
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer $k
+     * @return Integer
+     */
+    function maxKelements(array $nums, int $k)
+    {
+
+    }
 }

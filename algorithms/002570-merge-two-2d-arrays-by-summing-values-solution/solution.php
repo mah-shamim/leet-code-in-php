@@ -1,11 +1,15 @@
-class Solution {
+<?php
+
+class Solution
+{
 
     /**
-    * @param Integer[][] $nums1
-    * @param Integer[][] $nums2
-    * @return Integer[][]
-    */
-    function mergeArrays($nums1, $nums2) {
+     * @param Integer[][] $nums1
+     * @param Integer[][] $nums2
+     * @return Integer[][]
+     */
+    function mergeArrays(array $nums1, array $nums2): array
+    {
         $result = [];
         $i = $j = 0;
         while ($i < count($nums1) || $j < count($nums2)) {

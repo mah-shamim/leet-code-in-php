@@ -1,10 +1,14 @@
-class Solution {
+<?php
+
+class Solution
+{
 
     /**
-    * @param String $s
-    * @return String
-    */
-    function minRemoveToMakeValid($s) {
+     * @param String $s
+     * @return String
+     */
+    function minRemoveToMakeValid(string $s): string
+    {
         // Stack to keep track of characters that lead to a valid string
         $stack = [];
 
@@ -21,8 +25,7 @@ class Solution {
             // If an opening parenthesis is found, increment the open count
             if ($char == '(') {
                 $openCount++;
-            }
-            // If a closing parenthesis is found and there is a matching open, decrement the open count
+            } // If a closing parenthesis is found and there is a matching open, decrement the open count
             elseif ($char == ')') {
                 $openCount--;
             }
@@ -45,8 +48,7 @@ class Solution {
             // If a closing parenthesis is found, increment the open count
             if ($char == ')') {
                 $openCount++;
-            }
-            // If an opening parenthesis is found and there is a matching close, decrement the open count
+            } // If an opening parenthesis is found and there is a matching close, decrement the open count
             elseif ($char == '(') {
                 $openCount--;
             }

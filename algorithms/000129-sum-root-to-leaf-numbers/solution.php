@@ -1,28 +1,36 @@
 <?php
 /**
  * Definition for a binary tree node.
- * class TreeNode {
- *     public $val = null;
- *     public $left = null;
- *     public $right = null;
- *     function __construct($val = 0, $left = null, $right = null) {
- *         $this->val = $val;
- *         $this->left = $left;
- *         $this->right = $right;
- *     }
- * }
  */
-class Solution {
+
+class TreeNode
+{
+    public mixed $val = null;
+    public mixed $left = null;
+    public mixed $right = null;
+
+    function __construct($val = 0, $left = null, $right = null)
+    {
+        $this->val = $val;
+        $this->left = $left;
+        $this->right = $right;
+    }
+}
+
+class Solution
+{
 
     /**
      * @param TreeNode $root
-     * @return Integer
+     * @return float|int
      */
-    function sumNumbers($root) {
+    function sumNumbers(TreeNode $root): float|int
+    {
         return $this->sumNumbersRecu($root, 0);
     }
 
-    function sumNumbersRecu($root, $num) {
+    function sumNumbersRecu($root, $num)
+    {
         if ($root === null) {
             return 0;
         }
@@ -34,4 +42,5 @@ class Solution {
         return $this->sumNumbersRecu($root->left, $num * 10 + $root->val) + $this->sumNumbersRecu($root->right, $num * 10 + $root->val);
     }
 }
+
 ?>

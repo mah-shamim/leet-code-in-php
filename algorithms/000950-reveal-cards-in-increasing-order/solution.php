@@ -1,29 +1,33 @@
-class Solution {
+<?php
 
-/**
- * @param Integer[] $deck
- * @return Integer[]
- */
-function deckRevealedIncreasing($deck) {
-    // Initialize an empty double-ended queue (deque)
-    $deque_cards = new SplDoublyLinkedList();      
+class Solution
+{
 
-    // Sort the deck in descending order and iterate over the cards
-    rsort($deck);
+    /**
+     * @param Integer[] $deck
+     * @return Integer[]
+     */
+    function deckRevealedIncreasing(array $deck): array
+    {
+        // Initialize an empty double-ended queue (deque)
+        $deque_cards = new SplDoublyLinkedList();
 
-    foreach ($deck as $card) {
+        // Sort the deck in descending order and iterate over the cards
+        rsort($deck);
 
-        // If the deque is not empty, move the last element to the front
-        if (!$deque_cards->isEmpty()) {
-            $deque_cards->unshift($deque_cards->pop());
-        }          
+        foreach ($deck as $card) {
 
-        // Insert the current card to the front of the deque
-        $deque_cards->unshift($card);
+            // If the deque is not empty, move the last element to the front
+            if (!$deque_cards->isEmpty()) {
+                $deque_cards->unshift($deque_cards->pop());
+            }
 
-    }     
+            // Insert the current card to the front of the deque
+            $deque_cards->unshift($card);
 
-    // Convert the deque back to a list before returning it
-    return iterator_to_array($deque_cards);
-}
+        }
+
+        // Convert the deque back to a list before returning it
+        return iterator_to_array($deque_cards);
+    }
 }

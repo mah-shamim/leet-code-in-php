@@ -1,3 +1,4 @@
+<?php
 class Solution {
 
     /**
@@ -5,7 +6,8 @@ class Solution {
      * @param Integer $k
      * @return Integer
      */
-    function timeRequiredToBuy($tickets, $k) {
+    function timeRequiredToBuy(array $tickets, int $k): int
+    {
         $ans = 0;
 
         foreach ($tickets as $i => $ticket) {

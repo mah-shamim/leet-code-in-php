@@ -1,20 +1,24 @@
-class Solution {
+<?php
 
-/**
- * @param Integer[] $students
- * @param Integer[] $sandwiches
- * @return Integer
- */
-function countStudents($students, $sandwiches) {
-    $count = array_count_values($students);
-    $i = 0;
-    foreach ($sandwiches as $s) {
-        if (!$count[$s]) {
-            break;
+class Solution
+{
+
+    /**
+     * @param Integer[] $students
+     * @param Integer[] $sandwiches
+     * @return Integer
+     */
+    function countStudents(array $students, array $sandwiches): int
+    {
+        $count = array_count_values($students);
+        $i = 0;
+        foreach ($sandwiches as $s) {
+            if (!$count[$s]) {
+                break;
+            }
+            $count[$s]--;
+            $i++;
         }
-        $count[$s]--;
-        $i++;
+        return count($sandwiches) - $i;
     }
-    return count($sandwiches) - $i;
-}
 }

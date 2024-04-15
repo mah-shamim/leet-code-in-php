@@ -1,22 +1,26 @@
-class Solution {
+<?php
 
-/**
- * @param String $s
- * @return Integer
- */
-function maxDepth($s) {
-    $ans = 0;
-$opened = 0;
+class Solution
+{
 
-foreach(str_split($s) as $c) {
-  if ($c == '(') {
-    $opened += 1;
-    $ans = max($ans, $opened);
-  } elseif ($c == ')') {
-    $opened -= 1;
-  }
-}
+    /**
+     * @param String $s
+     * @return Integer
+     */
+    function maxDepth(string $s): int
+    {
+        $ans = 0;
+        $opened = 0;
 
-return $ans;
-}
+        foreach (str_split($s) as $c) {
+            if ($c == '(') {
+                $opened += 1;
+                $ans = max($ans, $opened);
+            } elseif ($c == ')') {
+                $opened -= 1;
+            }
+        }
+
+        return $ans;
+    }
 }
