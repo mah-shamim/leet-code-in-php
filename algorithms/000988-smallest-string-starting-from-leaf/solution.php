@@ -17,8 +17,7 @@ class TreeNode
     }
 }
 
-class Solution
-{
+class Solution {
 
     /**
      * @param TreeNode $root
@@ -26,26 +25,33 @@ class Solution
      */
     function smallestFromLeaf(TreeNode $root): string
     {
-        $ans = $this->dfs($root, new SplStack(), array());
-        sort($ans);
-        return $ans[0];
+        $ans = "";
+        $this->dfs($root, "", $ans);
+        return $ans;
     }
 
-    public function dfs($root, $stack, $ans)
+    /**
+     * @param $root
+     * @param $path
+     * @param $ans
+     * @return void
+     */
+    private function dfs($root, $path, &$ans): void
     {
-        if ($root == null) return $ans;
-        $stack->push($root);
+        if ($root == null)
+            return;
+
+        $path .= chr($root->val + ord('a'));
+
         if ($root->left == null && $root->right == null) {
-            $sb = "";
-            foreach ($stack as $n) {
-                $sb .= chr(97 + $n->val);
-            }
-            $ans[] = strrev($sb);
+            $path = strrev($path);
+            if ($ans == "" || $ans > $path)
+                $ans = $path;
+            $path = strrev($path);  // Roll back.
         }
 
-        $this->dfs($root->left, $stack, $ans);
-        while ($stack->top()->right != $root->right) $stack->pop();
-        $this->dfs($root->right, $stack, $ans);
-        return $ans;
+        $this->dfs($root->left, $path, $ans);
+        $this->dfs($root->right, $path, $ans);
+        $path = substr($path, 0, -1);
     }
 }
