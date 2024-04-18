@@ -33,5 +33,5 @@ A leaf of a node is a node that has no children.
 
 **Constraints:**
 
-- he number of nodes in the tree is in the range <code>[1, 8500]</code>.
+- The number of nodes in the tree is in the range <code>[1, 8500]</code>.
 - `0 <= Node.val <= 25`
