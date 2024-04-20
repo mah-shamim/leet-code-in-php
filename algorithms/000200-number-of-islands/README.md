@@ -8,33 +8,33 @@ An **island** is surrounded by water and is formed by connecting adjacent lands 
 
 **Example 1:**
 
-**Input:**
-
+- **Input:** 
+    ```
     grid = [
-      ["1","1","1","1","0"],
-      ["1","1","0","1","0"],
-      ["1","1","0","0","0"],
-      ["0","0","0","0","0"]
+        ["1","1","1","1","0"],
+        ["1","1","0","1","0"],
+        ["1","1","0","0","0"],
+        ["0","0","0","0","0"]
     ]
-
-**Output:** 1
+    ```
+- **Output:** 1
 
 **Example 2:**
 
-**Input:**
-
+- **Input:**
+    ```
     grid = [
       ["1","1","0","0","0"],
       ["1","1","0","0","0"],
       ["0","0","1","0","0"],
       ["0","0","0","1","1"]
     ]
-
-**Output:** 3
+    ```
+- **Output:** 3
 
 **Constraints:**
 
-*   `m == grid.length`
-*   `n == grid[i].length`
-*   `1 <= m, n <= 300`
-*   `grid[i][j]` is `'0'` or `'1'`.
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m, n <= 300`
+- `grid[i][j]` is `'0'` or `'1'`.
