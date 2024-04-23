@@ -1,53 +1,47 @@
 <?php
 
-/**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val = 0, $next = null) {
- *         $this->val = $val;
- *         $this->next = $next;
- *     }
- * }
- */
-class Solution
-{
+class Solution {
 
     /**
-     * @param ListNode $l1
-     * @param ListNode $l2
-     * @return ListNode
+     * @param Integer $n
+     * @param Integer[][] $edges
+     * @return Integer[]
      */
-    function addTwoNumbers(ListNode $l1, ListNode $l2): ListNode
+    function findMinHeightTrees(int $n, array $edges): array
     {
-        $dummyHead = new ListNode(0);
-        $p = $l1;
-        $q = $l2;
-        $curr = $dummyHead;
-        $carry = 0;
+        if ($n == 1 || empty($edges)) {
+            return [0];
+        }
 
-        while ($p !== null || $q !== null) {
-            $x = ($p !== null) ? $p->val : 0;
-            $y = ($q !== null) ? $q->val : 0;
-            $sum = $carry + $x + $y;
-            $carry = (int)($sum / 10);
+        $ans = [];
+        $graph = [];
 
-            $curr->next = new ListNode($sum % 10);
-            $curr = $curr->next;
+        foreach ($edges as $edge) {
+            $u = $edge[0];
+            $v = $edge[1];
+            $graph[$u][] = $v;
+            $graph[$v][] = $u;
+        }
 
-            if ($p !== null) {
-                $p = $p->next;
-            }
-            if ($q !== null) {
-                $q = $q->next;
+        foreach ($graph as $label => $children) {
+            if (count($children) == 1) {
+                $ans[] = $label;
             }
         }
 
-        if ($carry > 0) {
-            $curr->next = new ListNode($carry);
+        while ($n > 2) {
+            $n -= count($ans);
+            $nextLeaves = [];
+            foreach ($ans as $leaf) {
+                $u = current($graph[$leaf]);
+                unset($graph[$u][array_search($leaf, $graph[$u])]);
+                if (count($graph[$u]) == 1) {
+                    $nextLeaves[] = $u;
+                }
+            }
+            $ans = $nextLeaves;
         }
 
-        return $dummyHead->next;
+        return $ans;
     }
 }
