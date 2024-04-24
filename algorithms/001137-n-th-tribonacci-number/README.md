@@ -27,4 +27,4 @@ Given `n`, return the value of T<sub>n</sub>.
 **Constraints:**
 
 - <code>0 <= n <= 37</code>
-- The answer is guaranteed to fit within a 32-bit integer, ie. <code>answer <= 2^31 - 1</code>.
+- The answer is guaranteed to fit within a 32-bit integer, i.e. <code>answer <= 2^31 - 1</code>.
