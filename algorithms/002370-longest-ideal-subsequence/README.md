@@ -18,7 +18,7 @@ A **subsequence** is a string that can be derived from another string by deletin
 - **Input:** `s = "acfgbd", k = 2`
 - **Output:** `4`
 - **Explanation:** The longest ideal string is `"acbd"`. The length of this string is `4`, so `4` is returned.
-Note that `"acfgbd"` is not ideal because `'c'` and `'f'` have a difference of `3` in alphabet order.
+**Note** that `"acfgbd"` is not ideal because `'c'` and `'f'` have a difference of `3` in alphabet order.
 
 **Example 2:**
 
