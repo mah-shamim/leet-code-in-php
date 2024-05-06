@@ -24,7 +24,7 @@ Given a `rows x cols` binary matrix filled with `0`'s and `1`'s, find the larges
 
 **Constraints:**
 
-*   `rows == matrix.length`
-*   `cols == matrix[i].length`
-*   `1 <= row, cols <= 200`
-*   <code>`matrix[i][j]` is `'0'` or `'1'`</code>.
+- `rows == matrix.length`
+- `cols == matrix[i].length`
+- `1 <= row, cols <= 200`
+- <code>`matrix[i][j]` is `'0'` or `'1'`</code>.
