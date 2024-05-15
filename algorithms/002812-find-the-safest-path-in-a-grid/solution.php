@@ -61,6 +61,7 @@ class Solution {
                 $right = $mid;
             }
         }
+
         return $right;
     }
 }
