@@ -1,53 +1,26 @@
 <?php
 
-/**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val = 0, $next = null) {
- *         $this->val = $val;
- *         $this->next = $next;
- *     }
- * }
- */
-class Solution
-{
+class Solution {
 
     /**
-     * @param ListNode $l1
-     * @param ListNode $l2
-     * @return ListNode
+     * @param Integer[] $nums
+     * @param Integer $k
+     * @param Integer[][] $edges
+     * @return Integer
      */
-    function addTwoNumbers(ListNode $l1, ListNode $l2): ListNode
-    {
-        $dummyHead = new ListNode(0);
-        $p = $l1;
-        $q = $l2;
-        $curr = $dummyHead;
-        $carry = 0;
+    function maximumValueSum($nums, $k, $edges) {
+        $maxSum = 0;
+        $changedCount = 0;
+        $minChangeDiff = PHP_INT_MAX;
 
-        while ($p !== null || $q !== null) {
-            $x = ($p !== null) ? $p->val : 0;
-            $y = ($q !== null) ? $q->val : 0;
-            $sum = $carry + $x + $y;
-            $carry = (int)($sum / 10);
-
-            $curr->next = new ListNode($sum % 10);
-            $curr = $curr->next;
-
-            if ($p !== null) {
-                $p = $p->next;
-            }
-            if ($q !== null) {
-                $q = $q->next;
-            }
+        foreach ($nums as $num) {
+            $maxSum += max($num, $num ^ $k);
+            $changedCount += (($num ^ $k) > $num) ? 1 : 0;
+            $minChangeDiff = min($minChangeDiff, abs($num - ($num ^ $k)));
         }
 
-        if ($carry > 0) {
-            $curr->next = new ListNode($carry);
-        }
-
-        return $dummyHead->next;
+        if ($changedCount % 2 == 0)
+            return $maxSum;
+        return $maxSum - $minChangeDiff;
     }
 }
