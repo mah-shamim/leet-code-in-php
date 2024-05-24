@@ -31,7 +31,7 @@ It is not necessary to use all characters in `letters` and each letter can only 
 - **Input:** words = ["leetcode"], letters = ["l","e","t","c","o","d"], score = [0,0,1,1,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0]
 - **Output:** 0
 - **Explanation:** \
-  Letter "e" can only be used once.
+  Letter "e" can only be used once. 
 
 **Constraints:**
 
