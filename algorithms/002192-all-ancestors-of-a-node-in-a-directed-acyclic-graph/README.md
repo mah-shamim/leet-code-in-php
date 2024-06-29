@@ -39,14 +39,6 @@ A node `u` is an **ancestor** of another node `v` if `u` can reach `v` via a set
   - Node 3 has three ancestors 0, 1, and 2.
   - Node 4 has four ancestors 0, 1, 2, and 3.
 
-**Example 3:**
-
-![](https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg)
-
-- **Input:** l1 = [2,4,3], l2 = [5,6,4]
-- **Output:** [7,0,8]
-- **Explanation:** 342 + 465 = 807.
-
 **Constraints:**
 
 
