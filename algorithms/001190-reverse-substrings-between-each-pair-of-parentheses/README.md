@@ -42,7 +42,7 @@ Here's the step-by-step plan:
 4. If you encounter a closing parenthesis ')', pop from the stack until you reach an opening parenthesis '('. Reverse the substring collected and push it back onto the stack.
 5. Finally, concatenate the stack contents to get the result.
 
-Here's the implementation in PHP: **[1190. Reverse Substrings Between Each Pair of Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001190-reverse-substrings-between-each-pair-of-parentheses)**
+Here's the implementation in PHP: **[1190. Reverse Substrings Between Each Pair of Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001190-reverse-substrings-between-each-pair-of-parentheses/solution.php)**
 
 ```php
 <?php
