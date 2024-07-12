@@ -55,12 +55,12 @@ Here's the implementation in PHP: **[1717. Maximum Score From Removing Substring
 $s = "cdbcbbaaabab";
 $x = 4;
 $y = 5;
-echo maxPoints($s, $x, $y);  // Output: 19
+echo maximumGain($s, $x, $y);  // Output: 19
 
 $s = "aabbaaxybbaabb";
 $x = 5;
 $y = 4;
-echo maxPoints($s, $x, $y);  // Output: 20
+echo maximumGain($s, $x, $y);  // Output: 20
 
 ?>
 ```
