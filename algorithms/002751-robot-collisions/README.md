@@ -77,8 +77,8 @@ print_r(robotCollisions($positions, $healths, $directions));
 
 
 // Example2 usage
-$positions = [1, 2, 5, 6];
-$healths = [10, 10, 11, 11];
+$positions = [3,5,2,6];
+$healths = [10,10,15,12];
 $directions = "RLRL";
 
 print_r(robotCollisions($positions, $healths, $directions));
@@ -86,8 +86,8 @@ print_r(robotCollisions($positions, $healths, $directions));
 
 
 // Example3 usage
-$positions = [1, 2, 5, 6];
-$healths = [10, 10, 11, 11];
+$positions = [1,2,5,6];
+$healths = [10,10,11,11];
 $directions = "RLRL";
 
 print_r(robotCollisions($positions, $healths, $directions));
@@ -102,7 +102,7 @@ print_r(robotCollisions($positions, $healths, $directions));
 3. **Stack Processing**: We use a stack to manage the robots. Robots moving to the right are simply pushed onto the stack. When a robot moving to the left is encountered, we handle collisions by popping from the stack and comparing healths.
 4. **Result Preparation**: Finally, we prepare the result array based on the original indices of the robots, ensuring that the order is maintained.
 
-This solution ensures that we efficiently handle up to \(10^5\) robots with the given constraints.
+This solution ensures that we efficiently handle up to <code>(10<sup>5</sup>)</code> robots with the given constraints.
 
 
 **Contact Links**
