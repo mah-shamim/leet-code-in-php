@@ -1,6 +1,6 @@
 2751\. Robot Collisions
 
-Hard
+Hard 
 
 There are `n` **1-indexed** robots, each having a position on a line, health, and movement direction.
 
