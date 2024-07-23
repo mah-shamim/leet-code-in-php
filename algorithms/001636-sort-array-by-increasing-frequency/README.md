@@ -38,34 +38,34 @@ _Return the sorted array_.
 
 To solve this problem, we can follow these steps:
 
-Let's implement this solution in PHP: **[1. Two Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000001-two-sum/solution.php)**
+1. Count the frequency of each value in the input array.
+2. Use a custom comparator to sort the values based on their frequency first, and if the frequencies are the same, sort by value in decreasing order.
+
+Let's implement this solution in PHP: **[1636. Sort Array by Increasing Frequency](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001636-sort-array-by-increasing-frequency/solution.php)**
 
 ```php
 <?php
-// Test the function with example inputs
-print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-print_r(twoSum([3, 2, 4], 6)); // Output: [1, 2]
-print_r(twoSum([3, 3], 6)); // Output: [0, 1]
+// Test cases
+$nums1 = [1,1,2,2,2,3];
+$nums2 = [2,3,1,3,2];
+$nums3 = [-1,1,-6,4,5,-6,1,4,1];
+
+print_r(frequencySort($nums1)); // Output: [3, 1, 1, 2, 2, 2]
+print_r(frequencySort($nums2)); // Output: [1, 3, 3, 2, 2]
+print_r(frequencySort($nums3)); // Output: [5, -1, 4, 4, -6, -6, 1, 1, 1]
 ?>
 ```
 
 ### Explanation:
 
-1. **Initialization**:
-    - Create an empty associative array `$map` to store the numbers and their indices.
+1. array_count_values($nums):
+   - This function counts the frequency of each value in the array. It returns an associative array where the keys are the values from the input array and the values are their respective counts.
+2. usort($nums, function($a, $b) use ($frequency)):
+   - This function sorts the array using a custom comparator.
+   - if ($frequency[$a] == $frequency[$b]): If the frequency of a and b is the same, compare their values directly. Return ($b - $a) to sort in decreasing order.
+   - return $frequency[$a] - $frequency[$b]: If the frequency is not the same, return the difference to sort by frequency in increasing order.
 
-2. **Iteration**:
-    - Loop through the array using a `foreach` loop.
-    - For each number, calculate its complement (`$target - $num`).
-
-3. **Check for Complement**:
-    - If the complement exists in the associative array (`isset($map[$complement])`), return the index of the complement and the current index.
-    - If not, store the current number and its index in the associative array (`$map[$num] = $index`).
-
-4. **Return**:
-    - The function will return an array containing the indices of the two numbers that add up to the target.
-
-This solution has a time complexity of \(O(n)\) and a space complexity of \(O(n)\), making it efficient for large input sizes.
+This approach ensures that the array is sorted according to the specified rules.
 
 **Contact Links**
 
