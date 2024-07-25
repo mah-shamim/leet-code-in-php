@@ -60,34 +60,40 @@ Return _**any** matrix that satisfies the conditions. If no answer exists, retur
 
 To solve this problem, we can follow these steps:
 
-Let's implement this solution in PHP: **[1. Two Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000001-two-sum/solution.php)**
+1. **Topological Sorting**: We'll perform topological sorting on the row conditions and column conditions separately to determine the order in which elements should appear in rows and columns.
+2. **Constructing the Matrix**: Using the sorted order from the topological sort, we will place the elements in the \( k \times k \) matrix accordingly.
+3. **Validation**: If there is a cycle detected during topological sorting, it means the conditions are contradictory, and no valid matrix can be formed. In this case, we return an empty matrix.
+
+Let's implement this solution in PHP: **[2392. Build a Matrix With Conditions](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002392-build-a-matrix-with-conditions/solution.php)**
 
 ```php
 <?php
-// Test the function with example inputs
-print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-print_r(twoSum([3, 2, 4], 6)); // Output: [1, 2]
-print_r(twoSum([3, 3], 6)); // Output: [0, 1]
+// Example usage:
+$k = 3;
+$rowConditions = [[1, 2], [3, 2]];
+$colConditions = [[2, 1], [3, 2]];
+$result = buildMatrix($k, $rowConditions, $colConditions);
+
+foreach ($result as $row) {
+    echo implode(" ", $row) . "\n";
+}
 ?>
 ```
 
 ### Explanation:
+1. **Topological Sorting**:
+    - We build a graph and calculate in-degrees for each node based on the given conditions.
+    - Using a queue, we perform a topological sort and track the sorted order of elements.
+    - If we successfully sort \( k \) elements, we return the sorted order. Otherwise, we return an empty array indicating a cycle (contradictory conditions).
 
-1. **Initialization**:
-    - Create an empty associative array `$map` to store the numbers and their indices.
+2. **Constructing the Matrix**:
+    - We use the sorted order from topological sorting to determine the row and column positions of each element.
+    - We map each element to its respective position and place it in the \( k \times k \) matrix.
 
-2. **Iteration**:
-    - Loop through the array using a `foreach` loop.
-    - For each number, calculate its complement (`$target - $num`).
+3. **Validation**:
+    - If either row order or column order is empty, it means a cycle was detected, and we return an empty matrix.
 
-3. **Check for Complement**:
-    - If the complement exists in the associative array (`isset($map[$complement])`), return the index of the complement and the current index.
-    - If not, store the current number and its index in the associative array (`$map[$num] = $index`).
-
-4. **Return**:
-    - The function will return an array containing the indices of the two numbers that add up to the target.
-
-This solution has a time complexity of \(O(n)\) and a space complexity of \(O(n)\), making it efficient for large input sizes.
+The provided code effectively handles the given constraints and ensures that the matrix satisfies the specified conditions.
 
 **Contact Links**
 
