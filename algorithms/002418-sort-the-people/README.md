@@ -39,34 +39,39 @@ Return _`names` sorted in **descending** order by the people's heights_.
 
 To solve this problem, we can follow these steps:
 
-Let's implement this solution in PHP: **[1. Two Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000001-two-sum/solution.php)**
+1. **Combine Names and Heights**: Create a combined array of pairs where each pair consists of a name and its corresponding height.
+2. **Sort the Combined Array**: Sort the combined array based on heights in descending order.
+3. **Extract Sorted Names**: Extract the names from the sorted combined array.
+
+
+Let's implement this solution in PHP: **[2418. Sort the People](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002418-sort-the-people/solution.php)**
 
 ```php
 <?php
-// Test the function with example inputs
-print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-print_r(twoSum([3, 2, 4], 6)); // Output: [1, 2]
-print_r(twoSum([3, 3], 6)); // Output: [0, 1]
+// Example usage:
+$names = ["Mary","John","Emma"];
+$heights = [180,165,170];
+$result = sortPeople($names, $heights);
+
+echo implode(",", $result); // Output: Mary,Emma,John
 ?>
 ```
 
 ### Explanation:
 
-1. **Initialization**:
-    - Create an empty associative array `$map` to store the numbers and their indices.
+1. **Combining Names and Heights**:
+   - We create an array called `$combined` where each element is a pair of a name and its corresponding height.
+   - This is done using a loop that iterates through the indices of the `names` and `heights` arrays.
 
-2. **Iteration**:
-    - Loop through the array using a `foreach` loop.
-    - For each number, calculate its complement (`$target - $num`).
+2. **Sorting**:
+   - We use the `usort` function to sort the `$combined` array.
+   - The sorting is based on the heights (the second element of each pair) in descending order. The comparison function returns the difference between the heights to achieve this.
 
-3. **Check for Complement**:
-    - If the complement exists in the associative array (`isset($map[$complement])`), return the index of the complement and the current index.
-    - If not, store the current number and its index in the associative array (`$map[$num] = $index`).
+3. **Extracting Sorted Names**:
+   - After sorting, we extract the names from the `$combined` array into the `$sortedNames` array.
+   - This is done using another loop that goes through the sorted pairs.
 
-4. **Return**:
-    - The function will return an array containing the indices of the two numbers that add up to the target.
-
-This solution has a time complexity of \(O(n)\) and a space complexity of \(O(n)\), making it efficient for large input sizes.
+This approach ensures that the names are returned in the order of descending heights, as required. The time complexity is \(O(n \log n)\) due to the sorting step, which is efficient for the input size constraints.
 
 **Contact Links**
 
