@@ -85,6 +85,7 @@ echo findTheCity($n2, $edges2, $distanceThreshold2); // Output: 0
 
 ?>
 ```
+This code solves the problem by using the Floyd-Warshall algorithm to compute the shortest paths between all pairs of cities and then counts the number of reachable cities within the given distance threshold for each city. Finally, it returns the city with the smallest number of reachable cities, breaking ties by choosing the city with the greater number.
 
 **Contact Links**
 
