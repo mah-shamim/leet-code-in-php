@@ -6,22 +6,29 @@ class Solution {
      * @param Integer[] $nums
      * @return NULL
      */
-    function sortColors(array &$nums) {
-        $l = 0;                // The next 0 should be placed in l.
-        $r = count($nums) - 1;  // The next 2 should be placed in r.
+    function sortColors(&$nums) {
+        $low = 0;
+        $mid = 0;
+        $high = count($nums) - 1;
 
-        for ($i = 0; $i <= $r;) {
-            if ($nums[$i] == 0) {
-                list($nums[$i], $nums[$l]) = array($nums[$l], $nums[$i]);
-                $i++;
-                $l++;
-            } elseif ($nums[$i] == 1) {
-                $i++;
-            } else {
-                // We may swap a 0 to index i, but we're still not sure whether this 0
-                // is placed in the correct index, so we can't move pointer i.
-                list($nums[$i], $nums[$r]) = array($nums[$r], $nums[$i]);
-                $r--;
+        while ($mid <= $high) {
+            if ($nums[$mid] == 0) {
+                // Swap nums[low] and nums[mid]
+                $temp = $nums[$low];
+                $nums[$low] = $nums[$mid];
+                $nums[$mid] = $temp;
+
+                $low++;
+                $mid++;
+            } elseif ($nums[$mid] == 1) {
+                $mid++;
+            } else { // nums[$mid] == 2
+                // Swap nums[mid] and nums[high]
+                $temp = $nums[$high];
+                $nums[$high] = $nums[$mid];
+                $nums[$mid] = $temp;
+
+                $high--;
             }
         }
     }
