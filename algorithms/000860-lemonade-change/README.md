@@ -45,33 +45,6 @@ Let's implement this solution in PHP: **[860. Lemonade Change](https://github.co
 
 ```php
 <?php
-function lemonadeChange($bills) {
-    $five = 0;
-    $ten = 0;
-
-    foreach ($bills as $bill) {
-        if ($bill == 5) {
-            $five++;
-        } elseif ($bill == 10) {
-            if ($five == 0) {
-                return false;
-            }
-            $five--;
-            $ten++;
-        } else { // $bill == 20
-            if ($ten > 0 && $five > 0) {
-                $ten--;
-                $five--;
-            } elseif ($five >= 3) {
-                $five -= 3;
-            } else {
-                return false;
-            }
-        }
-    }
-    return true;
-}
-
 // Example usage:
 $bills = [5, 5, 5, 10, 20];
 echo lemonadeChange($bills) ? 'true' : 'false'; // Output: true
