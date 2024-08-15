@@ -54,38 +54,6 @@ Let's implement this solution in PHP: **[129. Sum Root to Leaf Numbers](https://
 
 ```php
 <?php
-class TreeNode {
-    public $val = null;
-    public $left = null;
-    public $right = null;
-    public function __construct($val = 0, $left = null, $right = null) {
-        $this->val = $val;
-        $this->left = $left;
-        $this->right = $right;
-    }
-}
-
-function sumNumbers($root) {
-    return sumNumbersRecu($root, 0);
-}
-
-function sumNumbersRecu($node, $currentSum) {
-    if ($node === null) {
-        return 0;
-    }
-
-    // Update the current sum with the value of the current node
-    $currentSum = $currentSum * 10 + $node->val;
-
-    // If the node is a leaf, return the current sum
-    if ($node->left === null && $node->right === null) {
-        return $currentSum;
-    }
-
-    // Recursively call dfs for left and right children
-    return sumNumbersRecu($node->left, $currentSum) + sumNumbersRecu($node->right, $currentSum);
-}
-
 // Example usage:
 
 // Example 1
