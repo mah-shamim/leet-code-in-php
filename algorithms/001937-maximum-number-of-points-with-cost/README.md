@@ -89,37 +89,6 @@ Let's implement this solution in PHP: **[1937. Maximum Number of Points with Cos
 
 ```php
 <?php
-function maxPoints($points) {
-    $m = count($points);
-    $n = count($points[0]);
-    $dp = $points[0];
-
-    for ($i = 1; $i < $m; $i++) {
-        // Initialize left and right arrays
-        $left = array_fill(0, $n, 0);
-        $right = array_fill(0, $n, 0);
-
-        // Calculate the left array
-        $left[0] = $dp[0];
-        for ($j = 1; $j < $n; $j++) {
-            $left[$j] = max($left[$j - 1] - 1, $dp[$j]);
-        }
-
-        // Calculate the right array
-        $right[$n - 1] = $dp[$n - 1];
-        for ($j = $n - 2; $j >= 0; $j--) {
-            $right[$j] = max($right[$j + 1] - 1, $dp[$j]);
-        }
-
-        // Update dp for the current row
-        for ($j = 0; $j < $n; $j++) {
-            $dp[$j] = $points[$i][$j] + max($left[$j], $right[$j]);
-        }
-    }
-
-    return max($dp);
-}
-
 // Example usage:
 $points1 = [[1, 5], [2, 3], [4, 2]];
 $points2 = [[2, 4, 3], [5, 6, 4]];
