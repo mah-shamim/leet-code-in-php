@@ -3,30 +3,33 @@
 class Solution {
 
     /**
-     * @param Integer[] $nums
-     * @param Integer $target
-     * @return Integer[]
+     * @param Integer $n
+     * @return Integer
      */
-    function twoSum($nums, $target) {
-        // Create an associative array (hash map) to store numbers and their indices
-        $map = [];
+    function minSteps($n) {
+        // If n is 1, no operations are needed
+        if ($n == 1) return 0;
 
-        // Iterate through the array
-        foreach ($nums as $index => $num) {
-            // Calculate the complement of the current number
-            $complement = $target - $num;
+        // Initialize DP array with a large number
+        $dp = array_fill(0, $n + 1, PHP_INT_MAX);
+        $dp[1] = 0;
 
-            // Check if the complement exists in the map
-            if (isset($map[$complement])) {
-                // If found, return the indices of the complement and the current number
-                return [$map[$complement], $index];
+        // Fill DP array
+        for ($i = 2; $i <= $n; $i++) {
+            // Check all divisors of i
+            for ($d = 1; $d <= sqrt($i); $d++) {
+                if ($i % $d == 0) {
+                    // If d is a divisor
+                    $dp[$i] = min($dp[$i], $dp[$d] + ($i / $d));
+
+                    // If i / d is a divisor and not equal to d
+                    if ($d != $i / $d) {
+                        $dp[$i] = min($dp[$i], $dp[$i / $d] + $d);
+                    }
+                }
             }
-
-            // Otherwise, add the current number and its index to the map
-            $map[$num] = $index;
         }
 
-        // If no solution is found (although the problem guarantees one), return an empty array
-        return [];
+        return $dp[$n];
     }
 }
