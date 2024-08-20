@@ -51,50 +51,6 @@ Let's implement this solution in PHP: **[200. Number of Islands](https://github.
 
 ```php
 <?php
-class Solution {
-
-    /**
-     * @param String[][] $grid
-     * @return Integer
-     */
-    function numIslands($grid) {
-        if (empty($grid) || empty($grid[0])) {
-            return 0;
-        }
-
-        $m = count($grid);
-        $n = count($grid[0]);
-        $islands = 0;
-
-        for ($i = 0; $i < $m; $i++) {
-            for ($j = 0; $j < $n; $j++) {
-                if ($grid[$i][$j] == '1') {
-                    $this->dfs($grid, $i, $j, $m, $n);
-                    $islands++;
-                }
-            }
-        }
-
-        return $islands;
-    }
-
-    private function dfs(&$grid, $x, $y, $m, $n) {
-        // Check if the current cell is out of bounds or water
-        if ($x < 0 || $x >= $m || $y < 0 || $y >= $n || $grid[$x][$y] != '1') {
-            return;
-        }
-
-        // Mark the current cell as visited
-        $grid[$x][$y] = 'x';
-
-        // Perform DFS in all four directions
-        $this->dfs($grid, $x + 1, $y, $m, $n);
-        $this->dfs($grid, $x - 1, $y, $m, $n);
-        $this->dfs($grid, $x, $y + 1, $m, $n);
-        $this->dfs($grid, $x, $y - 1, $m, $n);
-    }
-}
-
 // Example usage
 $solution = new Solution();
 
