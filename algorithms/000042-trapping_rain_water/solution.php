@@ -1,30 +1,40 @@
 <?php
 
-class Solution
-{
+class Solution {
 
     /**
      * @param Integer[] $height
      * @return Integer
      */
-    function trap(array $height): int
-    {
-        $result = 0;
-        $leftIndex = 0;
-        $rightIndex = count($height) - 1;
-        $maxLeft = 0;
-        $maxRight = 0;
-        while ($leftIndex < $rightIndex) {
-            if ($height[$leftIndex] < $height[$rightIndex]) {
-                $maxLeft = max($maxLeft, $height[$leftIndex]);
-                $result += $maxLeft - $height[$leftIndex];
-                $leftIndex++;
+    function trap($height) {
+        $n = count($height);
+        if ($n == 0) return 0;
+
+        $left = 0;
+        $right = $n - 1;
+        $left_max = 0;
+        $right_max = 0;
+        $water = 0;
+
+        while ($left <= $right) {
+            if ($height[$left] <= $height[$right]) {
+                if ($height[$left] >= $left_max) {
+                    $left_max = $height[$left];
+                } else {
+                    $water += $left_max - $height[$left];
+                }
+                $left++;
             } else {
-                $maxRight = max($maxRight, $height[$rightIndex]);
-                $result += $maxRight - $height[$rightIndex];
-                $rightIndex--;
+                if ($height[$right] >= $right_max) {
+                    $right_max = $height[$right];
+                } else {
+                    $water += $right_max - $height[$right];
+                }
+                $right--;
             }
         }
-        return $result;
+
+        return $water;
+
     }
 }
