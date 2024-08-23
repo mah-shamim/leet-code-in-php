@@ -1,50 +1,59 @@
 <?php
 
-class Solution
-{
+class Solution {
 
     /**
      * @param Integer[] $nums1
      * @param Integer[] $nums2
-     * @return float|int
+     * @return Float
      */
-    function findMedianSortedArrays(array $nums1, array $nums2): float|int
-    {
-        $mergedArray = [];
-        $totalLength = count($nums1) + count($nums2);
-        $median = ($totalLength / 2);
-        if ($totalLength % 2 === 0) {
-            $index = [$median - 1, $median];
-        } else {
-            $index = [floor($median)];
+    function findMedianSortedArrays($nums1, $nums2) {
+        $m = count($nums1);
+        $n = count($nums2);
+
+        if ($m > $n) {
+            return $this->findMedianSortedArrays($nums2, $nums1);
         }
-        $i = 0;
-        $i1 = 0;
-        $i2 = 0;
-        while ($i < $totalLength) {
-            if (!isset($nums1[$i1])) {
-                $mergedArray[] = $nums2[$i2];
-                $i2++;
-                $i++;
-                continue;
-            }
-            if (!isset($nums2[$i2])) {
-                $mergedArray[] = $nums1[$i1];
-                $i1++;
-                $i++;
-                continue;
-            }
-            if ($nums1[$i1] < $nums2[$i2]) {
-                $mergedArray[] = $nums1[$i1];
-                $i1++;
+
+        $imin = 0;
+        $imax = $m;
+        $half_len = intval(($m + $n + 1) / 2);
+
+        while ($imin <= $imax) {
+            $i = intval(($imin + $imax) / 2);
+            $j = $half_len - $i;
+
+            if ($i < $m && $nums2[$j - 1] > $nums1[$i]) {
+                $imin = $i + 1;
+            } elseif ($i > 0 && $nums1[$i - 1] > $nums2[$j]) {
+                $imax = $i - 1;
             } else {
-                $mergedArray[] = $nums2[$i2];
-                $i2++;
+                $max_of_left;
+                if ($i == 0) {
+                    $max_of_left = $nums2[$j - 1];
+                } elseif ($j == 0) {
+                    $max_of_left = $nums1[$i - 1];
+                } else {
+                    $max_of_left = max($nums1[$i - 1], $nums2[$j - 1]);
+                }
+
+                if (($m + $n) % 2 == 1) {
+                    return $max_of_left;
+                }
+
+                $min_of_right;
+                if ($i == $m) {
+                    $min_of_right = $nums2[$j];
+                } elseif ($j == $n) {
+                    $min_of_right = $nums1[$i];
+                } else {
+                    $min_of_right = min($nums1[$i], $nums2[$j]);
+                }
+
+                return ($max_of_left + $min_of_right) / 2.0;
             }
-            $i++;
         }
-        return isset($index[1])
-            ? ($mergedArray[$index[0]] + $mergedArray[$index[1]]) / 2
-            : $mergedArray[$index[0]];
+
+        return 0.0; // should never be reached
     }
 }
