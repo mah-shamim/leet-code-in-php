@@ -7,13 +7,18 @@ class Solution {
      * @return NULL
      */
     function reverseString(&$s) {
-        $l = 0;
-        $r = count($s) - 1;
+        $left = 0;
+        $right = count($s) - 1;
 
-        while ($l < $r) {
-            list($s[$l], $s[$r]) = array($s[$r], $s[$l]);
-            $l++;
-            $r--;
+        while ($left < $right) {
+            // Swap the characters
+            $temp = $s[$left];
+            $s[$left] = $s[$right];
+            $s[$right] = $temp;
+
+            // Move the pointers
+            $left++;
+            $right--;
         }
     }
 }
