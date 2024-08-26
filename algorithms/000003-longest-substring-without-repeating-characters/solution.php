@@ -5,32 +5,29 @@ class Solution {
      * @param String $s
      * @return Integer
      */
-    function lengthOfLongestSubstring(string $s): int
-    {
-        $lastIndices = array_fill(0, 256, -1);
-        $maxLen = 0;
-        $curLen = 0;
+    function lengthOfLongestSubstring($s) {
+        $n = strlen($s);
+        $maxLength = 0;
+        $charIndexMap = [];
         $start = 0;
 
-        for ($i = 0; $i < strlen($s); $i++) {
-            $cur = $s[$i];
-            $curAscii = ord($cur);
+        for ($end = 0; $end < $n; $end++) {
+            $char = $s[$end];
 
-            if ($lastIndices[$curAscii] < $start) {
-                $lastIndices[$curAscii] = $i;
-                $curLen++;
-            } else {
-                $lastIndex = $lastIndices[$curAscii];
-                $start = $lastIndex + 1;
-                $curLen = $i - $start + 1;
-                $lastIndices[$curAscii] = $i;
+            // If the character is already in the map and its index is within the current window
+            if (isset($charIndexMap[$char]) && $charIndexMap[$char] >= $start) {
+                // Move the start right after the last occurrence of current character
+                $start = $charIndexMap[$char] + 1;
             }
 
-            if ($curLen > $maxLen) {
-                $maxLen = $curLen;
-            }
+            // Update the latest index of the character
+            $charIndexMap[$char] = $end;
+
+            // Update the maximum length of substring found
+            $maxLength = max($maxLength, $end - $start + 1);
         }
 
-        return $maxLen;
+        return $maxLength;
+
     }
 }

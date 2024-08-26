@@ -7,20 +7,27 @@ class Solution {
      * @return Integer[]
      */
     function singleNumber($nums) {
-        $xors = array_reduce($nums, function($carry, $item) { return $carry ^ $item; }, 0);
-        $lowbit = $xors & -$xors;
-        $ans = array_fill(0, 2, 0);
-
-        // Seperate `nums` into two groups by `lowbit`.
+        // Step 1: XOR all elements
+        $xor = 0;
         foreach ($nums as $num) {
-            if ($num & $lowbit) {
-                $ans[0] ^= $num;
+            $xor ^= $num;
+        }
+
+        // Step 2: Find a set bit (rightmost set bit in this case)
+        $rightmost_set_bit = $xor & (-$xor);
+
+        // Step 3: Partition the array into two groups and XOR them
+        $num1 = 0;
+        $num2 = 0;
+        foreach ($nums as $num) {
+            if (($num & $rightmost_set_bit) == 0) {
+                $num1 ^= $num;
             } else {
-                $ans[1] ^= $num;
+                $num2 ^= $num;
             }
         }
 
-        return $ans;
+        return [$num1, $num2];
 
     }
 }
