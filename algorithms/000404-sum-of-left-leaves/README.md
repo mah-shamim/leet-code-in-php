@@ -107,5 +107,3 @@ If you want more helpful content like this, feel free to follow me:
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
 
-
-#123, #124 leetcode problems 000350-intersection-of-two-arrays-ii submissions 1307232739
