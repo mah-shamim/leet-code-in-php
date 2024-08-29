@@ -1,4 +1,6 @@
 .idea/
 .vscode/
-
+automate_git.bat
+auto_commit.sh
+auto_commit.bat
 *.iml

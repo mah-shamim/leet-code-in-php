@@ -7,23 +7,30 @@ class Solution {
      * @param String $version2
      * @return Integer
      */
-    function compareVersion(string $version1, string $version2): int
-    {
-        $levels1 = explode('.', $version1);
-        $levels2 = explode('.', $version2);
-        $length = max(count($levels1), count($levels2));
+    function compareVersion($version1, $version2) {
+        // Split the version numbers into arrays of segments
+        $v1 = explode('.', $version1);
+        $v2 = explode('.', $version2);
 
+        // Get the maximum length to iterate over both arrays
+        $length = max(count($v1), count($v2));
+
+        // Compare each segment
         for ($i = 0; $i < $length; $i++) {
-            $v1 = isset($levels1[$i]) ? (int)$levels1[$i] : 0;
-            $v2 = isset($levels2[$i]) ? (int)$levels2[$i] : 0;
-            if ($v1 < $v2) {
+            // Get the current segment from each version, defaulting to "0" if not present
+            $seg1 = isset($v1[$i]) ? (int)$v1[$i] : 0;
+            $seg2 = isset($v2[$i]) ? (int)$v2[$i] : 0;
+
+            // Compare segments
+            if ($seg1 < $seg2) {
                 return -1;
-            }
-            if ($v1 > $v2) {
+            } elseif ($seg1 > $seg2) {
                 return 1;
             }
         }
 
+        // All segments are equal
         return 0;
+
     }
 }

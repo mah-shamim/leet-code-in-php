@@ -1,42 +1,40 @@
 <?php
 
-class Solution
-{
+class Solution {
 
     /**
      * @param String $num
      * @param Integer $k
      * @return String
      */
-    function removeKdigits(string $num, int $k): string
-    {
-        if (strlen($num) == $k) {
-            return '0';
-        }
-
-        $ans = [];
+    function removeKdigits($num, $k) {
         $stack = [];
+        $len = strlen($num);
 
-        for ($i = 0; $i < strlen($num); $i++) {
+        for ($i = 0; $i < $len; $i++) {
             $digit = $num[$i];
-            while ($k > 0 && !empty($stack) && $stack[count($stack) - 1] > $digit) {
+
+            // Remove digits from the stack if the current digit is smaller and we still have digits to remove
+            while ($k > 0 && !empty($stack) && end($stack) > $digit) {
                 array_pop($stack);
-                $k -= 1;
+                $k--;
             }
-            array_push($stack, $digit);
+
+            // Push the current digit onto the stack
+            $stack[] = $digit;
         }
 
-        for ($j = 0; $j < $k; $j++) {
+        // If we still have digits to remove, remove them from the end
+        while ($k > 0) {
             array_pop($stack);
+            $k--;
         }
 
-        foreach ($stack as $c) {
-            if ($c == '0' && empty($ans)) {
-                continue;
-            }
-            array_push($ans, $c);
-        }
+        // Build the final result, removing leading zeros
+        $result = ltrim(implode('', $stack), '0');
 
-        return implode($ans) ? implode($ans) : '0';
+        // Return "0" if the result is empty
+        return $result === '' ? '0' : $result;
+
     }
 }
