@@ -1,77 +1,120 @@
-1\. Two Sum
+1595\. Minimum Cost to Connect Two Groups of Points
 
-Easy
+**Difficulty:** Hard
 
-Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
+**Topics:** `Array`, `Dynamic Programming`, `Bit Manipulation`, `Matrix`, `Bitmask`
 
-You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
+You are given two groups of points where the first group has <code>size<sub>1</sub></code> points, the second group has <code>size<sub>2</sub></code> points, and <code>size<sub>1</sub> >= size<sub>2</sub></code>.
 
-You can return the answer in any order.
+The `cost` of the connection between any two points are given in an <code>size<sub>1</sub> x size<sub>2</sub></code> matrix where `cost[i][j]` is the cost of connecting point `i` of the first group and point `j` of the second group. The groups are connected if **each point in both groups is connected to one or more points in the opposite group**. In other words, each point in the first group must be connected to at least one point in the second group, and each point in the second group must be connected to at least one point in the first group.
+
+Return _the minimum cost it takes to connect the two groups_.
 
 **Example 1:**
 
-- **Input:** nums = [2,7,11,15], target = 9
-- **Output:** [0,1]
-- **Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1]. 
+![ex1](https://assets.leetcode.com/uploads/2020/09/03/ex1.jpg)
+
+- **Input:** cost = [[15, 96], [36, 2]]
+- **Output:** 17
+- **Explanation:** The optimal way of connecting the groups is:\
+  1--A\
+  2--B\
+  This results in a total cost of 17.
 
 **Example 2:**
 
-- **Input:** nums = [3,2,4], target = 6
-- **Output:** [1,2] 
+![ex2](https://assets.leetcode.com/uploads/2020/09/03/ex2.jpg)
+
+- **Input:** cost = [[1, 3, 5], [4, 1, 1], [1, 5, 3]]
+- **Output:** 4
+- **Explanation:** The optimal way of connecting the groups is:\
+  1--A\
+  2--B\
+  2--C\
+  3--A\
+  This results in a total cost of 4.\
+  Note that there are multiple points connected to point 2 in the first group and point A in the second group. This does not matter as there is no limit to the number of points that can be connected. We only care about the minimum total cost.
+
 
 **Example 3:**
 
-- **Input:** nums = [3,3], target = 6
-- **Output:** [0,1] 
+- **Input:** cost = [[2, 5, 1], [3, 4, 7], [8, 1, 2], [6, 2, 4], [3, 8, 8]]
+- **Output:** 10
+
+
 
 **Constraints:**
 
-- <code>2 <= nums.length <= 10<sup>4</sup></code>
-- <code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code>
-- <code>-10<sup>9</sup> <= target <= 10<sup>9</sup></code>
-- **Only one valid answer exists.**
+- <code>size<sub>1</sub> == cost.length</code>
+- <code>size<sub>2</sub> == cost[i].length</code>
+- <code>1 <= size<sub>1</sub>, size<sub>2</sub> <= 12</code>
+- <code>size<sub>1</sub> >= size<sub>2</sub></code>
+- `0 <= cost[i][j] <= 100`
 
-**Follow-up:** Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code> time complexity?
 
 **Hint:**
-1. A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions for just for completeness. It is from these brute force solutions that you can come up with optimizations.
-2. So, if we fix one of the numbers, say `x`, we have to scan the entire array to find the next number `y` which is `value - x` where value is the input parameter. Can we change our array somehow so that this search becomes faster?
-3. The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
+1. Each point on the left would either be connected to exactly point already connected to some left node, or a subset of the nodes on the right which are not connected to any node
+2. Use dynamic programming with bitmasking, where the state will be (number of points assigned in first group, bitmask of points assigned in second group).
+
 
 
 **Solution:**
 
+We can leverage dynamic programming with bitmasking. The idea is to minimize the cost by considering each point in the first group and trying to connect it to all points in the second group.
 
-To solve this problem, we can follow these steps:
+### Dynamic Programming (DP) Approach with Bitmasking
 
-Let's implement this solution in PHP: **[1. Two Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000001-two-sum/solution.php)**
+#### Steps:
+1. **State Representation**:
+   - Use a DP table `dp[i][mask]` where:
+      - `i` is the index in the first group (ranging from `0` to `size1-1`).
+      - `mask` is a bitmask representing which points in the second group have been connected.
+
+2. **State Transition**:
+   - For each point in the first group, try connecting it to every point in the second group, updating the DP table accordingly.
+   - If a new point in the second group is connected, update the corresponding bit in the mask.
+
+3. **Base Case**:
+   - Start with `dp[0][0] = 0` (no connections initially).
+
+4. **Goal**:
+   - Compute the minimum cost for `dp[size1][(1 << size2) - 1]`, which represents connecting all points from both groups.
+
+Let's implement this solution in PHP: **[1595. Minimum Cost to Connect Two Groups of Points](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001595-minimum-cost-to-connect-two-groups-of-points/solution.php)**
 
 ```php
 <?php
-// Test the function with example inputs
-print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-print_r(twoSum([3, 2, 4], 6)); // Output: [1, 2]
-print_r(twoSum([3, 3], 6)); // Output: [0, 1]
+/**
+ * @param Integer[][] $cost
+ * @return Integer
+ */
+function connectTwoGroups($cost) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+// Example usage:
+$cost1 = [[15, 96], [36, 2]];
+$cost2 = [[1, 3, 5], [4, 1, 1], [1, 5, 3]];
+$cost3 = [[2, 5, 1], [3, 4, 7], [8, 1, 2], [6, 2, 4], [3, 8, 8]];
+
+echo connectTwoGroups($cost1) . "\n"; // Output: 17
+echo connectTwoGroups($cost2) . "\n"; // Output: 4
+echo connectTwoGroups($cost3) . "\n"; // Output: 10
 ?>
 ```
 
 ### Explanation:
 
-1. **Initialization**:
-    - Create an empty associative array `$map` to store the numbers and their indices.
+- The DP array `dp[i][mask]` stores the minimum cost to connect the first `i` points from group 1 with the points in group 2 as indicated by `mask`.
+- The nested loops iterate over each combination of `i` and `mask`, trying to find the optimal cost by considering all possible connections.
+- In the end, the solution calculates the minimum cost considering the scenarios where some points in the second group may still be unconnected, ensuring all points are connected.
 
-2. **Iteration**:
-    - Loop through the array using a `foreach` loop.
-    - For each number, calculate its complement (`$target - $num`).
-
-3. **Check for Complement**:
-    - If the complement exists in the associative array (`isset($map[$complement])`), return the index of the complement and the current index.
-    - If not, store the current number and its index in the associative array (`$map[$num] = $index`).
-
-4. **Return**:
-    - The function will return an array containing the indices of the two numbers that add up to the target.
-
-This solution has a time complexity of \(O(n)\) and a space complexity of \(O(n)\), making it efficient for large input sizes.
+This approach efficiently handles the problem's constraints and ensures the minimum cost for connecting the two groups.
 
 **Contact Links**
 
@@ -81,3 +124,4 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
+

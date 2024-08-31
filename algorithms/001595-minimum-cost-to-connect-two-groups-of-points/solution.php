@@ -3,30 +3,47 @@
 class Solution {
 
     /**
-     * @param Integer[] $nums
-     * @param Integer $target
-     * @return Integer[]
+     * @param Integer[][] $cost
+     * @return Integer
      */
-    function twoSum($nums, $target) {
-        // Create an associative array (hash map) to store numbers and their indices
-        $map = [];
+    function connectTwoGroups($cost) {
+        $size1 = count($cost);
+        $size2 = count($cost[0]);
 
-        // Iterate through the array
-        foreach ($nums as $index => $num) {
-            // Calculate the complement of the current number
-            $complement = $target - $num;
+        // Initialize the dp table with a large number (infinity substitute)
+        $dp = array_fill(0, $size1 + 1, array_fill(0, 1 << $size2, PHP_INT_MAX));
+        $dp[0][0] = 0;
 
-            // Check if the complement exists in the map
-            if (isset($map[$complement])) {
-                // If found, return the indices of the complement and the current number
-                return [$map[$complement], $index];
+        // Fill the dp table
+        for ($i = 0; $i < $size1; $i++) {
+            for ($mask = 0; $mask < (1 << $size2); $mask++) {
+                for ($j = 0; $j < $size2; $j++) {
+                    $newMask = $mask | (1 << $j);
+                    $dp[$i + 1][$newMask] = min(
+                        $dp[$i + 1][$newMask],
+                        $dp[$i][$mask] + $cost[$i][$j]
+                    );
+                }
             }
-
-            // Otherwise, add the current number and its index to the map
-            $map[$num] = $index;
         }
 
-        // If no solution is found (although the problem guarantees one), return an empty array
-        return [];
+        // Ensure all points in the second group are connected
+        $finalCost = PHP_INT_MAX;
+        for ($mask = 0; $mask < (1 << $size2); $mask++) {
+            $currentCost = $dp[$size1][$mask];
+            for ($j = 0; $j < $size2; $j++) {
+                if (!($mask & (1 << $j))) {
+                    $minConnectionCost = PHP_INT_MAX;
+                    for ($i = 0; $i < $size1; $i++) {
+                        $minConnectionCost = min($minConnectionCost, $cost[$i][$j]);
+                    }
+                    $currentCost += $minConnectionCost;
+                }
+            }
+            $finalCost = min($finalCost, $currentCost);
+        }
+
+        return $finalCost;
+
     }
 }
