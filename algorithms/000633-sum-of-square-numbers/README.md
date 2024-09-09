@@ -50,24 +50,12 @@ Let's implement this solution in PHP: **[633. Sum of Square Numbers](https://git
  * @return Boolean
  */
 function judgeSquareSum($c) {
-    // Initialize two pointers
-    $a = 0;
-    $b = (int) sqrt($c);
-
-    // Iterate while a <= b
-    while ($a <= $b) {
-        $sumOfSquares = $a * $a + $b * $b;
-
-        if ($sumOfSquares == $c) {
-            return true; // Found a pair (a, b)
-        } elseif ($sumOfSquares < $c) {
-            $a++; // Increment a to increase sum
-        } else {
-            $b--; // Decrement b to decrease sum
-        }
-    }
-
-    return false; // No such pair exists
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example usage:
