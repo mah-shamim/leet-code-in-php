@@ -10,37 +10,40 @@ class Solution {
      * @return Integer
      */
     function findMaximizedCapital($k, $w, $profits, $capital) {
-        $n = count($capital); // Number of projects
+        // Combine the projects into a list of tuples (capital, profit)
+        $projects = [];
+        $n = count($profits);
 
-        // Create a min-heap (priority queue) to keep track of projects based on required capital
-        $minCapitalHeap = new SplMinHeap();
-
-        // Populate the min-heap with project information - each item is an array where
-        // the first element is the capital required and the second element is the profit.
-        for ($i = 0; $i < $n; ++$i) {
-            $minCapitalHeap->insert([$capital[$i], $profits[$i]]);
+        for ($i = 0; $i < $n; $i++) {
+            $projects[] = [$capital[$i], $profits[$i]];
         }
 
-        // Create a max-heap (priority queue) to keep track of profitable projects that we can afford
-        $maxProfitHeap = new SplMaxHeap();
+        // Sort projects by the capital needed (ascending)
+        usort($projects, function($a, $b) {
+            return $a[0] - $b[0];
+        });
 
-        // Iterate k times, which represents the maximum number of projects we can select
-        while ($k-- > 0) {
+        // A max heap to store the available profits
+        $maxHeap = new SplMaxHeap();
 
-            // Move all the projects that we can afford (w >= required capital) to the max profit heap
-            while (!$minCapitalHeap->isEmpty() && $minCapitalHeap->top()[0] <= $w) {
-                $maxProfitHeap->insert($minCapitalHeap->extract()[1]);
+        $index = 0;
+        for ($i = 0; $i < $k; $i++) {
+            // Push all projects that can be started with the current capital into the heap
+            while ($index < $n && $projects[$index][0] <= $w) {
+                $maxHeap->insert($projects[$index][1]);
+                $index++;
             }
 
-            // If the max profit heap is empty, it means there are no projects we can afford, so we break
-            if ($maxProfitHeap->isEmpty()) {
+            // If there are no available projects, break out of the loop
+            if ($maxHeap->isEmpty()) {
                 break;
             }
 
-            // Otherwise, take the most profitable project from the max profit heap and add its profit to our total capital
-            $w += $maxProfitHeap->extract();
+            // Pick the project with the maximum profit
+            $w += $maxHeap->extract();
         }
 
-        return $w; // Return the maximized capital after picking up to k projects
+        return $w;
+
     }
 }
