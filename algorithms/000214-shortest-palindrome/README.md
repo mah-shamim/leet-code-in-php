@@ -25,7 +25,7 @@ Return _the shortest palindrome you can find by performing this transformation_.
 - `s` consists of lowercase English letters only.
 
 
-[^1]: **Palindrome** `A **palindrome** is a string that reads the same forward and backward.`
+[^1]: **Palindrome** A **palindrome** is a string that reads the same forward and backward.
 
 
 **Solution:**
