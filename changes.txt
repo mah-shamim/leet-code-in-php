@@ -1,1 +1,0 @@
-"Commit made on $current_date" 
