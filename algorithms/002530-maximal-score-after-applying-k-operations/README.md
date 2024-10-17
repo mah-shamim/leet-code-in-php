@@ -77,7 +77,7 @@ Let's break down the solution for the "Maximal Score After Applying K Operations
 
 - **Return the Final Score**: After `k` operations, return the accumulated `sum`.
 
-Let's implement this solution in PHP: **[2491. Divide Players Into Teams of Equal Skill](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002491-divide-players-into-teams-of-equal-skill/solution.php)**
+Let's implement this solution in PHP: **[2530. Maximal Score After Applying K Operations](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002530-maximal-score-after-applying-k-operations/solution.php)**
 
 ```php
 <?php
