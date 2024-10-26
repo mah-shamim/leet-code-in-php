@@ -64,6 +64,8 @@ The solution employs a two-pass approach:
 1. **Calculate the height of each node** in the tree.
 2. **Determine the maximum height** of the tree after removing the subtree rooted at each queried node.
 
+Let's implement this solution in PHP: **[2458. Height of Binary Tree After Subtree Removal Queries](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002458-height-of-binary-tree-after-subtree-removal-queries/solution.php)**
+
 #### Code Breakdown
 
 **1. Class Definition and Properties:**
