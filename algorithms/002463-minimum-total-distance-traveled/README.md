@@ -55,7 +55,7 @@ Return _the minimum total distance traveled by all the robots_. The test cases a
 
 - `1 <= robot.length, factory.length <= 100`
 - `factory[j].length == 2`
-- <code>-10<sup>9</sup> <= robot[i], positionj <= 10<sup>9</sup></code>
+- <code>-10<sup>9</sup> <= robot[i], position<sub>j</sub> <= 10<sup>9</sup></code>
 - <code>0 <= limit<sub>j</sub> <= robot.length</code>
 - The input will be generated such that it is always possible to repair every robot.
 
