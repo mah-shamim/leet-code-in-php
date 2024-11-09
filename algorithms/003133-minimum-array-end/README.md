@@ -1,4 +1,4 @@
-3133/. Minimum Array End
+3133\. Minimum Array End
 
 **Difficulty:** Medium
 
