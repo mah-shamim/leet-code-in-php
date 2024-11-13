@@ -6,7 +6,7 @@
 
 Given a **0-indexed** integer array `nums` of size `n` and two integers `lower` and `upper`, return _the number of fair pairs_.
 
-A pair (i, j) is **fair** if:
+A pair `(i, j)` is **fair** if:
 
 - `0 <= i < j < n`, and
 - `lower <= nums[i] + nums[j] <= upper`
