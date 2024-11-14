@@ -59,7 +59,7 @@ Return _the minimum possible `x`_.
 
 **Solution:**
 
-We can use a binary search on the maximum possible number of products assigned to any store (`x`). Here’s a step-by-step explanation and the PHP 5.6 solution:
+We can use a binary search on the maximum possible number of products assigned to any store (`x`). Here’s a step-by-step explanation and the PHP solution:
 
 ### Approach
 
