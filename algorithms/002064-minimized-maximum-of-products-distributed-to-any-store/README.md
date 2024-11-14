@@ -38,8 +38,8 @@ Return _the minimum possible `x`_.
 - **Input:** n = 1, quantities = [100000]
 - **Output:** 100000
 - **Explanation:** The only optimal way is:
-- The 100000 products of type 0 are distributed to the only store.
-  The maximum number of products given to any store is max(100000) = 100000.
+  - The 100000 products of type 0 are distributed to the only store.
+    The maximum number of products given to any store is max(100000) = 100000.
 
 
 
