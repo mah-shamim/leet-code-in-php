@@ -70,6 +70,13 @@ Let's implement this solution in PHP: **[2257. Count Unguarded Cells in the Grid
 
 ```php
 <?php
+/**
+ * @param Integer $m
+ * @param Integer $n
+ * @param Integer[][] $guards
+ * @param Integer[][] $walls
+ * @return Integer
+ */
 function countUnguarded($m, $n, $guards, $walls) {
     ...
     ...
