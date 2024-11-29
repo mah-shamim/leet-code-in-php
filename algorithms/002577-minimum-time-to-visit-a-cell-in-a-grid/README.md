@@ -125,10 +125,10 @@ echo minimumTime($grid2) . PHP_EOL; // Output: -1
 ### Complexity Analysis
 
 1. **Time Complexity**:
-    - Each cell is added to the priority queue at most once: \( O(m \times n \times \log(m \times n)) \), where \( m \) and \( n \) are the grid dimensions.
+    - Each cell is added to the priority queue at most once: _** O(m x n x log(m x n)) **_, where _** m **_ and _** n **_ are the grid dimensions.
 
 2. **Space Complexity**:
-    - The space for the priority queue and the `visited` array is \( O(m \times n) \).
+    - The space for the priority queue and the `visited` array is _** O(m x n) **_.
 
 ---
 
