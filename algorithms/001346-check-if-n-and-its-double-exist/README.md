@@ -55,6 +55,10 @@ Let's implement this solution in PHP: **[1346. Check If N and Its Double Exist](
 
 ```php
 <?php
+/**
+ * @param Integer[] $arr
+ * @return Boolean
+ */
 function checkIfExist($arr) {
     ...
     ...
