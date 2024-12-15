@@ -130,8 +130,8 @@ echo maxAverageRatio($classes, $extraStudents); // Output: 0.53485
 ### Complexity:
 
 - **Time Complexity**:
-   - Heap insertion and extraction take _**O(\log N)**_, where _**N**_ is the number of classes.
-   - For _**extraStudents**_ iterations, the complexity is _**O(extraStudents \times \log N)**_.
+   - Heap insertion and extraction take _**O(log N)**_, where _**N**_ is the number of classes.
+   - For _**extraStudents**_ iterations, the complexity is _**O(extraStudents x log N)**_.
    - The final pass ratio summation is _**O(N)**_.
 
 - **Space Complexity**:
