@@ -59,14 +59,13 @@ The "Target Sum" problem involves creating expressions using the numbers in an a
 We can solve this problem using **Dynamic Programming (Subset Sum Transformation)** or **Backtracking**. Below, we use **Dynamic Programming (DP)** for efficiency.
 
 **Key Observations**:
-1. If we split `nums` into two groups: `P` (positive subset) and `N` (negative subset), then:
-   target} = sum(P) - sum(N)
+1. If we split `nums` into two groups: `P` (positive subset) and `N` (negative subset), then: `target = sum(P) - sum(N)`
 
-   Rearrange terms:    sum(P) + sum(N) = sum(nums)
+   Rearrange terms:    `sum(P) + sum(N) = sum(nums)`
 
-   Let S<sub>+</sub> be the sum of the positive subset. Then:    S<sub>+</sub> = (sum(nums) + target) / 2
+   Let S<sub>+</sub> be the sum of the positive subset. Then:    `S<sub>+</sub> = (sum(nums) + target) / 2`
 
-2. If (sum(nums) + target) % 2 ≠ 0, return `0` because it's impossible to partition the sums.
+2. If `(sum(nums) + target) % 2 ≠ 0`, return `0` because it's impossible to partition the sums.
 
 
 ### **Plan**
