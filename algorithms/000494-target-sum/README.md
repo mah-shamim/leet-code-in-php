@@ -52,7 +52,7 @@ The "Target Sum" problem involves creating expressions using the numbers in an a
 
 3. **Challenges**:
    - The solution must handle both small and large values of `target`.
-   - Efficient handling of up to 2<sup>20</sup> combinations when using backtracking.
+   - Efficient handling of up to <code>2<sup>20</sup></code> combinations when using backtracking.
 
 
 ### **Approach**
@@ -70,8 +70,8 @@ We can solve this problem using **Dynamic Programming (Subset Sum Transformation
 
 ### **Plan**
 1. Compute the total sum of `nums`.
-2. Check if the target is achievable using the formula for S<sub>+</sub>. If invalid, return `0`.
-3. Use a DP approach to find the count of subsets in `nums` whose sum equals S<sub>+</sub>.
+2. Check if the target is achievable using the formula for <code>S<sub>+</sub></code>. If invalid, return `0`.
+3. Use a DP approach to find the count of subsets in `nums` whose sum equals <code>S<sub>+</sub></code>.
 
 Let's implement this solution in PHP: **[494. Target Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000494-target-sum/solution.php)**
 
@@ -101,8 +101,8 @@ echo findTargetSumWays($nums, $target); // Output: 5
 ### Explanation:
 
 1. **Input Validation**:
-   - We calculate S<sub>+</sub> = (sum(nums) + target) / 2.
-   - If S<sub>+</sub> is not an integer, it's impossible to split `nums` into two subsets.
+   - We calculate <code>S<sub>+</sub> = (sum(nums) + target) / 2</code>.
+   - If <code>S<sub>+</sub></code> is not an integer, it's impossible to split `nums` into two subsets.
 
 2. **Dynamic Programming Logic**:
    - `dp[j]` represents the number of ways to form a sum `j` using the given numbers.
@@ -114,7 +114,7 @@ echo findTargetSumWays($nums, $target); // Output: 5
 
 ### **Example Walkthrough**
 **Input**: `nums = [1, 1, 1, 1, 1]`, `target = 3`
-1. `totalSum = 5`, S<sub>+</sub> = (5 + 3) / 2 = 4.
+1. `totalSum = 5`, <code>S<sub>+</sub> = (5 + 3) / 2 = 4</code>.
 2. Initialize DP array: `dp = [1, 0, 0, 0, 0]`.
 3. Process each number:
    - For `1`: Update `dp`: `[1, 1, 0, 0, 0]`.
@@ -126,8 +126,8 @@ echo findTargetSumWays($nums, $target); // Output: 5
 
 
 ### **Time Complexity**
-- **Time**: O(n x S), where n is the length of `nums` and S is the target sum.
-- **Space**: O(S) for the DP array.
+- **Time**: `O(n x S)`, where n is the length of `nums` and S is the target sum.
+- **Space**: `O(S)` for the DP array.
 
 
 ### **Output for Example**
