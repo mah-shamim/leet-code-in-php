@@ -62,17 +62,12 @@ Let's implement this solution in PHP: **[945. Minimum Increment to Make Array Un
  * @return Integer
  */
 function minIncrementForUnique($nums) {
-    $ans = 0;
-    $minAvailable = 0;
-
-    sort($nums);
-
-    foreach ($nums as $num) {
-        $ans += max($minAvailable - $num, 0);
-        $minAvailable = max($minAvailable, $num) + 1;
-    }
-
-    return $ans;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example usage:
