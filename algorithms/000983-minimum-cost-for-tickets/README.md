@@ -61,7 +61,6 @@ The problem involves determining the minimum cost to travel on a set of specifie
    - **7-day pass**: The cost would be the cost of the 7-day pass (`costs[1]`) added to the cost of the most recent day that is within 7 days of `d`.
    - **30-day pass**: The cost would be the cost of the 30-day pass (`costs[2]`) added to the cost of the most recent day that is within 30 days of `d`.
 - **Base Case**: The minimum cost for a day when no travel is done is 0.
-- **Final Answer**: The answer will be the value of `dp[365]` since we need to calculate the minimum cost to cover all days from 1 to 365.
 
 ### Approach
 
