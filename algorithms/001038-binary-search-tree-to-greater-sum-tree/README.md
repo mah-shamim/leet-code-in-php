@@ -15,7 +15,7 @@ As a reminder, _a binary search tree_ is a tree that satisfies these constraints
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/05/02/tree.png)
+![tree](https://assets.leetcode.com/uploads/2019/05/02/tree.png)
 
 - **Input:** root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
 - **Output:** [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
@@ -72,22 +72,12 @@ Let's implement this solution in PHP: **[1038. Binary Search Tree to Greater Sum
  * @return TreeNode
  */
 function bstToGst($root) {
-    $prefix = 0;
-
-    $reversedInorder = function ($root) use (&$reversedInorder, &$prefix) {
-        if ($root == null)
-            return;
-
-        $reversedInorder($root->right);
-
-        $root->val += $prefix;
-        $prefix = $root->val;
-
-        $reversedInorder($root->left);
-    };
-
-    $reversedInorder($root);
-    return $root;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example 1
