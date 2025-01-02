@@ -51,7 +51,7 @@ The main idea is to:
 3. **Build the result:** Iterate through the global frequency array and append characters to the result based on their minimum frequency.
 4. **Return the result array.**
 
-Let's implement this solution in PHP: **[995. Minimum Number of K Consecutive Bit Flips](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000995-minimum-number-of-k-consecutive-bit-flips/solution.php)**
+Let's implement this solution in PHP: **[1002. Find Common Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001002-find-common-characters/solution.php)**
 
 ```php
 <?php
