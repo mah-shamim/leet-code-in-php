@@ -168,7 +168,5 @@ If you want more helpful content like this, feel free to follow me:
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
 
-#213, #214 leetcode problems 001051-height-checker submissions 1284173182
-
 
 
