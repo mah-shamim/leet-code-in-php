@@ -167,5 +167,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-#215, #216 leetcode problems 001052-grumpy-bookstore-owner submissions 1295805663
