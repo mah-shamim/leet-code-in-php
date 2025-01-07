@@ -87,7 +87,7 @@ print_r(stringMatching($words));
 5. Finally, the function returns the result array containing all the substrings.
 
 ### Time Complexity:
-- The time complexity is \( O(n^2 \cdot m) \), where \( n \) is the number of words and \( m \) is the maximum length of a word. This is because we are performing a substring search for each word within every other word.
+- The time complexity is _**O(n<sup>2</sup> x m)**_, where _**n**_ is the number of words and _**m**_ is the maximum length of a word. This is because we are performing a substring search for each word within every other word.
 
 ### Example Outputs:
 
