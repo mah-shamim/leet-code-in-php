@@ -128,7 +128,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#219, #220 leetcode problems 001137-n-th-tribonacci-number submissions 1241175426
-
