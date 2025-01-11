@@ -2,25 +2,18 @@
 
 /**
  * Definition for a binary tree node.
+ * class TreeNode {
+ *     public $val = null;
+ *     public $left = null;
+ *     public $right = null;
+ *     function __construct($val = 0, $left = null, $right = null) {
+ *         $this->val = $val;
+ *         $this->left = $left;
+ *         $this->right = $right;
+ *     }
+ * }
  */
-
-class TreeNode
-{
-    public mixed $val = null;
-    public mixed $left = null;
-    public mixed $right = null;
-
-    function __construct($val = 0, $left = null, $right = null)
-    {
-        $this->val = $val;
-        $this->left = $left;
-        $this->right = $right;
-    }
-}
-
-
-class Solution
-{
+class Solution {
 
     /**
      * @param TreeNode $root
@@ -28,41 +21,43 @@ class Solution
      * @param Integer $depth
      * @return TreeNode
      */
-    function addOneRow(TreeNode $root, int $val, int $depth): TreeNode
-    {
-        return $this->dfs($root, $val, $depth, 1, false);
-    }
+    function addOneRow($root, $val, $depth) {
+        if ($depth == 1) {
+            // Create a new root with value $val, and set the original tree as its left child
+            return new TreeNode($val, $root, null);
+        }
 
-    function dfs($root, $val, $depth, $curr, $isLeft)
-    {
-        if ($root == null) {
-            if ($depth == 1) {
-                $root = new TreeNode($val);
+        // Perform BFS to find nodes at depth - 1
+        $queue = [$root];
+        $current_depth = 1;
+
+        // Traverse until we reach depth - 1
+        while (!empty($queue) && $current_depth < $depth - 1) {
+            $size = count($queue);
+            for ($i = 0; $i < $size; $i++) {
+                $node = array_shift($queue);
+                if ($node->left !== null) {
+                    $queue[] = $node->left;
+                }
+                if ($node->right !== null) {
+                    $queue[] = $node->right;
+                }
             }
-            return $root;
+            $current_depth++;
         }
 
-        if ($depth == 1 && $root != null) {
-            $newNode = new TreeNode($val);
-            $newNode->left = $root;
-            $root = $newNode;
-            return $newNode;
+        // At this point, we are at depth - 1. Add the new row.
+        foreach ($queue as $node) {
+            // Save the original left and right children
+            $old_left = $node->left;
+            $old_right = $node->right;
+
+            // Insert new nodes with value $val
+            $node->left = new TreeNode($val, $old_left, null);
+            $node->right = new TreeNode($val, null, $old_right);
         }
 
-        if ($curr + 1 == $depth) {
-            $newNode = new TreeNode($val);
-            $newNode->left = $root->left;
-            $root->left = $newNode;
-
-            $newNode1 = new TreeNode($val);
-            $newNode1->right = $root->right;
-            $root->right = $newNode1;
-
-            return $root;
-        }
-
-        $this->dfs($root->left, $val, $depth, $curr + 1, true);
-        $this->dfs($root->right, $val, $depth, $curr + 1, false);
         return $root;
+
     }
 }
