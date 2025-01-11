@@ -47,7 +47,7 @@ It is not necessary to use all characters in `letters` and each letter can only 
 
 
 **Hint:**
-1. Note that `words.length` is small. This means you can iterate over every subset of words (2<sup>>N</sup>).
+1. Note that `words.length` is small. This means you can iterate over every subset of words (2<sup>N</sup>).
 
 
 
