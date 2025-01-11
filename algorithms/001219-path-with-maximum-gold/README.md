@@ -76,7 +76,7 @@ The "Path with Maximum Gold" problem is a typical backtracking problem where we 
 2. **DFS Function**: Implement a helper function that takes the current coordinates and recursively explores all four possible directions.
 3. **Iterate Through Grid**: Start DFS from each cell that contains gold, keeping track of the maximum gold collected.
 
-Let's implement this solution in PHP: **[1595. Minimum Cost to Connect Two Groups of Points](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001219-path-with-maximum-gold/solution.php)**
+Let's implement this solution in PHP: **[1219. Path with Maximum Gold](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001219-path-with-maximum-gold/solution.php)**
 
 ```php
 <?php
