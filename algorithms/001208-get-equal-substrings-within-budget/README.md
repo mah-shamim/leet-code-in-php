@@ -96,17 +96,17 @@ function equalSubstring($s, $t, $maxCost) {
 $s = "abcd";
 $t = "bcdf";
 $maxCost = 3;
-echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 17
+echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 3
 
 $s = "abcd";
 $t = "cdef";
 $maxCost = 3;
-echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 4
+echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 1
 
 $s = "abcd";
 $t = "acde";
 $maxCost = 0;
-echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 10
+echo equalSubstring($s, $t, $maxCost) . "\n"; // Output: 1
 ?>
 ```
 
