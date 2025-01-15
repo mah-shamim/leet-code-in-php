@@ -162,6 +162,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#261, #262 leetcode problems 001249-minimum-remove-to-make-valid-parentheses submissions 1235139710
