@@ -177,6 +177,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#263, #264 leetcode problems 001255-maximum-score-words-formed-by-letters submissions 1266936846
