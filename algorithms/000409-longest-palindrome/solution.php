@@ -7,25 +7,36 @@ class Solution {
      * @return Integer
      */
     function longestPalindrome($s) {
-        $ans = 0;
-        $count = array_fill(0, 128, 0);
+        $charCount = [];
+        $length = 0;
+        $oddCountFound = false;
 
-        foreach(str_split($s) as $c) {
-            $count[ord($c)]++;
+        // Count the occurrences of each character
+        for ($i = 0; $i < strlen($s); $i++) {
+            $char = $s[$i];
+            if (!isset($charCount[$char])) {
+                $charCount[$char] = 0;
+            }
+            $charCount[$char]++;
         }
 
-        foreach($count as $freq) {
-            $ans += $freq % 2 == 0 ? $freq : $freq - 1;
-        }
-
-        $hasOddCount = false;
-        foreach($count as $c) {
-            if($c % 2 != 0) {
-                $hasOddCount = true;
-                break;
+        // Calculate the length of the longest palindrome
+        foreach ($charCount as $count) {
+            if ($count % 2 == 0) {
+                // Add the entire count if it's even
+                $length += $count;
+            } else {
+                // Add the largest even number less than count
+                $length += $count - 1;
+                $oddCountFound = true;
             }
         }
 
-        return $ans + ($hasOddCount ? 1 : 0);
+        // If there was at least one character with an odd count, we can place one in the middle
+        if ($oddCountFound) {
+            $length += 1;
+        }
+
+        return $length;
     }
 }
