@@ -7,23 +7,23 @@ class Solution {
      * @param Integer $limit
      * @return Integer
      */
-    function numRescueBoats(array $people, int $limit): int
-    {
-        $ans = 0;
-        $i = 0;
-        $j = count($people) - 1;
+    function numRescueBoats($people, $limit) {
+        sort($people); // Step 1: Sort the array
+        $left = 0; // Pointer for the lightest person
+        $right = count($people) - 1; // Pointer for the heaviest person
+        $boats = 0;
 
-        sort($people);
-
-        while ($i <= $j) {
-            $remain = $limit - $people[$j];
-            $j -= 1;
-            if ($people[$i] <= $remain) {
-                $i += 1;
+        // Step 2: Use two pointers to try and pair people
+        while ($left <= $right) {
+            if ($people[$left] + $people[$right] <= $limit) {
+                // If they can share a boat, move both pointers
+                $left++;
             }
-            $ans += 1;
+            // Whether they share or not, the heaviest person takes a boat
+            $right--;
+            $boats++; // Count the boat used
         }
 
-        return $ans;
+        return $boats; // Return the total number of boats
     }
 }
