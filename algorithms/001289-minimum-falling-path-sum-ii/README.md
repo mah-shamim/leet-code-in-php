@@ -150,6 +150,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#265, #266 leetcode problems 001289-minimum-falling-path-sum-ii submissions 1242590175
