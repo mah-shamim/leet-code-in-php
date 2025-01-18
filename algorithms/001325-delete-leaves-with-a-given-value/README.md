@@ -164,6 +164,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#267, #268 leetcode problems 001325-delete-leaves-with-a-given-value submissions 1260759989
