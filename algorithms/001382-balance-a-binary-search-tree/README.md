@@ -222,6 +222,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#269, #270 leetcode problems 001382-balance-a-binary-search-tree submissions 1301195907
