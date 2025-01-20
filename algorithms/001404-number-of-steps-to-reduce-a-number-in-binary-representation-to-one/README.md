@@ -150,8 +150,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#271, #272 leetcode problems 001404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one submissions 1271541018
-
-
