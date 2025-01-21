@@ -18,38 +18,44 @@ class Solution {
      * @param ListNode $l2
      * @return ListNode
      */
-    function addTwoNumbers(ListNode $l1, ListNode $l2): ListNode
-    {
-        $s1 = new SplStack();
-        $s2 = new SplStack();
-        while($l1 != null){
-            $s1->push($l1->val);
+    function addTwoNumbers($l1, $l2) {
+        $stack1 = [];
+        $stack2 = [];
+
+        // Push all elements of l1 to stack1
+        while ($l1 !== null) {
+            array_push($stack1, $l1->val);
             $l1 = $l1->next;
         }
 
-        while($l2 != null){
-            $s2->push($l2->val);
+        // Push all elements of l2 to stack2
+        while ($l2 !== null) {
+            array_push($stack2, $l2->val);
             $l2 = $l2->next;
         }
 
-        $sum = 0;
-        $cur = new ListNode();
-        while(!$s1->isEmpty() || !$s2->isEmpty()){
-            if(!$s1->isEmpty()) $sum += $s1->pop();
-            if(!$s2->isEmpty()) $sum += $s2->pop();
+        $carry = 0;
+        $head = null;
 
-            $cur->val = $sum%10;
-            $head = new ListNode(floor($sum/10));
-            $head->next = $cur; // reconstruct
-            $cur = $head;// moving on
-            $sum /= 10;
+        // While there are elements in stack1 or stack2 or there's a carry
+        while (!empty($stack1) || !empty($stack2) || $carry > 0) {
+            $sum = $carry;
+
+            if (!empty($stack1)) {
+                $sum += array_pop($stack1);
+            }
+
+            if (!empty($stack2)) {
+                $sum += array_pop($stack2);
+            }
+
+            $carry = intdiv($sum, 10);
+            $newNode = new ListNode($sum % 10);
+            $newNode->next = $head;
+            $head = $newNode;
         }
-        if($cur->val >= 1 ){
-            $return_value =  0? $cur->next: $cur;   
-        }else{
-            $return_value = $cur->next;
-        }
-        return ($return_value);
-        //return $cur->val == 0? $cur->next: $cur;
+
+        return $head;
+
     }
 }

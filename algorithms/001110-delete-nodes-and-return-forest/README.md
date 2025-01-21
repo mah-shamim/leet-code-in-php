@@ -1,6 +1,8 @@
 1110\. Delete Nodes And Return Forest
 
-Medium 
+**Difficulty:** Medium
+
+**Topics:** `Array`, `Hash Table`, `Tree`, `Depth-First Search`, `Binary Tree`
 
 Given the `root` of a binary tree, each node in the tree has a distinct value.
 
@@ -42,28 +44,33 @@ Let's implement this solution in PHP: **[1110. Delete Nodes And Return Forest](h
 
 ```php
 <?php
-// Helper function to build a binary tree from a list
-function buildTree($nodes) {
-    if (empty($nodes)) {
-        return null;
-    }
-    $root = new TreeNode($nodes[0]);
-    $queue = [$root];
-    $i = 1;
-    while ($i < count($nodes)) {
-        $current = array_shift($queue);
-        if ($nodes[$i] !== null) {
-            $current->left = new TreeNode($nodes[$i]);
-            $queue[] = $current->left;
-        }
-        $i++;
-        if ($i < count($nodes) && $nodes[$i] !== null) {
-            $current->right = new TreeNode($nodes[$i]);
-            $queue[] = $current->right;
-        }
-        $i++;
-    }
-    return $root;
+/**
+ * @param TreeNode $root
+ * @param Integer[] $to_delete
+ * @return TreeNode[]
+ */
+function delNodes($root, $to_delete) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+/**
+ * @param $node
+ * @param $forest
+ * @param $to_delete_set
+ * @return mixed|null
+ */
+function helper($node, &$forest, $to_delete_set) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example usage:
