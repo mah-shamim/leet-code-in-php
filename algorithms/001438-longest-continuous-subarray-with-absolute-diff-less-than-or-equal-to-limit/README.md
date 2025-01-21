@@ -160,6 +160,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#273, #274 leetcode problems 001438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit submissions 1297931948
