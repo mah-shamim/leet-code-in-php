@@ -25,6 +25,11 @@ class Solution {
         return $this->build($nums, 0, count($nums) - 1);
     }
 
+    /**
+     * @param $root
+     * @param $nums
+     * @return void
+     */
     function inorder($root, &$nums) {
         if ($root == null)
             return;
@@ -33,6 +38,12 @@ class Solution {
         $this->inorder($root->right, $nums);
     }
 
+    /**
+     * @param $nums
+     * @param $l
+     * @param $r
+     * @return TreeNode|null
+     */
     function build($nums, $l, $r) {
         if ($l > $r)
             return null;

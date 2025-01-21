@@ -6,28 +6,37 @@ class Solution {
      * @param Integer[] $score
      * @return String[]
      */
-    function findRelativeRanks(array $score): array
-    {
+    function findRelativeRanks($score) {
         $n = count($score);
-        $ans = array_fill(0, $n, "");
-        $indices = range(0, $n - 1);
+        $ranked = $score;
 
-        usort($indices, function($a, $b) use ($score) {
-            return $score[$a] > $score[$b] ? -1 : 1;
-        });
+        // Step 1: Sort the scores in descending order while keeping track of original indices
+        arsort($ranked);
 
-        for ($i = 0; $i < $n; $i++) {
-            if ($i == 0) {
-                $ans[$indices[0]] = "Gold Medal";
-            } elseif ($i == 1) {
-                $ans[$indices[1]] = "Silver Medal";
-            } elseif ($i == 2) {
-                $ans[$indices[2]] = "Bronze Medal";
+        // Step 2: Assign ranks
+        $ranks = array();
+        $index = 0;
+
+        foreach ($ranked as $originalIndex => $value) {
+            $index++;
+            if ($index == 1) {
+                $ranks[$originalIndex] = "Gold Medal";
+            } elseif ($index == 2) {
+                $ranks[$originalIndex] = "Silver Medal";
+            } elseif ($index == 3) {
+                $ranks[$originalIndex] = "Bronze Medal";
             } else {
-                $ans[$indices[$i]] = strval($i + 1);
+                $ranks[$originalIndex] = (string)$index;
             }
         }
 
-        return $ans;
+        // Step 3: Prepare the result array based on the original scores' indices
+        $result = array();
+        for ($i = 0; $i < $n; $i++) {
+            $result[$i] = $ranks[$i];
+        }
+
+        return $result;
+
     }
 }
