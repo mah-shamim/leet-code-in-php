@@ -1,6 +1,8 @@
 1190\. Reverse Substrings Between Each Pair of Parentheses
 
-Medium
+**Difficulty:** Medium
+
+**Topics:** `String`, `Stack`
 
 You are given a string `s` that consists of lower case English letters and brackets.
 
@@ -31,6 +33,13 @@ Your result should **not** contain any brackets.
 - `s` only contains lower case English characters and parentheses.
 - It is guaranteed that all parentheses are balanced.
 
+
+**Hint:**
+1. Find all brackets in the string.
+2. Does the order of the reverse matter ?
+3. The order does not matter.
+
+
 **Solution:**
 
 
@@ -46,6 +55,19 @@ Here's the implementation in PHP: **[1190. Reverse Substrings Between Each Pair 
 
 ```php
 <?php
+/**
+ * @param String $s
+ * @return String
+ */
+function reverseParentheses($s) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Example 1
 echo reverseParentheses("(abcd)") . "\n"; // Output: "dcba"
 
@@ -71,6 +93,10 @@ This method efficiently handles nested parentheses and ensures the correct order
 
 
 **Contact Links**
+
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+
+If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
