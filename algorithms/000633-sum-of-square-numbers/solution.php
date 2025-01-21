@@ -7,17 +7,23 @@ class Solution {
      * @return Boolean
      */
     function judgeSquareSum($c) {
-        for ($i = 2; $i * $i <= $c; $i++) {
-            $count = 0;
-            if ($c % $i == 0) {
-                while ($c % $i == 0) {
-                    $count++;
-                    $c /= $i;
-                }
-                if ($i % 4 == 3 && $count % 2 != 0)
-                    return false;
+        // Initialize two pointers
+        $a = 0;
+        $b = (int) sqrt($c);
+
+        // Iterate while a <= b
+        while ($a <= $b) {
+            $sumOfSquares = $a * $a + $b * $b;
+
+            if ($sumOfSquares == $c) {
+                return true; // Found a pair (a, b)
+            } elseif ($sumOfSquares < $c) {
+                $a++; // Increment a to increase sum
+            } else {
+                $b--; // Decrement b to decrease sum
             }
         }
-        return $c % 4 != 3;
+
+        return false; // No such pair exists
     }
 }

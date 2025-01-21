@@ -7,19 +7,30 @@ class Solution {
      * @param Integer $k
      * @return Integer
      */
-    function maxKelements(array $nums, int $k): int
-    {
-        $pq = new SplMaxHeap(); // Building Max Heap
-        $ans = 0;
-        foreach($nums as $num){
+    function maxKelements($nums, $k) {
+        $pq = new SplMaxHeap(); // Building a max heap
+        $sum = 0;
+
+        // Insert all elements into the max heap
+        foreach ($nums as $num) {
             $pq->insert($num);
         }
-        $sum = 0;
-        for($i=0; $i<$k; $i++){
+
+        // Perform k operations
+        for ($i = 0; $i < $k; $i++) {
+            // Extract the largest element
             $t = $pq->extract();
-            $sum += (int)$t;
-            $pq->insert((int)($t+2)/3); // taking ceil value
+
+            // Add it to the score
+            $sum += $t;
+
+            // Calculate the new value using ceil(t / 3)
+            $newVal = (int)(($t + 2) / 3);
+
+            // Insert the updated value back into the heap
+            $pq->insert($newVal);
         }
+
         return $sum;
     }
 }
