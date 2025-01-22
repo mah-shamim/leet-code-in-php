@@ -33,7 +33,7 @@ The distance between two cells sharing a common edge is `1`.
 - `mat[i][j]` is either `0` or `1`.
 - There is at least one `0` in `mat`.
 
-**Note:** This question is the same as [1765. Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak/)
+**Note:** This question is the same as [1765. Map of Highest Peak](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001765-map-of-highest-peak)
 
 
 **Solution:**
