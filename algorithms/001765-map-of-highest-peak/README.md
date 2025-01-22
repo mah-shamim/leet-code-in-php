@@ -56,7 +56,7 @@ Return _an integer matrix `height` of size `m x n` where `height[i][j]` is cell 
 1. Set each water cell to be 0. The height of each cell is limited by its closest water cell.
 2. Perform a multi-source BFS with all the water cells as sources.
 
-Note: This question is the same as [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
+Note: This question is the same as [542. 01 Matrix](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000542-01-matrix)
 
 
 
