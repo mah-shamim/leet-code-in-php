@@ -203,8 +203,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#277, #278 leetcode problems 001482-minimum-number-of-days-to-make-m-bouquets submissions 1293635594
-
-
