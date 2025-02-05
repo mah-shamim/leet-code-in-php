@@ -12,7 +12,7 @@ Given the two integers numBottles and numExchange, return the maximum number of 
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/07/01/sample_1_1875.png)
+![sample_1_1875](https://assets.leetcode.com/uploads/2020/07/01/sample_1_1875.png)
 
 - **Input:** numBottles = 9, numExchange = 3
 - **Output:** 13
@@ -21,7 +21,7 @@ Given the two integers numBottles and numExchange, return the maximum number of 
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2020/07/01/sample_2_1875.png)
+![sample_2_1875](https://assets.leetcode.com/uploads/2020/07/01/sample_2_1875.png)
 
 - **Input:** numBottles = 15, numExchange = 4
 - **Output:** 19
