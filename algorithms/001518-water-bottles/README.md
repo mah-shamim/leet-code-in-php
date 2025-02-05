@@ -150,6 +150,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#281, #282 leetcode problems 001518-water-bottles submissions 1313036556
