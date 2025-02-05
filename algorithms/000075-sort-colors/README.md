@@ -1,6 +1,6 @@
 75\. Sort Colors
 
-Medium
+**Difficulty:** Medium
 
 **Topics:** `Array`, `Two Pointers`, `Sorting`
 
