@@ -63,17 +63,12 @@ Let's implement this solution in PHP: **[3174. Clear Digits](https://github.com/
  * @return String
  */
 function clearDigits($s) {
-    $stack = array();
-    foreach (str_split($s) as $char) {
-        if (ctype_digit($char)) {
-            if (!empty($stack)) {
-                array_pop($stack);
-            }
-        } else {
-            array_push($stack, $char);
-        }
-    }
-    return implode('', $stack);
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example usage:
