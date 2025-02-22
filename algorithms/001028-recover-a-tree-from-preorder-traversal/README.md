@@ -17,14 +17,14 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 ![recover_tree_ex1](https://assets.leetcode.com/uploads/2024/09/10/recover_tree_ex1.png)
 
 - **Input:** traversal = "1-2--3--4-5--6--7"
-  - **Output:** [1,2,5,3,4,6,7]
+- **Output:** [1,2,5,3,4,6,7]
 
 **Example 2:**
 
 ![recover_tree_ex2](https://assets.leetcode.com/uploads/2024/09/10/recover_tree_ex2.png)
 
 - **Input:** traversal = "1-2--3---4-5--6---7"
-  - **Output:** [1,2,5,3,null,6,null,4,null,7]
+- **Output:** [1,2,5,3,null,6,null,4,null,7]
 
 
 **Example 3:**
@@ -32,7 +32,7 @@ Given the output `traversal` of this traversal, recover the tree and return _its
 ![recover_tree_ex3](https://assets.leetcode.com/uploads/2024/09/10/recover_tree_ex3.png)
 
 - **Input:** traversal = "1-401--349---90--88"
-  - **Output:** [1,401,null,349,88,90]
+- **Output:** [1,401,null,349,88,90]
 
 
 
