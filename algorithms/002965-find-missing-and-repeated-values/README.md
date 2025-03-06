@@ -62,10 +62,10 @@ function findMissingAndRepeatedValues($grid) {
 
 // Example Test Cases
 $grid1 = [[1,3],[2,2]];
-print_r(findMissingAndRepeated($grid1)); // Output: [2, 4]
+print_r(findMissingAndRepeatedValues($grid1)); // Output: [2, 4]
 
 $grid2 = [[9,1,7],[8,9,2],[3,4,6]];
-print_r(findMissingAndRepeated($grid2)); // Output: [9, 5]
+print_r(findMissingAndRepeatedValues($grid2)); // Output: [9, 5]
 ?>
 ```
 
