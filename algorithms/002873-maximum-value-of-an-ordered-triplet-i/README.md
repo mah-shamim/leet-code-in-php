@@ -77,9 +77,9 @@ $nums1 = [12,6,1,2,7];
 $nums2 = [1,10,3,4,19];
 $nums3 = [1,2,3];
 
-echo maxTripletValue($nums1) . "\n"; // Output: 77
-echo maxTripletValue($nums2) . "\n"; // Output: 133
-echo maxTripletValue($nums3) . "\n"; // Output: 0
+echo maximumTripletValue($nums1) . "\n"; // Output: 77
+echo maximumTripletValue($nums2) . "\n"; // Output: 133
+echo maximumTripletValue($nums3) . "\n"; // Output: 0
 ?>
 ```
 
