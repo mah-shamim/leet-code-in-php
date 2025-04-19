@@ -138,37 +138,37 @@ echo makeGood($s3) . "\n"; // Output: "s"
 #### Example 1:
 **Input**: `"leEeetcode"`
 
-- Initial stack: `[]`
-- Process `'l'`: Stack becomes `['l']`.
-- Process `'e'`: Stack becomes `['l', 'e']`.
-- Process `'E'`: Forms a bad pair with `'e'`. Pop `'e'`. Stack becomes `['l']`.
-- Process `'e'`: Stack becomes `['l', 'e']`.
-- Process `'t'`: Stack becomes `['l', 'e', 't']`.
-- Process `'c'`: Stack becomes `['l', 'e', 't', 'c']`.
-- Process `'o'`: Stack becomes `['l', 'e', 't', 'c', 'o']`.
-- Process `'d'`: Stack becomes `['l', 'e', 't', 'c', 'o', 'd']`.
-- Process `'e'`: Stack becomes `['l', 'e', 't', 'c', 'o', 'd', 'e']`.
+   - Initial stack: `[]`
+   - Process `'l'`: Stack becomes `['l']`.
+   - Process `'e'`: Stack becomes `['l', 'e']`.
+   - Process `'E'`: Forms a bad pair with `'e'`. Pop `'e'`. Stack becomes `['l']`.
+   - Process `'e'`: Stack becomes `['l', 'e']`.
+   - Process `'t'`: Stack becomes `['l', 'e', 't']`.
+   - Process `'c'`: Stack becomes `['l', 'e', 't', 'c']`.
+   - Process `'o'`: Stack becomes `['l', 'e', 't', 'c', 'o']`.
+   - Process `'d'`: Stack becomes `['l', 'e', 't', 'c', 'o', 'd']`.
+   - Process `'e'`: Stack becomes `['l', 'e', 't', 'c', 'o', 'd', 'e']`.
 
 **Final output**: `"leetcode"`
 
 #### Example 2:
 **Input**: `"abBAcC"`
 
-- Initial stack: `[]`
-- Process `'a'`: Stack becomes `['a']`.
-- Process `'b'`: Stack becomes `['a', 'b']`.
-- Process `'B'`: Forms a bad pair with `'b'`. Pop `'b'`. Stack becomes `['a']`.
-- Process `'A'`: Forms a bad pair with `'a'`. Pop `'a'`. Stack becomes `[]`.
-- Process `'c'`: Stack becomes `['c']`.
-- Process `'C'`: Forms a bad pair with `'c'`. Pop `'c'`. Stack becomes `[]`.
+   - Initial stack: `[]`
+   - Process `'a'`: Stack becomes `['a']`.
+   - Process `'b'`: Stack becomes `['a', 'b']`.
+   - Process `'B'`: Forms a bad pair with `'b'`. Pop `'b'`. Stack becomes `['a']`.
+   - Process `'A'`: Forms a bad pair with `'a'`. Pop `'a'`. Stack becomes `[]`.
+   - Process `'c'`: Stack becomes `['c']`.
+   - Process `'C'`: Forms a bad pair with `'c'`. Pop `'c'`. Stack becomes `[]`.
 
 **Final output**: `""`
 
 #### Example 3:
 **Input**: `"s"`
 
-- Initial stack: `[]`
-- Process `'s'`: Stack becomes `['s']`.
+   - Initial stack: `[]`
+   - Process `'s'`: Stack becomes `['s']`.
 
 **Final output**: `"s"`
 
@@ -201,6 +201,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#283, #284 leetcode problems 001544-make-the-string-great submissions 1235154388
