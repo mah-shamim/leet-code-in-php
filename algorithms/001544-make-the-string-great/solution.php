@@ -19,6 +19,11 @@ class Solution {
         return implode('', $ans);
     }
 
+    /**
+     * @param $a
+     * @param $b
+     * @return bool
+     */
     private function isBadPair($a, $b): bool
     {
         return $a != $b && strtolower($a) == strtolower($b);
