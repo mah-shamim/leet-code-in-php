@@ -42,7 +42,7 @@ Return _the selected subsequence. If there are multiple answers, return **any** 
 2. Begin by constructing the answer starting with the first number in `groups`.
 3. For each index `i` in the range `[1, n - 1]`, add `i` to the answer if `groups[i] != groups[i - 1]`.
 
-
+[^1]: **Subsequence**: A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 **Solution:**
 
