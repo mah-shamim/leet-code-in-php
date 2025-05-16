@@ -1,6 +1,8 @@
 3\. Longest Substring Without Repeating Characters
 
-Medium
+**Difficulty:** Medium
+
+**Topics:** `Hash Table`, `String`, `Sliding Window`
 
 Given a string `s`, find the length of the **longest substring** without repeating characters.
 
