@@ -31,7 +31,7 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 - `1 <= m, n <= 200`
 - <code>-2<sup>31</sup> <= matrix[i][j] <= 2<sup>31</sup> - 1</code>
 
-Follow up:
+**Follow up**:
 
 - A straightforward solution using `O(mn)` space is probably a bad idea.
 - A simple improvement uses `O(m + n)` space, but still not the best solution.
