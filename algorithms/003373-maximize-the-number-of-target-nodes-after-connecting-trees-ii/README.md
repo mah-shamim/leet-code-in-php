@@ -34,7 +34,7 @@ Return an array of `n` integers `answer`, where `answer[i]` is the **maximum** p
 - **Output:** [3,6,6,6,6]
 - **Explanation:** For every i, connect node i of the first tree with any node of the second tree.
 
-![ex2](https://assets.leetcode.com/uploads/2020/09/03/ex2.jpg)
+![3928-2](https://assets.leetcode.com/uploads/2024/09/24/3928-2.png)
 
 
 
