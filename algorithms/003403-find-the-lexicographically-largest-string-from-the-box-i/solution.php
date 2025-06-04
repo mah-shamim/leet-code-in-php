@@ -3,30 +3,41 @@
 class Solution {
 
     /**
-     * @param Integer[] $nums
-     * @param Integer $target
-     * @return Integer[]
+     * @param String $word
+     * @param Integer $numFriends
+     * @return String
      */
-    function twoSum($nums, $target) {
-        // Create an associative array (hash map) to store numbers and their indices
-        $map = [];
-
-        // Iterate through the array
-        foreach ($nums as $index => $num) {
-            // Calculate the complement of the current number
-            $complement = $target - $num;
-
-            // Check if the complement exists in the map
-            if (isset($map[$complement])) {
-                // If found, return the indices of the complement and the current number
-                return [$map[$complement], $index];
-            }
-
-            // Otherwise, add the current number and its index to the map
-            $map[$num] = $index;
+    function answerString($word, $numFriends) {
+        $n = strlen($word);
+        if ($numFriends == 1) {
+            return $word;
         }
+        $maxLen = $n - $numFriends + 1;
+        $candidate_start = 0;
+        $candidate_len = min($maxLen, $n);
 
-        // If no solution is found (although the problem guarantees one), return an empty array
-        return [];
+        for ($i = 1; $i < $n; $i++) {
+            $len = min($maxLen, $n - $i);
+            $min_len = min($len, $candidate_len);
+            $j = 0;
+            while ($j < $min_len) {
+                if ($word[$i + $j] != $word[$candidate_start + $j]) {
+                    break;
+                }
+                $j++;
+            }
+            if ($j < $min_len) {
+                if ($word[$i + $j] > $word[$candidate_start + $j]) {
+                    $candidate_start = $i;
+                    $candidate_len = $len;
+                }
+            } else {
+                if ($len > $candidate_len) {
+                    $candidate_start = $i;
+                    $candidate_len = $len;
+                }
+            }
+        }
+        return substr($word, $candidate_start, $candidate_len);
     }
 }

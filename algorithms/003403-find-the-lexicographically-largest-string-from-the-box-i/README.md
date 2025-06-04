@@ -30,6 +30,18 @@ Find the lexicographically largest[^1] string from the box after all the rounds 
 - **Explanation:** The only possible split is: `"g"`, `"g"`, `"g"`, and `"g"`.
 
 
+**Example 3:**
+
+- **Input:** word = "gh", numFriends = 1
+- **Output:** "gh"
+
+
+**Example 4:**
+
+- **Input:** word = "cgwzebexlahnfqsetbeaybmfdzywpvehjybpwiotnciddjonfi", numFriends = 21
+- **Output:** "zywpvehjybpwiotnciddjonfi"
+
+
 
 **Constraints:**
 
@@ -46,35 +58,24 @@ If the first `min(a.length, b.length)` characters do not differ, then the shorte
 
 **Solution:**
 
-We can leverage dynamic programming with bitmasking. The idea is to minimize the cost by considering each point in the first group and trying to connect it to all points in the second group.
+We need to find the lexicographically largest string from a box that contains all possible non-empty substrings obtained by splitting the given string into `numFriends` non-empty contiguous parts in all distinct ways. The key insight is recognizing that the lexicographically largest string in the box must be a contiguous substring of the original string with a maximum length of `n - numFriends + 1`, where `n` is the length of the string.
 
-### Dynamic Programming (DP) Approach with Bitmasking
-
-#### Steps:
-1. **State Representation**:
-   - Use a DP table `dp[i][mask]` where:
-      - `i` is the index in the first group (ranging from `0` to `size1-1`).
-      - `mask` is a bitmask representing which points in the second group have been connected.
-
-2. **State Transition**:
-   - For each point in the first group, try connecting it to every point in the second group, updating the DP table accordingly.
-   - If a new point in the second group is connected, update the corresponding bit in the mask.
-
-3. **Base Case**:
-   - Start with `dp[0][0] = 0` (no connections initially).
-
-4. **Goal**:
-   - Compute the minimum cost for `dp[size1][(1 << size2) - 1]`, which represents connecting all points from both groups.
+### Approach
+1. **Special Case Handling for Single Friend**: If `numFriends` is 1, the only possible split is the entire string itself, so we directly return the entire string.
+2. **Determine Maximum Length**: For other cases, calculate the maximum possible length of any substring in the box, which is `n - numFriends + 1`.
+3. **Iterate Over All Possible Substrings**: For each starting index in the string, consider the substring starting at that index with a length up to the minimum of the remaining characters from that index and the maximum length calculated.
+4. **Track the Lexicographically Largest Substring**: Compare each candidate substring with the current largest substring found, updating the largest substring whenever a lexicographically larger one is encountered. This comparison is done efficiently by comparing character by character to avoid unnecessary substring extractions.
 
 Let's implement this solution in PHP: **[3403. Find the Lexicographically Largest String From the Box I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003403-find-the-lexicographically-largest-string-from-the-box-i/solution.php)**
 
 ```php
 <?php
 /**
- * @param Integer[][] $cost
- * @return Integer
+ * @param String $word
+ * @param Integer $numFriends
+ * @return String
  */
-function connectTwoGroups($cost) {
+function answerString($word, $numFriends) {
     ...
     ...
     ...
@@ -83,21 +84,31 @@ function connectTwoGroups($cost) {
      */
 }
 
+// Example Test Cases
 // Test Case 1
 echo answerString("dbca", 2) . "\n"; // Output: "dbc"
 
 // Test Case 2
 echo answerString("gggg", 4) . "\n"; // Output: "g"
+
+// Test Case 3
+echo answerString("gh", 1) . "\n";   // Output: "gh"
+
+// Test Case 4
+echo answerString("cgwzebexlahnfqsetbeaybmfdzywpvehjybpwiotnciddjonfi", 21) . "\n"; // Output: "zywpvehjybpwiotnciddjonfi"
 ?>
 ```
 
 ### Explanation:
 
-- The DP array `dp[i][mask]` stores the minimum cost to connect the first `i` points from group 1 with the points in group 2 as indicated by `mask`.
-- The nested loops iterate over each combination of `i` and `mask`, trying to find the optimal cost by considering all possible connections.
-- In the end, the solution calculates the minimum cost considering the scenarios where some points in the second group may still be unconnected, ensuring all points are connected.
+1. **Special Case Handling**: If there's only one friend, the entire string is the only possible substring in the box, so it is returned immediately.
+2. **Maximum Length Calculation**: The maximum length of any substring in the box is derived from the formula `n - numFriends + 1`, ensuring the remaining parts of the string can be split into `numFriends - 1` non-empty substrings.
+3. **Substring Comparison**: For each starting index, the algorithm checks the substring of length up to `maxLen` or the remaining characters. The comparison with the current largest substring is done character by character:
+    - If a differing character is found, the substring with the higher character becomes the new candidate.
+    - If one substring is a prefix of the other, the longer substring is chosen.
+4. **Efficiency**: By comparing characters directly and only storing the start index and length of the candidate substring, the algorithm efficiently avoids repeated substring extraction, optimizing both time and space complexity.
 
-This approach efficiently handles the problem's constraints and ensures the minimum cost for connecting the two groups.
+This approach ensures that we efficiently find the lexicographically largest substring by leveraging direct character comparisons and optimal substring length constraints. The algorithm efficiently handles the worst-case scenarios with a time complexity of O(n^2), which is feasible given the problem constraints.
 
 **Contact Links**
 
@@ -107,8 +118,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#443, #444 leetcode problems 003403-find-the-lexicographically-largest-string-from-the-box-i submissions 1374515723
-
-Thanks for solving the problem of "Find the Lexicographically Largest String From the Box I"
