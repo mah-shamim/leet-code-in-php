@@ -4,11 +4,18 @@ class UnionFind {
     private $parent;
     private $rank;
 
+    /**
+     * @param $n
+     */
     public function __construct($n) {
         $this->parent = range(0, $n);
         $this->rank = array_fill(0, $n + 1, 1);
     }
 
+    /**
+     * @param $x
+     * @return mixed
+     */
     public function find($x) {
         if ($this->parent[$x] !== $x) {
             $this->parent[$x] = $this->find($this->parent[$x]);
@@ -16,6 +23,11 @@ class UnionFind {
         return $this->parent[$x];
     }
 
+    /**
+     * @param $x
+     * @param $y
+     * @return bool
+     */
     public function union($x, $y) {
         $rootX = $this->find($x);
         $rootY = $this->find($y);
