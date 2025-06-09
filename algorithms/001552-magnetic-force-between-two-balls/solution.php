@@ -9,29 +9,42 @@ class Solution {
      */
     function maxDistance($position, $m) {
         sort($position);
-        $left = 1;
-        $right = $position[count($position) - 1];
-        while ($left < $right) {
-            $mid = ($left + $right + 1) >> 1;
-            if ($this->check($position, $mid, $m)) {
-                $left = $mid;
+        $n = count($position);
+        $low = 0;
+        $high = $position[$n - 1] - $position[0];
+        $ans = 0;
+
+        while ($low <= $high) {
+            $mid = (int)(($low + $high) / 2);
+            if ($this->canPlaceBalls($position, $m, $mid)) {
+                $ans = $mid;
+                $low = $mid + 1;
             } else {
-                $right = $mid - 1;
+                $high = $mid - 1;
             }
         }
-        return $left;
+        return $ans;
     }
 
-    public function check($position, $f, $m) {
-        $prev = $position[0];
-        $cnt = 1;
-        for ($i = 1; $i < count($position); ++$i) {
-            $curr = $position[$i];
-            if ($curr - $prev >= $f) {
-                $prev = $curr;
-                ++$cnt;
+    /**
+     * @param $arr
+     * @param $m
+     * @param $d
+     * @return bool
+     */
+    private function canPlaceBalls($arr, $m, $d) {
+        $count = 1;
+        $last = $arr[0];
+        $length = count($arr);
+        for ($i = 1; $i < $length; $i++) {
+            if ($arr[$i] - $last >= $d) {
+                $count++;
+                $last = $arr[$i];
+                if ($count >= $m) {
+                    return true;
+                }
             }
         }
-        return $cnt >= $m;
+        return $count >= $m;
     }
 }

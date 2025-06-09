@@ -71,6 +71,13 @@ Return _the **maximum** net income Alice can have if she travels towards the opt
 2. Calculate Alice’s distance to each node via DFS.
 3. We can calculate Alice’s score along a path ending at some node easily using Hints 1 and 2.
 
+**Similar Questions**
+
+- [909. Snakes and Ladders](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000909-snakes-and-ladders)
+- [3241. Time Taken to Mark All Nodes](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003241-time-taken-to-mark-all-nodes)
+
+
+
 
 
 **Solution:**
