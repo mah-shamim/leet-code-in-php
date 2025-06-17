@@ -58,7 +58,7 @@ Since the answer may be very large, return it **modulo** <code>10<sup>9</sup> + 
 
 **Solution:**
 
-We need to count the number of "good arrays" of size `n` where each element is in the range `[1, m]` and exactly `k` adjacent elements are equal. The solution involves combinatorial mathematics and modular arithmetic to efficiently compute the result, especially given the constraints where `n` and `m` can be as large as _**10^5**_.
+We need to count the number of "good arrays" of size `n` where each element is in the range `[1, m]` and exactly `k` adjacent elements are equal. The solution involves combinatorial mathematics and modular arithmetic to efficiently compute the result, especially given the constraints where `n` and `m` can be as large as _**1010<sup>5</sup>**_.
 
 ### Approach
 1. **Problem Analysis**: The problem requires constructing arrays of length `n` with elements from `1` to `m` such that exactly `k` adjacent pairs (i.e., `arr[i-1] == arr[i]`) exist. The solution leverages combinatorial mathematics to determine the number of valid arrays:
