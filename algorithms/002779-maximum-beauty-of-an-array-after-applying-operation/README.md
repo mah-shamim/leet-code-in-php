@@ -47,6 +47,8 @@ A **subsequence** of an array is a new array generated from the original array b
 1. Sort the array.
 2. The problem becomes the following: find maximum subarray A[i … j] such that A[j] - A[i] ≤ 2 * k.
 
+**Similar Questions:**
+1. [2294. Partition Array Such That Maximum Difference Is K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002294-partition-array-such-that-maximum-difference-is-k/solution.php)
 
 
 **Solution:**
