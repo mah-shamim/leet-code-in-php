@@ -50,7 +50,9 @@ Given an array of integers `nums` and an integer `limit`, return the size of the
 1. Use a sliding window approach keeping the maximum and minimum value using a data structure like a multiset from STL in C++.
 2. More specifically, use the two pointer technique, moving the right pointer as far as possible to the right until the subarray is not valid (maxValue - minValue > limit), then moving the left pointer until the subarray is valid again (maxValue - minValue <= limit). Keep repeating this process.
 
-
+**Similar Questions:**
+1. [2294. Partition Array Such That Maximum Difference Is K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002294-partition-array-such-that-maximum-difference-is-k/solution.php)
+2. [2444. Count Subarrays With Fixed Bounds](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002444-count-subarrays-with-fixed-bounds/solution.php)
 
 **Solution:**
 
