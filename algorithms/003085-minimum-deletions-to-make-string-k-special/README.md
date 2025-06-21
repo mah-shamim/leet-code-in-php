@@ -51,7 +51,7 @@ Return _the **minimum** number of characters you need to delete to make `word` *
 1. [1647. Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/description/)
 
 
-[^1]**Frequency:** The **frequency** of a letter `x` is the number of times it occurs in the string.
+[^1]: **Frequency:** The **frequency** of a letter `x` is the number of times it occurs in the string.
 
 
 **Solution:**
