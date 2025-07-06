@@ -39,6 +39,12 @@ A pair `(i, j)` is **fair** if:
 3. As you move to larger number, both boundaries move down.
 
 
+**Similar Questions:**
+1. [327. Count of Range Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000327-count-of-range-sum)
+2. [1865. Finding Pairs With a Certain Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001865-finding-pairs-with-a-certain-sum)
+3. [2006. Count Number of Pairs With Absolute Difference K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002006-count-number-of-pairs-with-absolute-difference-k)
+4. [2824. Count Pairs Whose Sum is Less than Target](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002824-count-pairs-whose-sum-is-less-than-target)
+
 
 **Solution:**
 
