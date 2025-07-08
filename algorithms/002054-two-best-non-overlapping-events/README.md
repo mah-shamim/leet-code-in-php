@@ -50,6 +50,11 @@ Note that the start time and end time is **inclusive**: that is, you cannot atte
 2. How can we quickly get the maximum score of an interval not intersecting with the interval we chose?
 
 
+1. [1235. Maximum Profit in Job Scheduling](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001235-maximum-profit-in-job-scheduling)
+2. [1751. Maximum Number of Events That Can Be Attended II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001751-maximum-number-of-events-that-can-be-attended-ii)
+3. [2555. Maximize Win From Two Segments](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002555-maximize-win-from-two-segments)
+4. [3414. Maximum Score of Non-overlapping Intervals](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003414-maximum-score-of-non-overlapping-intervals)
+
 
 **Solution:**
 
