@@ -67,6 +67,13 @@ Given the **0-indexed** integer arrays `tasks` and `workers` and the integers `p
 2. How can you efficiently try every `k`?
 
 
+**Similar Questions:**
+1. [826. Most Profit Assigning Work](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000826-most-profit-assigning-work)
+2. [2141. Maximum Running Time of N Computers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002141-maximum-running-time-of-n-computers)
+3. [2398. Maximum Number of Robots Within Budget](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002398-maximum-number-of-robots-within-budget)
+4. [2410. Maximum Matching of Players With Trainers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002410-maximum-matching-of-players-with-trainers)
+5. [2528. Maximize the Minimum Powered City](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002528-maximize-the-minimum-powered-city)
+
 
 **Solution:**
 
