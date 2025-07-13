@@ -35,6 +35,11 @@ Return _the maximum profit we can achieve after assigning the workers to the job
 - <code>1 <= difficulty[i], profit[i], worker[i] <= 10<sup>5</sup></code>
 
 
+**Similar Questions:**
+1. [2071. Maximum Number of Tasks You Can Assign](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002071-maximum-number-of-tasks-you-can-assign)
+2. [2300. Successful Pairs of Spells and Potions](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002300-successful-pairs-of-spells-and-potions)
+3. [2410. Maximum Matching of Players With Trainers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002410-maximum-matching-of-players-with-trainers)
+
 
 **Solution:**
 
