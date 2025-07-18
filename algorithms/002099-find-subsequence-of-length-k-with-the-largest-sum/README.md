@@ -43,10 +43,10 @@ A **subsequence** is an array that can be derived from another array by deleting
 
 
 **Similar Questions:**
-1. [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
-2. [1005. Maximize Sum Of Array After K Negations](https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/description/)
-3. [1356. Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/description/)
-4. [2163. Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/description/)
+1. [215. Kth Largest Element in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000215-kth-largest-element-in-an-array)
+2. [1005. Maximize Sum Of Array After K Negations](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001005-maximize-sum-of-array-after-k-negations)
+3. [1356. Sort Integers by The Number of 1 Bits](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001356-sort-integers-by-the-number-of-1-bits)
+4. [2163. Minimum Difference in Sums After Removal of Elements](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002163-minimum-difference-in-sums-after-removal-of-elements)
 
 
 
