@@ -1,6 +1,8 @@
 726\. Number of Atoms
 
-Hard
+**Difficulty:** Hard
+
+**Topics:** `Hash Table`, `String`, `Stack`, `Sorting`
 
 Given a string `formula` representing a chemical formula, return _the count of each atom_.
 
@@ -50,6 +52,11 @@ The test cases are generated so that all the values in the output fit in a `32-b
 1. To parse formula[i:], when we see a `'('`, we will parse recursively whatever is inside the brackets (up to the correct closing ending bracket) and add it to our count, multiplying by the following multiplicity if there is one. Otherwise, we should see an uppercase character: we will parse the rest of the letters to get the name, and add that (plus the multiplicity if there is one.)
 
 
+**Similar Questions:**
+1. [394. Decode String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000394-decode-string)
+2. [471. Encode String with Shortest Length](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000471-encode-string-with-shortest-length)
+3. [736. Parse Lisp Expression](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000736-parse-lisp-expression)
+
 **Solution:**
 
 Here's the step-by-step approach:
@@ -91,10 +98,9 @@ echo countOfAtoms("K4(ON(SO3)2)2") . "\n"; // Output: "K4N2O14S4"
 
 This approach ensures that the formula is parsed correctly even with nested parentheses and multipliers, and that the counts are accurate and correctly sorted.
 
-
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://isolatedcompliments.com/v09uayg6h?key=a647d02f1aafcddaf10536d7cd00bd7c)
 
 If you want more helpful content like this, feel free to follow me:
 
