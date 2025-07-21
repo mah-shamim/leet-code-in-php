@@ -45,7 +45,8 @@ Return _the final string after the deletion. It can be shown that the answer wil
 1. What's the optimal way to delete characters if three or more consecutive characters are equal?
 2. If three or more consecutive characters are equal, keep two of them and delete the rest.
 
-
+**Similar Questions:**
+1. [3316. Find Maximum Removals From Source String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003316-find-maximum-removals-from-source-string)
 
 **Solution:**
 
