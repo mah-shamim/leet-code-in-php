@@ -38,6 +38,20 @@ Given a string `s`, find the length of the **longest substring** without repeati
 1. Generate all possible substrings & check for each substring if it's valid and keep updating maxLen accordingly.
 
 
+**Similar Questions:**
+1. [159. Longest Substring with At Most Two Distinct Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000159-longest-substring-with-at-most-two-distinct-characters)
+2. [340. Longest Substring with At Most K Distinct Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000340-longest-substring-with-at-most-k-distinct-characters)
+3. [992. Subarrays with K Different Integers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000992-subarrays-with-k-different-integers)
+4. [1695. Maximum Erasure Value](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001695-maximum-erasure-value)
+5. [2067. Number of Equal Count Substrings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002067-number-of-equal-count-substrings)
+6. [2260. Minimum Consecutive Cards to Pick Up](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002260-minimum-consecutive-cards-to-pick-up)
+7. [2401. Longest Nice Subarray](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002401-longest-nice-subarray)
+8. [2405. Optimal Partition of String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002405-optimal-partition-of-string)
+9. [2799. Count Complete Subarrays in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002799-count-complete-subarrays-in-an-array)
+10. [2982. Find Longest Special Substring That Occurs Thrice II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002982-find-longest-special-substring-that-occurs-thrice-ii)
+11. [2981. Find Longest Special Substring That Occurs Thrice I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002981-find-longest-special-substring-that-occurs-thrice-i)
+
+
 **Solution:**
 
 
