@@ -39,6 +39,9 @@ A **subarray** is a contiguous non-empty part of an array.
 2. Since the constraints are small, you can check every subarray.
 
 
+**Similar Questions:**
+1. [3. Longest Substring Without Repeating Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000003-longest-substring-without-repeating-characters)
+2. [992. Subarrays with K Different Integers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000992-subarrays-with-k-different-integers)
 
 **Solution:**
 

@@ -55,6 +55,11 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 
 
 
+**Similar Questions:**
+1. [2461. Maximum Sum of Distinct Subarrays With Length K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002461-maximum-sum-of-distinct-subarrays-with-length-k)
+
+
+
 **Solution:**
 
 We can break down the task as follows:
