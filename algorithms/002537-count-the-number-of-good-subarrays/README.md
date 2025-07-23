@@ -42,6 +42,12 @@ A subarray is a contiguous **non-empty** sequence of elements within an array.
 
 
 
+**Similar Questions:**
+1. [1759. Count Number of Homogenous Substrings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001759-count-number-of-homogenous-substrings)
+2. [2461. Maximum Sum of Distinct Subarrays With Length K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002461-maximum-sum-of-distinct-subarrays-with-length-k)
+
+
+
 **Solution:**
 
 We need to count the number of good subarrays in a given array. A good subarray is defined as one where there are at least `k` pairs of indices `(i, j)` such that `i < j` and `arr[i] == arr[j]`.
