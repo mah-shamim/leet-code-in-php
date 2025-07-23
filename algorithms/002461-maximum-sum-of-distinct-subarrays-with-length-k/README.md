@@ -47,6 +47,17 @@ _A **subarray** is a contiguous non-empty sequence of elements within an array_.
 3. Iterate through each subarray of size k and keep track of the sum of the subarray and the frequency of each element.
 
 
+
+**Similar Questions:**
+1. [1004. Max Consecutive Ones III](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001004-max-consecutive-ones-iii)
+2. [2401. Longest Nice Subarray](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002401-longest-nice-subarray)
+3. [2405. Optimal Partition of String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002405-optimal-partition-of-string)
+4. [2537. Count the Number of Good Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002537-count-the-number-of-good-subarrays)
+5. [3026. Maximum Good Subarray Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003026-maximum-good-subarray-sum)
+6. [3254. Find the Power of K-Size Subarrays I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003254-find-the-power-of-k-size-subarrays-i)
+7. [3255. Find the Power of K-Size Subarrays I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003255-find-the-power-of-k-size-subarrays-ii)
+
+
 **Solution:**
 
 We can follow these steps:
