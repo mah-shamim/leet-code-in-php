@@ -47,7 +47,7 @@ Return _the **minimum** score of any possible pair of edge removals on the given
 
 - `n == nums.length`
 - `3 <= n <= 1000`
-- <code>1 <= nums[i] <= 108</code>
+- <code>1 <= nums[i] <= 10<sub>8</sub></code>
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - <code>0 <= a<sub>i</sub>, b<sub>i</sub> < n</code>
