@@ -46,6 +46,11 @@ Return _the maximum length of a substring of `s` that can be changed to be the s
 
 
 
+**Similar Questions:**
+1. [2401. Longest Nice Subarray](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002401-longest-nice-subarray)
+
+
+
 **Solution:**
 
 The problem asks us to find the maximum length of a substring in string `s` that can be transformed into a substring in string `t` with a cost not exceeding `maxCost`. The cost of changing a character is the absolute difference between the ASCII values of corresponding characters in `s` and `t`. We need to determine the longest substring that can be changed without exceeding the given `maxCost`.

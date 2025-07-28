@@ -28,7 +28,14 @@ class Solution {
         return $score1 + $score2;
     }
 
-    // Function to calculate points for the given string and operations
+    /**
+     * Function to calculate points for the given string and operations
+     *
+     * @param $s
+     * @param $sub
+     * @param $points
+     * @return array
+     */
     function calculatePoints($s, $sub, $points) {
         $stack = [];
         $score = 0;

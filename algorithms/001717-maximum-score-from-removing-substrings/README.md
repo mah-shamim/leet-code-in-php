@@ -1,6 +1,8 @@
 1717\. Maximum Score From Removing Substrings
 
-Medium
+**Difficulty:** Medium
+
+**Topics:** `String`, `Stack`, `Greedy`, `Biweekly Contest 43`
 
 You are given a string `s` and two integers `x` and `y`. You can perform two types of operations any number of times.
 
@@ -38,6 +40,11 @@ Return _the maximum points you can gain after applying the above operations on `
 1. Note that it is always more optimal to take one type of substring before another
 2. You can use a stack to handle erasures
 
+
+**Similar Questions:**
+1. [2135. Count Words Obtained After Adding a Letter](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002135-count-words-obtained-after-adding-a-letter)
+
+
 **Solution:**
 
 
@@ -51,6 +58,38 @@ Here's the implementation in PHP: **[1717. Maximum Score From Removing Substring
 
 ```php
 <?php
+/**
+ * @param String $s
+ * @param Integer $x
+ * @param Integer $y
+ * @return Integer
+ */
+function maximumGain($s, $x, $y) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+/**
+ * Function to calculate points for the given string and operations
+ *
+ * @param $s
+ * @param $sub
+ * @param $points
+ * @return array
+ */
+function calculatePoints($s, $sub, $points) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Example usage
 $s = "cdbcbbaaabab";
 $x = 4;
@@ -77,7 +116,7 @@ This ensures that you get the maximum possible score by prioritizing the removal
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://isolatedcompliments.com/v09uayg6h?key=a647d02f1aafcddaf10536d7cd00bd7c)
 
 If you want more helpful content like this, feel free to follow me:
 

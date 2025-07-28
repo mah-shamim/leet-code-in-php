@@ -47,6 +47,11 @@ A **substring** is a contiguous **non-empty** sequence of characters within a st
 
 
 
+**Similar Questions:**
+1. [3. Longest Substring Without Repeating Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000003-longest-substring-without-repeating-characters)
+2. [395. Longest Substring with At Least K Repeating Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000395-longest-substring-with-at-least-k-repeating-characters)
+
+
 **Solution:**
 
 We can use a brute force approach due to the small constraints of `s` (length of up to 50). We'll:

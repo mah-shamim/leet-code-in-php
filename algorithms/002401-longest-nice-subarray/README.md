@@ -44,6 +44,20 @@ A **subarray** is a **contiguous** part of an array.
 
 
 
+**Similar Questions:**
+1. [3. Longest Substring Without Repeating Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000003-longest-substring-without-repeating-characters)
+2. [201. Bitwise AND of Numbers Range](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000201-bitwise-and-of-numbers-range)
+3. [898. Bitwise ORs of Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000898-bitwise-ors-of-subarrays)
+4. [904. Fruit Into Baskets](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000904-fruit-into-baskets)
+5. [1004. Max Consecutive Ones III](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001004-max-consecutive-ones-iii)
+6. [1208. Get Equal Substrings Within Budget](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001208-get-equal-substrings-within-budget)
+7. [1838. Frequency of the Most Frequent Element](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001838-frequency-of-the-most-frequent-element)
+8. [1839. Longest Substring Of All Vowels in Order](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001839-longest-substring-of-all-vowels-in-order)
+9. [2024. Maximize the Confusion of an Exam](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002024-maximize-the-confusion-of-an-exam)
+10. [2461. Maximum Sum of Distinct Subarrays With Length K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002461-maximum-sum-of-distinct-subarrays-with-length-k)
+
+
+
 **Solution:**
 
 We need to find the longest contiguous subarray (nice subarray) where the bitwise AND of every pair of elements in different positions is zero. This means that each element in the subarray must not share any common set bits with any other element in the subarray.
