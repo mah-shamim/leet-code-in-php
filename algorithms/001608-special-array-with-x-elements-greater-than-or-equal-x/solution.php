@@ -8,16 +8,15 @@ class Solution {
      */
     function specialArray($nums) {
         sort($nums);
-
-        if ($nums[0] >= count($nums))
-            return count($nums);
-
-        for ($i = 1; $i < count($nums); ++$i) {
-            $count = count($nums) - $i;
-            if ($nums[$i - 1] < $count && $nums[$i] >= $count)
-                return $count;
+        $n = count($nums);
+        if ($nums[0] >= $n) {
+            return $n;
         }
-
+        for ($x = 1; $x < $n; $x++) {
+            if ($nums[$n - $x] >= $x && $nums[$n - $x - 1] < $x) {
+                return $x;
+            }
+        }
         return -1;
     }
 }
