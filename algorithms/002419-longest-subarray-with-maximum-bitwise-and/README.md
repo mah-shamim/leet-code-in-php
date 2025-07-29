@@ -43,6 +43,12 @@ A **subarray** is a contiguous sequence of elements within an array.
 2. What does that tell us about the nature of the subarray that we should choose?
 
 
+**Similar Questions:**
+1. [1805. Number of Different Integers in a String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001805-number-of-different-integers-in-a-string)
+2. [2038. Remove Colored Pieces if Both Neighbors are the Same Color](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002038-remove-colored-pieces-if-both-neighbors-are-the-same-color)
+3. [2044. Count Number of Maximum Bitwise-OR Subsets](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002044-count-number-of-maximum-bitwise-or-subsets)
+4. [2411. Smallest Subarrays With Maximum Bitwise OR](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002411-smallest-subarrays-with-maximum-bitwise-or)
+
 
 **Solution:**
 

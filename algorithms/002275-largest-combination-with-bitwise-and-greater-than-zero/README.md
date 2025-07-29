@@ -41,6 +41,8 @@ Return _the size of the **largest** combination of candidates with a bitwise AND
 2. The candidates are 24 bits long, so for every bit position, we can calculate the size of the largest combination such that the bitwise AND will have a 1 at that bit position.
 
 
+**Similar Questions:**
+1. [2044. Count Number of Maximum Bitwise-OR Subsets](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002044-count-number-of-maximum-bitwise-or-subsets)
 
 **Solution:**
 
