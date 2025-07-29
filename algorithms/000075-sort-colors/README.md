@@ -34,6 +34,15 @@ You must solve this problem without using the library's sort function.
 3. Overwrite array with the total number of 0's, then 1's and followed by 2's.
 
 
+**Similar Questions:**
+1. [90. Subsets II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000090-subsets-ii)
+2. [784. Letter Case Permutation](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000784-letter-case-permutation)
+3. [320. Generalized Abbreviation](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000320-generalized-abbreviation)
+4. [1982. Find Array Given Subset Sums](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001982-find-array-given-subset-sums)
+5. [2044. Count Number of Maximum Bitwise-OR Subsets](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002044-count-number-of-maximum-bitwise-or-subsets)
+
+
+
 **Solution:**
 
 

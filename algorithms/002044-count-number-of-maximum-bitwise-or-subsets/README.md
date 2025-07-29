@@ -50,6 +50,11 @@ The bitwise OR of an array `a` is equal to `a[0] OR a[1] OR ... OR a[a.length - 
 2. The maximum bitwise-OR is the bitwise-OR of the whole array.
 
 
+**Similar Questions:**
+1. [78. Subsets](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000078-subsets)
+2. [2275. Largest Combination With Bitwise AND Greater Than Zero](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002275-largest-combination-with-bitwise-and-greater-than-zero)
+3. [2419. Longest Subarray With Maximum Bitwise AND](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002419-longest-subarray-with-maximum-bitwise-and)
+
 
 **Solution:**
 
