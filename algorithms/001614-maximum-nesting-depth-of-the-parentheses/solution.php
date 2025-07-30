@@ -1,26 +1,25 @@
 <?php
 
-class Solution
-{
+class Solution {
 
     /**
      * @param String $s
      * @return Integer
      */
-    function maxDepth(string $s): int
-    {
-        $ans = 0;
-        $opened = 0;
-
-        foreach (str_split($s) as $c) {
-            if ($c == '(') {
-                $opened += 1;
-                $ans = max($ans, $opened);
-            } elseif ($c == ')') {
-                $opened -= 1;
+    function maxDepth($s) {
+        $maxDepth = 0;
+        $currentDepth = 0;
+        $length = strlen($s);
+        for ($i = 0; $i < $length; $i++) {
+            if ($s[$i] == '(') {
+                $currentDepth++;
+                if ($currentDepth > $maxDepth) {
+                    $maxDepth = $currentDepth;
+                }
+            } elseif ($s[$i] == ')') {
+                $currentDepth--;
             }
         }
-
-        return $ans;
+        return $maxDepth;
     }
 }
