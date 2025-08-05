@@ -4,49 +4,44 @@
 
 **Topics:** `Array`, `Binary Search`, `Segment Tree`, `Simulation`, `Ordered Set`, `Weekly Contest 440`
 
-Alice and Bob have an undirected graph of `n` nodes and three types of edges:
+You are given two arrays of integers, `fruits` and `baskets`, each of length `n`, where `fruits[i]` represents the **quantity** of the <code>i<sup>th</sup></code> type of fruit, and `baskets[j]` represents the capacity of the <code>j<sup>th</sup></code> basket.
 
-- Type 1: Can be traversed by Alice only.
-- Type 2: Can be traversed by Bob only.
-- Type 3: Can be traversed by both Alice and Bob.
+From left to right, place the fruits according to these rules:
 
-Given an array `edges` where <code>edges[i] = [type<sub>i</sub>, u<sub>i</sub>, v<sub>i</sub>]</code> represents a bidirectional edge of type <code>type<sub>i</sub></code> between nodes <code>u<sub>i</sub></code> and <code>v<sub>i</sub></code>, find the maximum number of edges you can remove so that after removing the edges, the graph can still be fully traversed by both Alice and Bob. The graph is fully traversed by Alice and Bob if starting from any node, they can reach all other nodes.
+- Each fruit type must be placed in the **leftmost available basket** with a capacity **greater than or equal** to the quantity of that fruit type.
+- Each basket can hold **only one** type of fruit.
+- If a fruit type **cannot be placed** in any basket, it remains **unplaced**.
 
-Return _the maximum number of edges you can remove, or return `-1` if Alice and Bob cannot fully traverse the graph_.
+Return _the number of fruit types that remain unplaced after all possible allocations are made_.
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/08/19/ex1.png)
+- **Input:** fruits = [4,2,5], baskets = [3,5,4]
+- **Output:** 1
+- **Explanation:**
+  - `fruits[0] = 4` is placed in `baskets[1] = 5`.
+  - `fruits[1] = 2` is placed in `baskets[0] = 3`.
+  - `fruits[2] = 5` cannot be placed in `baskets[2] = 4`.
 
-- **Input:** n = 4, edges = [[3,1,2],[3,2,3],[1,1,3],[1,2,4],[1,1,2],[2,3,4]]
-- **Output:** 2
-- **Explanation:** If we remove the 2 edges [1,1,2] and [1,1,3]. The graph will still be fully traversable by Alice and Bob. Removing any additional edge will not make it so. So the maximum number of edges we can remove is 2.
+Since one fruit type remains unplaced, we return 1.
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2020/08/19/ex2.png)
-
-- **Input:** n = 4, edges = [[3,1,2],[3,2,3],[1,1,4],[2,1,4]]
+- **Input:** fruits = [3,6,1], baskets = [6,4,7]
 - **Output:** 0
-- **Explanation:** Notice that removing any edge will not make the graph fully traversable by Alice and Bob.
+- **Explanation:**
+  - `fruits[0] = 3` is placed in `baskets[0] = 6`.
+  - `fruits[1] = 6` cannot be placed in `baskets[1] = 4` (insufficient capacity) but can be placed in the next available basket, `baskets[2] = 7`.
+  - `fruits[2] = 1` is placed in `baskets[1] = 4`.
 
-**Example 3:**
-
-![](https://assets.leetcode.com/uploads/2020/08/19/ex3.png)
-
-- **Input:** n = 4, edges = [[3,2,3],[1,1,2],[2,3,4]]
-- **Output:** -1
-- **Explanation:** In the current graph, Alice cannot reach node 4 from the other nodes. Likewise, Bob cannot reach 1. Therefore it's impossible to make the graph fully traversable.
+Since all fruits are successfully placed, we return 0.
 
 **Constraints:**
 
+- `n == fruits.length == baskets.length`
+- `1 <= n <= 100`
+- `1 <= fruits[i], baskets[i] <= 1000`
 
-- <code>1 <= n <= 10<sup>5</sup></code>
-- <code>1 <= edges.length <= min(10<sup>5</sup>, 3 * n * (n - 1) / 2)</code>
-- <code>edges[i].length == 3</code>
-- <code>1 <= type<sub>i</sub> <= 3</code>
-- <code>1 <= u<sub>i</sub> < v<sub>i</sub> <= n</code>
-- All tuples <code>(type<sub>i</sub>, u<sub>i</sub>, v<sub>i</sub>)</code> are distinct.
 
 
 **Hint:**
@@ -64,35 +59,24 @@ Return _the maximum number of edges you can remove, or return `-1` if Alice and 
 
 **Solution:**
 
-We can use sorting and binary search techniques. Here’s the plan:
+We need to determine the number of fruit types that remain unplaced after attempting to place each fruit type into the leftmost available basket that can accommodate it. The key challenge is efficiently matching each fruit to the earliest basket that meets the capacity requirement while ensuring each basket is used only once.
 
-### Approach:
-
-1. **Two Pointers Approach:**
-    - First, identify the longest non-decreasing prefix (`left` pointer).
-    - Then, identify the longest non-decreasing suffix (`right` pointer).
-    - After that, try to combine these two subarrays by considering the middle part of the array and adjusting the subarray to be removed in such a way that the combined array is non-decreasing.
-
-2. **Monotonic Stack:**
-    - Use a monotonic stack to help manage subarray elements in a sorted fashion.
-
-3. **Steps:**
-    - Find the longest non-decreasing prefix (`left`).
-    - Find the longest non-decreasing suffix (`right`).
-    - Try to merge the two subarrays by looking for elements that can form a valid combination.
-
-4. **Optimization:**
-    - Use binary search to optimize the merging step for finding the smallest subarray to remove.
+### Approach
+1. **Problem Analysis**: The problem involves two arrays, `fruits` and `baskets`, each of the same length. Each fruit must be placed in the leftmost basket that has sufficient capacity (i.e., the basket's capacity is at least the fruit's quantity) and is not already used. If no such basket is available, the fruit remains unplaced.
+2. **Intuition**: For each fruit, we scan the baskets from left to right to find the first available basket that can hold the fruit. Once found, we mark the basket as used and proceed to the next fruit. If no basket is found, the fruit is counted as unplaced.
+3. **Algorithm Selection**: We use a simple simulation approach. We maintain a boolean array to track which baskets have been used. For each fruit, we iterate through the baskets in order, checking for the first available basket that meets the capacity requirement. The algorithm efficiently handles the constraints given the problem size (n ≤ 100).
+4. **Complexity Analysis**: The algorithm involves a nested loop where each fruit is processed in O(n) time, leading to an overall time complexity of O(n²). The space complexity is O(n) for the boolean array tracking used baskets.
 
 Let's implement this solution in PHP: **[3477. Fruits Into Baskets II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003477-fruits-into-baskets-ii/solution.php)**
 
 ```php
 <?php
 /**
- * @param Integer[] $arr
+ * @param Integer[] $fruits
+ * @param Integer[] $baskets
  * @return Integer
  */
-function shortestSubarrayToRemove($arr) {
+function numOfUnplacedFruits($fruits, $baskets) {
     ...
     ...
     ...
@@ -101,33 +85,32 @@ function shortestSubarrayToRemove($arr) {
      */
 }
 
-// Test cases
-echo shortestSubarrayToRemove([1, 2, 3, 10, 4, 2, 3, 5]) . "\n"; // Output: 3
-echo shortestSubarrayToRemove([5, 4, 3, 2, 1]) . "\n";           // Output: 4
-echo shortestSubarrayToRemove([1, 2, 3]) . "\n";                 // Output: 0
+// === Example usage ===
+
+// Example 1:
+$fruits1 = array(4, 2, 5);
+$baskets1 = array(3, 5, 4);
+$result1 = numOfUnplacedFruits($fruits1, $baskets1);
+echo "Example 1 Output: " . $result1 . "\n"; // expected 1
+
+// Example 2:
+$fruits2 = array(3, 6, 1);
+$baskets2 = array(6, 4, 7);
+$result2 = numOfUnplacedFruits($fruits2, $baskets2);
+echo "Example 2 Output: " . $result2 . "\n"; // expected 0
 ?>
 ```
 
 ### Explanation:
 
-1. **Longest Non-Decreasing Prefix and Suffix**:
-    - The prefix is determined by traversing the array from the start until elements are in non-decreasing order.
-    - Similarly, the suffix is determined by traversing from the end.
+1. **Initialization**: We start by determining the number of fruits (or baskets) `n`. We initialize a boolean array `taken` to keep track of which baskets have been used, setting all entries to `false` initially. The variable `unplaced` counts the number of fruits that cannot be placed.
+2. **Processing Fruits**: For each fruit in the array:
+    - We scan the baskets from left to right.
+    - For each basket, if it is not taken and its capacity is sufficient for the current fruit, we mark it as taken and move to the next fruit.
+    - If no suitable basket is found during the scan, we increment the `unplaced` count.
+3. **Result**: After processing all fruits, the value of `unplaced` gives the number of fruit types that could not be placed into any basket, which is returned as the result.
 
-2. **Initial Minimum Removal**:
-    - Calculate the removal length by keeping only the prefix or the suffix.
-
-3. **Merging Prefix and Suffix**:
-    - Use two pointers (`i` for prefix and `j` for suffix) to find the smallest subarray to remove such that the last element of the prefix is less than or equal to the first element of the suffix.
-
-4. **Return Result**:
-    - The result is the minimum length of the subarray to remove, calculated as the smaller of the initial removal or the merging of prefix and suffix.
-
-### Complexity
-- **Time Complexity**: _**O(n)**_, as the array is traversed at most twice.
-- **Space Complexity**: _**O(1)**_, as only a few variables are used.
-
-This solution efficiently finds the shortest subarray to be removed to make the array sorted by using a two-pointer technique, and it handles large arrays up to the constraint of `10^5` elements.
+This approach efficiently matches each fruit to the earliest available basket, ensuring optimal placement while adhering to the problem constraints. The solution is straightforward and leverages direct simulation to achieve the desired outcome.
 
 **Contact Links**
 
@@ -137,8 +120,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#443, #444 leetcode problems 003477-fruits-into-baskets-ii submissions 1374515723
-
-Thanks for solving the problem of "Fruits Into Baskets II"

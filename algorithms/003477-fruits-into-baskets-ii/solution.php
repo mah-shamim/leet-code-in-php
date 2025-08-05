@@ -3,30 +3,29 @@
 class Solution {
 
     /**
-     * @param Integer[] $nums
-     * @param Integer $target
-     * @return Integer[]
+     * @param Integer[] $fruits
+     * @param Integer[] $baskets
+     * @return Integer
      */
-    function twoSum($nums, $target) {
-        // Create an associative array (hash map) to store numbers and their indices
-        $map = [];
+    function numOfUnplacedFruits($fruits, $baskets) {
+        $n = count($fruits);
+        $taken = array_fill(0, $n, false);
+        $unplaced = 0;
 
-        // Iterate through the array
-        foreach ($nums as $index => $num) {
-            // Calculate the complement of the current number
-            $complement = $target - $num;
-
-            // Check if the complement exists in the map
-            if (isset($map[$complement])) {
-                // If found, return the indices of the complement and the current number
-                return [$map[$complement], $index];
+        foreach ($fruits as $fruit) {
+            $found = false;
+            for ($j = 0; $j < $n; $j++) {
+                if (!$taken[$j] && $baskets[$j] >= $fruit) {
+                    $taken[$j] = true;
+                    $found = true;
+                    break;
+                }
             }
-
-            // Otherwise, add the current number and its index to the map
-            $map[$num] = $index;
+            if (!$found) {
+                $unplaced++;
+            }
         }
 
-        // If no solution is found (although the problem guarantees one), return an empty array
-        return [];
+        return $unplaced;
     }
 }
