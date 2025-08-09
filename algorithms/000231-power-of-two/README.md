@@ -45,7 +45,7 @@ An integer `n` is a power of two, if there exists an integer `x` such that <code
 
 **Solution:**
 
-We need to determine if a given integer `n` is a power of two. A number is considered a power of two if it can be expressed as _**2^x**_ where _**x**_ is a non-negative integer. The solution should efficiently check this condition without using loops or recursion.
+We need to determine if a given integer `n` is a power of two. A number is considered a power of two if it can be expressed as _**2<sup>x</sup>**_ where _**x**_ is a non-negative integer. The solution should efficiently check this condition without using loops or recursion.
 
 ### Approach
 The approach leverages bit manipulation properties of numbers that are powers of two. Here's the key insight:
