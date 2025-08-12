@@ -38,6 +38,11 @@ Return the number of different **expressions** that you can build, which evaluat
 - `-1000 <= target <= 1000`
 
 
+**Similar Questions:**
+1. [282. Expression Add Operators](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000282-expression-add-operators)
+2. [2787. Ways to Express an Integer as Sum of Powers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002787-ways-to-express-an-integer-as-sum-of-powers)
+
+
 **Solution:**
 
 The "Target Sum" problem involves creating expressions using the numbers in an array `nums` by assigning a `+` or `-` sign to each number. The goal is to calculate how many such expressions evaluate to the given `target`. This problem can be solved efficiently using dynamic programming or backtracking.
