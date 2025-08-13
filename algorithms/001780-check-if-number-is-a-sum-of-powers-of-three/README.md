@@ -36,6 +36,9 @@ An integer `y` is a power of three if there exists an integer `x` such that <cod
 2. The number can not be represented as a sum of powers of 3 if it's ternary presentation has a 2 in it
 
 
+**Similar Questions:**
+1. [326. Power of Three](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000326-power-of-three)
+
 
 **Solution:**
 
