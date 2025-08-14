@@ -63,7 +63,7 @@ We need to find the largest 3-digit substring in a given string of digits where 
 1. **Problem Analysis**: The task is to find a substring of length 3 in the input string where all three characters are identical. The solution should return the largest such substring if multiple exist. The largest substring is determined by the digit value (e.g., '999' is larger than '888').
 2. **Intuition**: By checking substrings from the highest possible digit ('999') down to the lowest ('000'), the first valid substring encountered will inherently be the largest possible good integer.
 3. **Algorithm Selection**: Iterate from digit 9 down to 0. For each digit, generate a candidate string of three identical digits. Check if this candidate exists in the input string. If found, return the candidate immediately. If no candidate is found after checking all digits, return an empty string.
-4. **Complexity Analysis**: The algorithm checks at most 10 candidates (digits 9 to 0). Each check for substring existence in a string of length _** n **_ is _** O(n) **_. Thus, the overall complexity is _** O(10 × n) = O(n) **_, which is efficient for the given constraints (string length up to 1000).
+4. **Complexity Analysis**: The algorithm checks at most 10 candidates (digits 9 to 0). Each check for substring existence in a string of length _**n**_ is _**O(n)**_. Thus, the overall complexity is _**O(10 × n) = O(n)**_, which is efficient for the given constraints (string length up to 1000).
 
 Let's implement this solution in PHP: **[2264. Largest 3-Same-Digit Number in String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002264-largest-3-same-digit-number-in-string/solution.php)**
 
