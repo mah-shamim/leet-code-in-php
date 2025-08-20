@@ -38,6 +38,11 @@ Given a `m * n` matrix of ones and zeros, return _how many **square** submatrice
 2. Loop over all **subsquares** in <code>O(n<sup>3</sup>)</code> and check if the sum make the whole array to be ones, if it checks then add `1` to the answer.
 
 
+**Similar Questions:**
+1. [2087. Minimum Cost Homecoming of a Robot in a Grid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002087-minimum-cost-homecoming-of-a-robot-in-a-grid)
+2. [2088. Count Fertile Pyramids in a Land](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002088-count-fertile-pyramids-in-a-land)
+
+
 
 **Solution:**
 
@@ -97,7 +102,7 @@ This solution is efficient and meets the constraints provided in the problem.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://isolatedcompliments.com/v09uayg6h?key=a647d02f1aafcddaf10536d7cd00bd7c)
 
 If you want more helpful content like this, feel free to follow me:
 
