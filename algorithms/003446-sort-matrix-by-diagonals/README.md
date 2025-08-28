@@ -15,7 +15,7 @@ You are given an `n x n` square matrix of integers `grid`. Return the matrix suc
 - **Input:** grid = [[1,7,3],[9,8,2],[4,5,6]]
 - **Output:** [[8,2,3],[9,6,7],[4,5,1]]
 - **Explanation:**
-    ![4052example1drawio](https://assets.leetcode.com/uploads/2024/12/29/4052example1drawio.png)
+    ![4052-example1-draw-io](https://assets.leetcode.com/uploads/2024/12/29/4052example1drawio.png)
     - The diagonals with a black arrow (bottom-left triangle) should be sorted in non-increasing order:
         - `[1, 8, 6]` becomes `[8, 6, 1]`.
         - `[9, 5]` and `[4]` remain unchanged.
@@ -30,7 +30,7 @@ You are given an `n x n` square matrix of integers `grid`. Return the matrix suc
 - **Output:** [[2,1],[1,0]]
 - **Explanation:**
 
-    ![4052example2adrawio](https://assets.leetcode.com/uploads/2024/12/29/4052example2adrawio.png)
+    ![4052-example2-a-draw-io](https://assets.leetcode.com/uploads/2024/12/29/4052example2adrawio.png)
     - The diagonals with a black arrow must be non-increasing, so `[0, 2]` is changed to `[2, 0]`. The other diagonals are already in the correct order.
 
 **Example 3:**
