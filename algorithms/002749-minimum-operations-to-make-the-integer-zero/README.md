@@ -57,7 +57,7 @@ We need to determine the minimum number of operations required to reduce the int
 
 ### Approach
 1. **Problem Analysis**: The key insight is that each operation subtracts _**2<sup>i</sup> + num2**_ from `num1`. After `k` operations, the total subtracted amount is _**k x num2**_ plus the sum of `k` powers of two. Therefore, the equation becomes:
-    ![equation](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002749-minimum-operations-to-make-the-integer-zero/equation.png)
+    ![equation](equation.png)
    where each _**i<sub>j</sub>**_ is between 0 and 60.
 
 2. **Key Insight**: The right-hand side of the equation is the sum of `k` powers of two. For the equation to hold, the value _**S = num1 - k x num2**_ must be non-negative and at least `k` (since the smallest sum of `k` powers of two is `k` ones). Additionally, the number of set bits (popcount) in the binary representation of `S` must be less than or equal to `k`. This is because each set bit in `S` represents a power of two that must be included in the sum, and we can break larger powers into smaller ones to increase the number of terms if needed.
