@@ -53,16 +53,12 @@ Let's implement this solution in PHP: **[1304. Find N Unique Integers Sum up to 
  * @return Integer[]
  */
 function sumZero($n) {
-    $result = [];
-    if ($n % 2 != 0) {
-        $result[] = 0;
-        $n--;
-    }
-    for ($i = 1; $i <= $n / 2; $i++) {
-        $result[] = $i;
-        $result[] = -$i;
-    }
-    return $result;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Test cases
