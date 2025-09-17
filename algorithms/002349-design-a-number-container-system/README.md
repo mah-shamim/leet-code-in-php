@@ -46,6 +46,11 @@ Implement the `NumberContainers` class:
 2. In addition, you can use ordered set to store all of the indices for each number to solve the find method. Do not forget to update the ordered set according to the change method.
 
 
+**Similar Questions:**
+1. [1845. Seat Reservation Manager](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001845-seat-reservation-manager)
+2. [2353. Design a Food Rating System](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002353-design-a-food-rating-system)
+
+
 
 **Solution:**
 
