@@ -45,6 +45,11 @@ Return _the **maximum** difference_.
 2. Use prefix sum (maintain 2 characters' parities as status).
 
 
+**Similar Questions:**
+1. [1838. Frequency of the Most Frequent Element](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001838-frequency-of-the-most-frequent-element)
+2. [3005. Count Elements With Maximum Frequency](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003005-count-elements-with-maximum-frequency)
+
+
 
 
 
