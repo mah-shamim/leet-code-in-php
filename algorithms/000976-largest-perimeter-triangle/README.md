@@ -55,13 +55,12 @@ Let's implement this solution in PHP: **[976. Largest Perimeter Triangle](https:
  * @return Integer
  */
 function largestPerimeter($nums) {
-    rsort($nums);
-    for ($i = 0; $i < count($nums) - 2; $i++) {
-        if ($nums[$i + 1] + $nums[$i + 2] > $nums[$i]) {
-            return $nums[$i] + $nums[$i + 1] + $nums[$i + 2];
-        }
-    }
-    return 0;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Test cases
