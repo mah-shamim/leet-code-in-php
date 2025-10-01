@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `Math`, `Simulation`
+**Topics:** `Math`, `Simulation`, `Weekly Contest 198`
 
 There are numBottles water bottles that are initially full of water. You can exchange numExchange empty water bottles from the market with one full water bottle.
 
@@ -39,6 +39,10 @@ Given the two integers numBottles and numExchange, return the maximum number of 
 1. Simulate the process until there are not enough empty bottles for even one full bottle of water.
 
 
+**Similar Questions:**
+1. [3100. Water Bottles II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003100-water-bottles-ii)
+
+
 
 **Solution:**
 
@@ -63,9 +67,9 @@ The key challenge is to keep track of the full and empty bottles and handle the 
 1. Initialize `totalDrunk` to 0 to keep track of the number of bottles you've drunk.
 2. Initialize `emptyBottles` to 0 to track the number of empty bottles you've accumulated.
 3. Start a loop while there are still full bottles:
-  - Drink all the full bottles, and increase `totalDrunk`.
-  - Convert those bottles into empty bottles and add to `emptyBottles`.
-  - If you have enough empty bottles (`emptyBottles >= numExchange`), exchange them for new full bottles.
+   - Drink all the full bottles, and increase `totalDrunk`.
+   - Convert those bottles into empty bottles and add to `emptyBottles`.
+   - If you have enough empty bottles (`emptyBottles >= numExchange`), exchange them for new full bottles.
 4. Return `totalDrunk` as the final answer.
 
 Let's implement this solution in PHP: **[1518. Water Bottles](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001518-water-bottles/solution.php)**
@@ -144,7 +148,7 @@ The problem can be solved efficiently by simulating the exchange process and kee
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://jackaltimer.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
 
 If you want more helpful content like this, feel free to follow me:
 
