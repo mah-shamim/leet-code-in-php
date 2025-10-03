@@ -49,6 +49,9 @@ Return _the resulting array `answer`_.
 2. Sort the queries knowing their original order to be able to build the answer array.
 3. Run a BFS on the graph and answer the queries in increasing order.
 
+**Similar Questions:**
+1. [407. Trapping Rain Water II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000407-trapping-rain-water-ii)
+2. [2258. Escape the Spreading Fire](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002258-escape-the-spreading-fire)
 
 
 **Solution:**

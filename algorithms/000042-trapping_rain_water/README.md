@@ -26,6 +26,13 @@ Given `n` non-negative integers representing an elevation map where the width of
 - <code>0 <= height[i] <= 10<sup>5</sup></code>
 
 
+**Similar Questions:**
+1. [11. Container With Most Water](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000011-container-with-most-water)
+2. [238. Product of Array Except Self](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000238-product-of-array-except-self)
+3. [407. Trapping Rain Water II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000407-trapping-rain-water-ii)
+4. [755. Pour Water](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000755-pour-water)
+5. [2874. Maximum Value of an Ordered Triplet II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002874-maximum-value-of-an-ordered-triplet-ii)
+
 
 **Solution:**
 

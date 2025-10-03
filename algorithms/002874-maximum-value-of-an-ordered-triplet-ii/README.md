@@ -45,6 +45,12 @@ The **value of a triplet of indices** `(i, j, k)` is equal to `(nums[i] - nums[j
 3. For index `j`, the maximum triplet value is `(prefix_max[j - 1] - nums[j]) * suffix_max[j + 1]`.
 
 
+**Similar Questions:**
+1. [42. Trapping Rain Water](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000042-trapping_rain_water)
+2. [2012. Sum of Beauty in the Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002012-sum-of-beauty-in-the-array)
+3. [2909. Minimum Sum of Mountain Triplets II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002909-minimum-sum-of-mountain-triplets-ii)
+
+
 
 **Solution:**
 
