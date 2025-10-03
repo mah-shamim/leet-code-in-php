@@ -33,6 +33,12 @@ Given an `m x n` integer matrix `heightMap` representing the height of each unit
 - <code>0 <= heightMap[i][j] <= 2 * 10<sup>4</sup></code>
 
 
+**Similar Questions:**
+1. [42. Trapping Rain Water](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000042-trapping-rain-water)
+2. [2503. Maximum Number of Points From Grid Queries](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002503-maximum-number-of-points-from-grid-queries)
+
+
+
 **Solution:**
 
 The "Trapping Rain Water II" problem is a challenging computational problem that requires us to compute the volume of water trapped after raining on a 2D elevation map represented as a matrix. This problem extends the classic "Trapping Rain Water" problem to two dimensions, making the solution more complex due to the need to consider water flow in all directions.
@@ -167,7 +173,7 @@ The "Trapping Rain Water II" problem demonstrates the power of advanced data str
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://jackaltimer.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
 
 If you want more helpful content like this, feel free to follow me:
 
