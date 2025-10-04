@@ -46,6 +46,13 @@ Return _the **minimum** capability of the robber out of all the possible ways to
 4. Adjust the search range based on the outcome of the check function, until the range converges and the minimum value is found.
 
 
+**Similar Questions:**
+1. [11. Container With Most Water](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000011-container-with-most-water)
+2. [198. House Robber](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000198-house-robber)
+
+
+
+
 
 **Solution:**
 
