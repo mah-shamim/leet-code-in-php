@@ -48,8 +48,7 @@ Return _the **maximum** number of matchings between `players` and `trainers` tha
 4. [1754. Largest Merge Of Two Strings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001754-largest-merge-of-two-strings)
 5. [2071. Maximum Number of Tasks You Can Assign](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002071-maximum-number-of-tasks-you-can-assign)
 6. [2300. Successful Pairs of Spells and Potions](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002300-successful-pairs-of-spells-and-potions)
-7. [2332. The Latest Time to Catch a Bus
-](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002332-the-latest-time-to-catch-a-bus)
+7. [2332. The Latest Time to Catch a Bus](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002332-the-latest-time-to-catch-a-bus)
 8. [2592. Maximize Greatness of an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002592-maximize-greatness-of-an-array)
 
 
