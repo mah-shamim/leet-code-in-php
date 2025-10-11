@@ -68,7 +68,7 @@ Let's implement this solution in PHP: **[3186. Maximum Total Damage With Spell C
  * @param Integer[] $power
  * @return Integer
  */
-function maxTotalDamage($power) {
+function maximumTotalDamage($power) {
     ...
     ...
     ...
@@ -78,8 +78,8 @@ function maxTotalDamage($power) {
 }
 
 // Test cases
-echo maxTotalDamage([1,1,3,4]) . "\n"; // Output: 6
-echo maxTotalDamage([7,1,6,6]) . "\n"; // Output: 13
+echo maximumTotalDamage([1,1,3,4]) . "\n"; // Output: 6
+echo maximumTotalDamage([7,1,6,6]) . "\n"; // Output: 13
 ?>
 ```
 
