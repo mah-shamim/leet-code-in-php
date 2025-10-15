@@ -39,7 +39,7 @@ Return `true` if it is possible to find **two** such subarrays, and `false` othe
 
 
 
-
+[^1]: **Subarray** A **subarray** is a contiguous **non-empty** sequence of elements within an array.
 
 
 **Solution:**
