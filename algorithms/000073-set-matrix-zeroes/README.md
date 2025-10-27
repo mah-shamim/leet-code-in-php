@@ -46,6 +46,14 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 
 
+**Similar Questions:**
+1. [289. Game of Life](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000289-game-of-life)
+2. [2125. Number of Laser Beams in a Bank](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002125-number-of-laser-beams-in-a-bank)
+3. [2123. Minimum Operations to Remove Adjacent Ones in Matrix](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002123-minimum-operations-to-remove-adjacent-ones-in-matrix)
+4. [2174. Remove All Ones With Row and Column Flips II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002174-remove-all-ones-with-row-and-column-flips-ii)
+
+
+
 **Solution:**
 
 We need to set the entire row and column of any element in a matrix to zero if that element is zero. The challenge is to achieve this in-place with constant space complexity.
