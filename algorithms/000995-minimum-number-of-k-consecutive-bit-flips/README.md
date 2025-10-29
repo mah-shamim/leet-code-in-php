@@ -39,6 +39,14 @@ A **subarray** is a **contiguous** part of an array.
 - <code>1 <= k <= nums.length</code>
 
 
+**Similar Questions:**
+1. [319. Bulb Switcher](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000319-bulb-switcher)
+2. [2167. Minimum Time to Remove All Cars Containing Illegal Goods](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002167-minimum-time-to-remove-all-cars-containing-illegal-goods)
+3. [2450. Number of Distinct Binary Strings After Applying Operations](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002450-number-of-distinct-binary-strings-after-applying-operations)
+4. [3191. Minimum Operations to Make Binary Array Elements Equal to One I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003191-minimum-operations-to-make-binary-array-elements-equal-to-one-i)
+5. [3370. Smallest Number With All Set Bits](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003370-smallest-number-with-all-set-bits)
+
+
 **Solution:**
 
 We are given a binary array `nums` and an integer `k`. Our goal is to transform all `0`s in the array into `1`s using a minimum number of **k-bit flips**. A k-bit flip involves choosing a contiguous subarray of length `k`, and flipping every bit in that subarray: changing `0` to `1` and `1` to `0`. The task is to find the minimum number of k-bit flips required to make the entire array consist of `1`s. If it's not possible, we should return `-1`.
