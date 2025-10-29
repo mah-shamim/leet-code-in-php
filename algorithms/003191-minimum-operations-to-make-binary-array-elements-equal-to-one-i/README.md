@@ -42,6 +42,10 @@ Return _the **minimum** number of operations required to make all elements in `n
 1. If `nums[0]` is 0, then the only way to change it to 1 is by doing an operation on the first 3 elements of the array.
 2. After Changing `nums[0]` to 1, use the same logic on the remaining array.
 
+
+**Similar Questions:**
+1. [995. Minimum Number of K Consecutive Bit Flips](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000995-minimum-number-of-k-consecutive-bit-flips)
+
 [^1]: **Binary Array** `A binary array is an array which contains only 0 and 1`.
 
 
