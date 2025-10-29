@@ -1,6 +1,8 @@
 2997\. Minimum Number of Operations to Make Array XOR Equal to K
 
-Medium
+**Difficulty:** Medium
+
+**Topics:** `Array`, `Bit Manipulation`, `Biweekly Contest 121`
 
 You are given a **0-indexed** integer array `nums` and a positive integer `k`.
 
@@ -33,3 +35,11 @@ Return _the **minimum** number of operations required to make the bitwise `XOR` 
 - <code>1 <= nums.length <= 10<sup>5</sup></code>
 - <code>0 <= nums[i] <= 10<sup>6</sup></code>
 - <code>0 <= k <= 10<sup>6</sup></code>
+
+**Hint:**
+1. Calculate the bitwise `XOR` of all elements of the original array and compare it to `k` in their binary representation.
+2. For each different bit between the bitwise `XOR` of elements of the original array and `k` we have to flip **exactly** one bit of an element in `nums` to make that bit equal.
+
+
+**Similar Questions:**
+1. [2220. Minimum Bit Flips to Convert Number](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002220-minimum-bit-flips-to-convert-number)
