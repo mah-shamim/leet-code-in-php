@@ -40,6 +40,12 @@ Given two integers `start` and `goal`, return _the **minimum** number of **bit f
 2. Consider using the XOR operation to determine which bits need a bit flip.
 
 
+**Similar Questions:**
+1. [1318. Minimum Flips to Make a OR b Equal to c](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001318-minimum-flips-to-make-a-or-b-equal-to-c)
+2. [2997. Minimum Number of Operations to Make Array XOR Equal to K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002997-minimum-number-of-operations-to-make-array-xor-equal-to-k)
+3. [3370. Smallest Number With All Set Bits](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003370-smallest-number-with-all-set-bits/solution.php)
+
+
 
 **Solution:**
 
