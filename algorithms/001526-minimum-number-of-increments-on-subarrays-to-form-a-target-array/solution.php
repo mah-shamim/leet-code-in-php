@@ -17,5 +17,3 @@ class Solution {
         return $operations;
     }
 }
-
-
