@@ -47,6 +47,13 @@ You are given an array of integers `nums` and the `head` of a linked list. Retur
 
 
 
+**Similar Questions:**
+1. [203. Remove Linked List Elements](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000203-remove-linked-list-elements)
+2. [237. Delete Node in a Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000237-delete-node-in-a-linked-list)
+3. [2487. Remove Nodes From Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002487-remove-nodes-from-linked-list)
+
+
+
 **Solution:**
 
 We need to traverse through the linked list and remove any nodes that have a value present in the array `nums`.
@@ -149,7 +156,8 @@ The resulting linked list is `[4, 5]`.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
