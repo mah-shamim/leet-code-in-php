@@ -26,7 +26,7 @@ Custom testing:
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/09/01/node1.jpg)
+![node1](https://assets.leetcode.com/uploads/2020/09/01/node1.jpg)
 
 - **Input:** head = [4,5,1,9], node = 5
 - **Output:** [4,1,9]
@@ -34,7 +34,7 @@ Custom testing:
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2020/09/01/node2.jpg)
+![node2](https://assets.leetcode.com/uploads/2020/09/01/node2.jpg)
 
 - **Input:** head = [4,5,1,9], node = 1
 - **Output:** [4,5,9]
@@ -47,6 +47,13 @@ Custom testing:
 - `-1000 <= Node.val <= 1000`
 - The value of each node in the list is **unique**.
 - The `node` to be deleted is in the list and is **not a tail** node.
+
+
+
+**Similar Questions:**
+1. [203. Remove Linked List Elements](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000203-remove-linked-list-elements)
+2. [2487. Remove Nodes From Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002487-remove-nodes-from-linked-list)
+3. [3217. Delete Nodes From Linked List Present in Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003217-delete-nodes-from-linked-list-present-in-array/solution.php)
 
 
 **Solution:**
