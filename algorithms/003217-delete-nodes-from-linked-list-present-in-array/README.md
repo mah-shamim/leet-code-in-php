@@ -47,6 +47,13 @@ You are given an array of integers `nums` and the `head` of a linked list. Retur
 
 
 
+**Similar Questions:**
+1. [203. Remove Linked List Elements](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000203-remove-linked-list-elements)
+2. [237. Delete Node in a Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000237-delete-node-in-a-linked-list)
+3. [2487. Remove Nodes From Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002487-remove-nodes-from-linked-list)
+
+
+
 **Solution:**
 
 We need to traverse through the linked list and remove any nodes that have a value present in the array `nums`.
