@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Matrix`, `Simulation`
+**Topics:** `Array`, `Matrix`, `Simulation`, `Biweekly Contest 77`
 
 You are given two integers `m` and `n` representing a **0-indexed** `m x n` grid. You are also given two 2D integer arrays `guards` and `walls` where <code>guards[i] = [row<sub>i</sub>, col<sub>i</sub>]</code> and <code>walls[j] = [row<sub>j</sub>, col<sub>j</sub>]</code> represent the positions of the <code>i<sup>th</sup></code> guard and <code>j<sup>th</sup></code> wall respectively.
 
@@ -45,6 +45,12 @@ Return _the number of unoccupied cells that are **not guarded**_.
 **Hint:**
 1. Create a 2D array to represent the grid. Can you mark the tiles that can be seen by a guard?
 2. Iterate over the guards, and for each of the 4 directions, advance the current tile and mark the tile. When should you stop advancing?
+
+
+
+**Similar Questions:**
+1. [361. Bomb Enemy](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000361-bomb-enemy)
+2. [999. Available Captures for Rook](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000999-available-captures-for-rook)
 
 
 
