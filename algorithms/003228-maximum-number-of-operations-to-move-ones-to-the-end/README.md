@@ -98,8 +98,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#2415, #2416 leetcode problems 003228-maximum-number-of-operations-to-move-ones-to-the-end submissions 1828724573
-
-Thanks for solving the problem of "Maximum Number of Operations to Move Ones to the End"
