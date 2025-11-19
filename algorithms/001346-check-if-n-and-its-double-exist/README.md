@@ -38,6 +38,11 @@ Given an array `arr` of integers, check if there exist two indices `i` and `j` s
 
 
 
+**Similar Questions:**
+1. [2154. Keep Multiplying Found Values by Two](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002154-keep-multiplying-found-values-by-two)
+
+
+
 **Solution:**
 
 We can use a hash table (associative array) to track the elements we have already encountered while iterating through the array. The idea is to check for each element `arr[i]` if its double (i.e., `2 * arr[i]`) or half (i.e., `arr[i] / 2` if it's an even number) has already been encountered.
