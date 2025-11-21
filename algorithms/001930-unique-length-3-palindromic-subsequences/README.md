@@ -55,6 +55,11 @@ A **subsequence** of a string is a new string generated from the original string
 
 
 
+**Similar Questions:**
+1. [2484. Count Palindromic Subsequences](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002484-count-palindromic-subsequences)
+
+
+
 **Solution:**
 
 We can use an efficient algorithm that leverages prefix and suffix character tracking to count all valid palindromic subsequences.
