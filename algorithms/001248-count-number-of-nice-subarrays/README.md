@@ -39,6 +39,14 @@ Return _the number of **nice** sub-arrays_.
 
 
 
+**Similar Questions:**
+1. [2261. K Divisible Elements Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002261-k-divisible-elements-subarrays)
+2. [2444. Count Subarrays With Fixed Bounds](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002244-count-subarrays-with-fixed-bounds)
+3. [2750. Ways to Split Array Into Good Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002750-ways-to-split-array-into-good-subarrays)
+4. [2845. Count of Interesting Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002845-count-of-interesting-subarrays)
+
+
+
 **Solution:**
 
 The problem requires finding the number of subarrays in an integer array `nums` that contain exactly `k` odd numbers. Subarrays are contiguous, and we need to optimize for performance due to constraints on the size of the array.

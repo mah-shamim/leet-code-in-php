@@ -42,6 +42,13 @@ A **subarray** is a **contiguous** part of an array.
 
 
 
+**Similar Questions:**
+1. [1248. Count Number of Nice Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001248-count-number-of-nice-subarrays)
+2. [1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit)
+3. [3113. Find the Number of Subarrays Where Boundary Elements Are Maximum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003113-find-the-number-of-subarrays-where-boundary-elements-are-maximum)
+
+
+
 **Solution:**
 
 We need to count the number of subarrays where the minimum value is exactly `minK` and the maximum value is exactly `maxK`. These subarrays must be contiguous and all elements within them must lie between `minK` and `maxK` inclusive.

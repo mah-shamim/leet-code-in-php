@@ -27,6 +27,16 @@ A **subarray** is a **contiguous** part of an array.
 - <code>2 <= k <= 10<sup>4</sup></code>
 
 
+
+**Similar Questions:**
+1. [560. Subarray Sum Equals K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000560-subarray-sum-equals-k)
+2. [1590. Make Sum Divisible by P](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001590-make-sum-divisible-by-p)
+3. [2364. Count Number of Bad Pairs](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002364-count-number-of-bad-pairs)
+4. [2575. Find the Divisibility Array of a String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002575-find-the-divisibility-array-of-a-string)
+5. [2845. Count of Interesting Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002845-count-of-interesting-subarrays)
+6. [3381. Maximum Subarray Sum With Length Divisible by K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003381-maximum-subarray-sum-with-length-divisible-by-k)
+
+
 **Solution:**
 
 The problem at hand asks us to find the number of non-empty subarrays of an integer array `nums` whose sum is divisible by a given integer `k`. A **subarray** is defined as a contiguous part of the array. The challenge requires an efficient solution given that the length of `nums` can be as large as _**3 \times 10^4**_.

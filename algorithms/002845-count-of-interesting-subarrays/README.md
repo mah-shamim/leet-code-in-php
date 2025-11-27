@@ -67,6 +67,12 @@ Return _an integer denoting the count of interesting subarrays_.
 
 
 
+**Similar Questions:**
+1. [974. Subarray Sums Divisible by K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000974-subarray-sums-divisible-by-k)
+2. [1248. Count Number of Nice Subarrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001248-count-number-of-nice-subarrays)
+
+
+
 **Solution:**
 
 We need to count the number of interesting subarrays in a given array `nums` based on specific conditions. A subarray is considered interesting if the count of elements in it that satisfy a certain modulo condition, when taken modulo `modulo`, equals `k`.
