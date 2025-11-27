@@ -46,6 +46,12 @@ A **subarray** is defined as a contiguous block of elements in the array.
 
 
 
+**Similar Questions:**
+1. [974. Subarray Sums Divisible by K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000974-subarray-sums-divisible-by-k)
+2. [2575. Find the Divisibility Array of a String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001590-find-the-divisibility-array-of-a-string)
+
+
+
 **Solution:**
 
 We can use a combination of prefix sums and a hash table to efficiently compute the smallest subarray that needs to be removed such that the sum of the remaining elements is divisible by `p`.
