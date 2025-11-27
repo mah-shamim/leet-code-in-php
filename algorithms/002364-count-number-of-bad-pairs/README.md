@@ -41,6 +41,16 @@ Return _the total number of **bad pairs** in `nums`_.
 
 
 
+**Similar Questions:**
+1. [532. K-diff Pairs in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000532-k-diff-pairs-in-an-array)
+2. [974. Subarray Sums Divisible by K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000974-subarray-sums-divisible-by-k)
+3. [1814. Count Nice Pairs in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001841-count-nice-pairs-in-an-array)
+4. [2006. Count Number of Pairs With Absolute Difference K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002006-count-number-of-pairs-with-absolute-difference-k)
+5. [2176. Count Equal and Divisible Pairs in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002176-count-equal-and-divisible-pairs-in-an-array)
+6. [2426. Number of Pairs Satisfying Inequality](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002426-number-of-pairs-satisfying-inequality)
+
+
+
 **Solution:**
 
 We need to count the number of bad pairs in a given array. A pair (i, j) is considered bad if i < j and j - i != nums[j] - nums[i]. Directly checking each pair would be inefficient, so we use a mathematical approach to optimize the solution.
