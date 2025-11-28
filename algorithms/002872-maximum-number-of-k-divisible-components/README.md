@@ -58,6 +58,11 @@ Return _the **maximum number of components** in any valid split_.
 
 
 
+**Similar Questions:**
+1. [2440. Create Components With Same Value](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002440-create-components-with-same-value)
+
+
+
 **Solution:**
 
 We can implement a Depth-First Search (DFS) approach to explore the tree, track the values of components, and find the maximum number of valid splits.
