@@ -16,9 +16,9 @@ Suppose we chose a set of deletion indices `answer` such that after deletions, t
 
 - **Input:** strs = ["babca","bbazb"]
 - **Output:** 3
-- **Explanation:** After deleting columns 0, 1, and 4, the final array is strs = ["bc", "az"].
-  Both these rows are individually in lexicographic order (ie. strs[0][0] <= strs[0][1] and strs[1][0] <= strs[1][1]).
-  Note that strs[0] > strs[1] - the array strs is not necessarily in lexicographic order.
+- **Explanation:** After deleting columns 0, 1, and 4, the final array is `strs = ["bc", "az"]`.
+  Both these rows are individually in lexicographic order (ie. `strs[0][0] <= strs[0][1]` and `strs[1][0] <= strs[1][1]`).
+  Note that `strs[0] > strs[1]` - the array `strs` is not necessarily in lexicographic order.
 
 **Example 2:**
 
