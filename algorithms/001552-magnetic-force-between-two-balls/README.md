@@ -41,6 +41,11 @@ Given the integer array `position` and the integer `m`. Return _the required for
 
 
 
+**Similar Questions:**
+1. [2064. Minimized Maximum of Products Distributed to Any Store](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002064-minimized-maximum-of-products-distributed-to-any-store)
+
+
+
 **Solution:**
 
 We need to determine the maximum possible minimum magnetic force between any two balls placed in baskets at given positions. The magnetic force between two balls at positions `x` and `y` is defined as `|x - y|`. The goal is to distribute `m` balls such that the minimum magnetic force between any two balls is maximized.
