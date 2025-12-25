@@ -49,6 +49,12 @@ Return _the minimum possible penalty after performing the operations_.
 
 
 
+**Similar Questions:**
+1. [2226. Maximum Candies Allocated to K Children](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002226-maximum-candies-allocated-to-k-children)
+2. [2064. Minimized Maximum of Products Distributed to Any Store](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002064-minimized-maximum-of-products-distributed-to-any-store)
+
+
+
 **Solution:**
 
 We can use **binary search** to find the minimum possible penalty. The key insight is that if we can determine whether a given penalty is achievable, we can narrow down the search range using binary search.
