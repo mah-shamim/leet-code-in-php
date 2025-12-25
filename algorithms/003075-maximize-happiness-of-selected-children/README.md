@@ -63,13 +63,13 @@ Return _the **maximum** sum of the happiness values of the selected children you
 
 **Solution:**
 
-We are given an array of happiness values and we need to pick `k` children in `k` turns.
+We are given an array of happiness values, and we need to pick `k` children in `k` turns.
 In each turn, when we pick a child, the happiness of every other child that hasn't been selected decreases by 1 (but not below 0).
 
 ### Approach:
 
 - **Sort in descending order**: Sort the happiness array in descending order so we can select children with the highest happiness values first.
-- **Greedy selection**: Iterate `k` times to select `k` children. For the `i-th` selection (0-indexed), the child's effective happiness is `max(0, happiness[i] - i)` because:
+- **Greedy selection**: Iterate `k` times to select `k` children. For the `iᵗʰ` selection (0-indexed), the child's effective happiness is `max(0, happiness[i] - i)` because:
   - Each previous selection reduces all remaining children's happiness by 1
   - The first selected child (index 0) has no reduction
   - The second selected child (index 1) has been reduced by 1 (from the first selection)
@@ -105,7 +105,7 @@ echo maximumHappinessSum([2,3,4,5], 1) . "\n";      // Output: 5
 ### Explanation:
 
 - **Why sorting works**: Since unselected children's happiness decreases equally by 1 each turn, it's optimal to always select the child with the highest current happiness. This is equivalent to selecting the k largest values initially, then accounting for the reductions.
-- **Reduction logic**: When we select the i-th largest child (where i starts at 0), it has already been reduced by i (from the previous i selections). So its contribution is `max(0, happiness[i] - i)`.
+- **Reduction logic**: When we select the `iᵗʰ` largest child (where `i` starts at `0`), it has already been reduced by i (from the previous i selections). So its contribution is `max(0, happiness[i] - i)`.
 - **No negative values**: We use `max(0, ...)` because happiness cannot go below zero.
 - **Time complexity**: O(n log n) due to sorting, where n is the length of the happiness array.
 - **Space complexity**: O(1) additional space (excluding sorting space, which is O(log n) for quicksort in PHP).
