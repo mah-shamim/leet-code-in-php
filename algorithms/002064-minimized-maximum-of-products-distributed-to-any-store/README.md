@@ -57,6 +57,18 @@ Return _the minimum possible `x`_.
 
 
 
+**Similar Questions:**
+1. [875. Koko Eating Bananas](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000875-koko-eating-bananas)
+2. [1011. Capacity To Ship Packages Within D Days](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001011-capacity-to-ship-packages-within-d-days)
+3. [2226. Maximum Candies Allocated to K Children](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002226-maximum-candies-allocated-to-k-children)
+4. [1283. Find the Smallest Divisor Given a Threshold](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001283-find-the-smallest-divisor-given-a-threshold)
+5. [1552. Magnetic Force Between Two Balls](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001552-magnetic-force-between-two-balls)
+6. [1760. Minimum Limit of Balls in a Bag](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001760-minimum-limit-of-balls-in-a-bag)
+7. [2187. Minimum Time to Complete Trips](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002187-minimum-time-to-complete-trips)
+8. [2398. Maximum Number of Robots Within Budget](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002398-maximum-number-of-robots-within-budget)
+
+
+
 **Solution:**
 
 We can use a binary search on the maximum possible number of products assigned to any store (`x`). Here’s a step-by-step explanation and the PHP solution:
