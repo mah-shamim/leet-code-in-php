@@ -37,6 +37,20 @@ Return _the **maximum number of candies** each child can get_.
 
 
 
+**Similar Questions:**
+1. [875. Koko Eating Bananas](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000875-koko-eating-bananas)
+2. [1760. Minimum Limit of Balls in a Bag](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001760-minimum-limit-of-balls-in-a-bag)
+3. [1870. Minimum Speed to Arrive on Time](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001870-minimum-speed-to-arrive-on-time)
+4. [1898. Maximum Number of Removable Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001898-maximum-number-of-removable-characters)
+5. [2064. Minimized Maximum of Products Distributed to Any Store](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002064-minimized-maximum-of-products-distributed-to-any-store)
+6. [2187. Minimum Time to Complete Trips](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002187-minimum-time-to-complete-trips)
+7. [2439. Minimize Maximum of Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002439-minimize-maximum-of-array)
+8. [3075. Maximize Happiness of Selected Children](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003075-maximize-happiness-of-selected-children)
+
+
+
+
+
 **Solution:**
 
 We need to determine the maximum number of candies each child can get such that each child receives the same number of candies from a single pile (or sub-pile). The solution involves using binary search to efficiently find this maximum number of candies.
