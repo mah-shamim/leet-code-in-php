@@ -59,6 +59,12 @@ The **first** robot wants to **minimize** the number of points collected by the 
 
 
 
+**Similar Questions:**
+1. [2017. Grid Game](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002017-grid-game)
+2. [3273. Minimum Amount of Damage Dealt to Bob](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003273-minimum-amount-of-damage-dealt-to-bob)
+
+
+
 **Solution:**
 
 We'll use the following approach:
