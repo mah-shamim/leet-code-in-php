@@ -44,6 +44,12 @@ Given an array `nums` sorted in **non-decreasing** order, return _the maximum be
 
 
 
+**Similar Questions:**
+1. [704. Binary Search](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000704-binary-search)
+2. [1351. Count Negative Numbers in a Sorted Matrix](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001351-count-negative-numbers-in-a-sorted-matrix)
+
+
+
 **Solution:**
 
 We need to determine the maximum count between positive and negative integers in a given sorted array. The array is sorted in non-decreasing order, which allows us to efficiently find the counts using binary search.
