@@ -43,6 +43,10 @@ Return _the number of ways to color the grid with **no two adjacent cells having
 2. Use bitmasks DP with state (currentCell, prevColumn).
 
 
+**Similar Questions:**
+1. [1411. Number of Ways to Paint N × 3 Grid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001411-number-of-ways-to-paint-n-3-grid)
+
+
 
 **Solution:**
 
