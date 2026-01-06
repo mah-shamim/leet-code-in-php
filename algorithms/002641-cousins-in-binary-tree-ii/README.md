@@ -50,6 +50,11 @@ Return _the `root` of the modified tree_.
 3. For the second time, update the value of the node with the sum of the values of the current level - sibling node’s values.
 
 
+**Similar Questions:**
+1. [993. Cousins in Binary Tree](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000993-cousins-in-binary-tree)
+2. [1161. Maximum Level Sum of a Binary Tree](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001161-maximum-level-sum-of-a-binary-tree)
+
+
 
 **Solution:**
 
