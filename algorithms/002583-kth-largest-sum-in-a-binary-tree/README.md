@@ -47,6 +47,12 @@ Return _the <code>k<sup>th</sup></code> **largest** level sum in the tree (not n
 2. To find the sum of the values of nodes on each level, you can use a DFS or BFS algorithm to traverse the tree and keep track of the level of each node.
 
 
+**Similar Questions:**
+1. [144. Binary Tree Preorder Traversal](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000144-binary-tree-preorder-traversal)
+2. [1161. Maximum Level Sum of a Binary Tree](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001161-maximum-level-sum-of-a-binary-tree)
+3. [3157. Find the Level of Tree with Minimum Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003157-find-the-level-of-tree-with-minimum-sum)
+
+
 
 **Solution:**
 
