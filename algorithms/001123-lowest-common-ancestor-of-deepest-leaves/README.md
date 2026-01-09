@@ -52,6 +52,9 @@ Recall that:
 3. The final node marked will be the correct answer.
 
 
+**Similar Questions:**
+1. [1676. Lowest Common Ancestor of a Binary Tree IV](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001676-lowest-common-ancestor-of-a-binary-tree-iv)
+
 
 **Solution:**
 
