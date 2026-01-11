@@ -32,6 +32,12 @@ Given a `rows x cols` binary matrix filled with `0`'s and `1`'s, find the larges
 - <code>`matrix[i][j]` is `'0'` or `'1'`</code>.
 
 
+**Similar Questions:**
+1. [84. Largest Rectangle in Histogram](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000084-largest-rectangle-in-histogram)
+2. [221. Maximal Square](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000221-maximal-square)
+3. [3359. Find Sorted Submatrices With Maximum Element at Most K](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003359-find-sorted-submatrices-with-maximum-element-at-most-k)
+
+
 **Solution:**
 
 
@@ -46,6 +52,33 @@ Let's implement this solution in PHP: **[85. Maximal Rectangle](https://github.c
 
 ```php
 <?php
+
+/**
+ * @param String[][] $matrix
+ * @return Integer
+ */
+function maximalRectangle($matrix) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+/**
+ * @param $heights
+ * @return int|mixed
+ */
+function calculateMaxHistogramArea($heights) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Test cases
 $matrix1 = array(
     array("1","0","1","0","0"),
@@ -91,7 +124,8 @@ The `calculateMaxHistogramArea` function computes the largest rectangle area in 
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
