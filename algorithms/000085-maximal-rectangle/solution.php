@@ -58,5 +58,4 @@ class Solution {
 
         return $maxArea;
     }
-
 }
