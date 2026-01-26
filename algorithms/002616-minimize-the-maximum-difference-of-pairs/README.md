@@ -36,6 +36,11 @@ Return the **minimum maximum** difference among all `p` pairs. We define the max
 3. The recurrence relation is fn(i, x) = min(fn(i+1, x), max(abs(nums[i]-nums[i+1]), fn(i+2, p-1)), and fn(0,p) gives the desired answer.
 
 
+**Similar Questions:**
+1. [1200. Minimum Absolute Difference](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001200-minimum-absolute-difference)
+2. [1509. Minimum Difference Between Largest and Smallest Value in Three Moves](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001509-minimum-difference-between-largest-and-smallest-value-in-three-moves)
+
+
 
 
 

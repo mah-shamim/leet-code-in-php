@@ -51,6 +51,10 @@ Return _the minimum difference between the largest and smallest value of `nums` 
 1. The minimum difference possible is obtained by removing three elements between the three smallest and three largest values in the array.
 
 
+**Similar Questions:**
+1. [2616. Minimize the Maximum Difference of Pairs](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002616-minimize-the-maximum-difference-of-pairs)
+
+
 
 **Solution:**
 
