@@ -10,7 +10,8 @@ class Solution {
      * @param Integer[] $cost
      * @return Integer
      */
-    function minimumCost($source, $target, $original, $changed, $cost) {
+    function minimumCost(string $source, string $target, array $original, array $changed, array $cost): int
+    {
         $n = strlen($source);
         $numChars = 26;
         $inf = 1000000000; // A large number representing infinity
