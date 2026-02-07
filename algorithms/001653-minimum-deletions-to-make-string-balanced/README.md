@@ -1,8 +1,10 @@
 1653\. Minimum Deletions to Make String Balanced
 
-Medium
+**Difficulty:** Medium
 
-You are given a string `s` consisting only of characters `'a'` and `'b'`​​​​.
+**Topics:** `Senior`, `String`, `Dynamic Programming`, `Stack`, `Biweekly Contest 39`
+
+You are given a string `s` consisting only of characters `'a'` and `'b'`.
 
 You can delete any number of characters in `s` to make `s` **balanced**. `s` is **balanced** if there is no pair of indices `(i,j)` such that `i < j` and `s[i] = 'b'` and `s[j]= 'a'`.
 
@@ -25,11 +27,15 @@ Return _the **minimum** number of deletions needed to make `s` **balanced**_.
 **Constraints:**
 
 - <code>1 <= s.length <= 10<sup>5</sup></code>
-- `s[i]` is `a` or `b`​​.
+- `s[i]` is `a` or `b`.
 
 **Hint:**
 1. You need to find for every index the number of Bs before it and the number of A's after it
 2. You can speed up the finding of A's and B's in suffix and prefix using preprocessing
+
+
+**Similar Questions:**
+1. [2124. Check if All A's Appears Before All B's](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002124-check-if-all-as-appears-before-all-bs)
 
 
 **Solution:**
@@ -46,6 +52,19 @@ Let's implement this solution in PHP: **[1653. Minimum Deletions to Make String 
 
 ```php
 <?php
+/**
+ * @param String $s
+ * @return Integer
+ */
+function minimumDeletions($s) {
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Test cases
 echo minimumDeletions("aababbab") . "\n"; // Output: 2
 echo minimumDeletions("bbaaaaabb") . "\n"; // Output: 2
@@ -58,12 +77,13 @@ echo minimumDeletions("bbaaaaabb") . "\n"; // Output: 2
 2. **Suffix Array for 'a's**: This array keeps track of the cumulative count of 'a's from each index to the end. For the same string, the suffix array for 'a's will be `[4, 3, 3, 2, 2, 1, 1, 0]`.
 3. **Calculating Minimum Deletions**: For each index `i`, the total deletions needed to make the string balanced if we split at `i` can be calculated as the sum of 'b's before `i` and 'a's after `i`. The minimum of these values across all indices gives the result.
 
-This approach ensures that the solution is efficient with a time complexity of \(O(n)\), which is suitable given the constraints.
+This approach ensures that the solution is efficient with a time complexity of _**O(n)**_, which is suitable given the constraints.
 
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
