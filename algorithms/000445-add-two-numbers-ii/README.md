@@ -34,6 +34,11 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 **Follow-up:** Could you solve it without reversing the input lists?
 
 
+**Similar Questions:**
+1. [2. Add Two Numbers](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000002-add-two-numbers)
+2. [1634. Add Two Polynomials Represented as Linked Lists](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001634-add-two-polynomials-represented-as-linked-lists)
+
+
 
 **Solution:**
 
