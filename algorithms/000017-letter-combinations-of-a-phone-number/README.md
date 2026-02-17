@@ -8,7 +8,7 @@ Given a string containing digits from `2-9` inclusive, return all possible lette
 
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
+![200px-Telephone-keypad2.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
 
 **Example 1:**
 
@@ -29,6 +29,15 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 
 - `0 <= digits.length <= 4`
 - `digits[i]` is a digit in the range `['2', '9']`.
+
+
+**Similar Questions:**
+1. [22. Generate Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000022-generate-parentheses)
+2. [39. Combination Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000039-combination-sum)
+3. [401. Binary Watch](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000401-binary-watch)
+4. [2266. Count Number of Texts](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002266-count-number-of-texts)
+5. [3014. Minimum Number of Pushes to Type Word I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003014-minimum-number-of-pushes-to-type-word-i)
+6. [3016. Minimum Number of Pushes to Type Word II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003016-minimum-number-of-pushes-to-type-word-ii)
 
 
 **Solution:**
@@ -74,10 +83,10 @@ This approach is efficient given the constraints and handles edge cases like emp
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
