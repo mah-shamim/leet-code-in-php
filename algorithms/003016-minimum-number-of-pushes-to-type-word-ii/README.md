@@ -1,8 +1,8 @@
 3016\. Minimum Number of Pushes to Type Word II
 
-Medium
+**Difficulty:** Medium
 
-**Topics** : `Hash Table`, `String`, `Greedy`, `Sorting`, `Counting`
+**Topics** : `Hash Table`, `String`, `Greedy`, `Sorting`, `Counting`, `Weekly Contest 381`
 
 You are given a string `word` containing lowercase English letters.
 
@@ -75,6 +75,10 @@ An example mapping of letters to keys on a telephone keypad is given below. Note
 3. Sort the letters by frequencies in the word in non-increasing order.
 
 
+**Similar Questions:**
+1. [17. Letter Combinations of a Phone Number](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000017-letter-combinations-of-a-phone-number)
+
+
 **Solution:**
 
 
@@ -123,7 +127,8 @@ This approach ensures that the most frequent characters are assigned to the keys
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
