@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `String`, `Stack`, `Greedy`
+**Topics:** `Staff`, `String`, `Stack`, `Greedy`, `Biweekly Contest 68`
 
 A parentheses string is a `non-empty` string consisting only of `'('` and `')'`. It is valid if any of the following conditions is `true`:
 
@@ -54,6 +54,14 @@ Return _`true` if you can make `s` a valid parentheses string_. Otherwise, retur
 1. Can an odd length string ever be valid?
 2. From left to right, if a locked ')' is encountered, it must be balanced with either a locked '(' or an unlocked index on its left. If neither exist, what conclusion can be drawn? If both exist, which one is more preferable to use?
 3. After the above, we may have locked indices of '(' and additional unlocked indices. How can you balance out the locked '(' now? What if you cannot balance any locked '('?
+
+
+**Similar Questions:**
+1. [20. Valid Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000020-valid-parentheses)
+2. [22. Generate Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000022-generate-parentheses)
+3. [678. Valid Parenthesis String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000678-valid-parenthesis-string)
+4. [1249. Minimum Remove to Make Valid Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001249-minimum-remove-to-make-valid-parentheses)
+5. [2267. Check if There Is a Valid Parentheses String Path](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002267-check-if-there-is-a-valid-parentheses-string-path)
 
 
 
