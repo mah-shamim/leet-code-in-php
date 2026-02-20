@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Two Pointers`, `String`, `Stack`, `Greedy`
+**Topics:** `Staff`, `Two Pointers`, `String`, `Stack`, `Greedy`, `Weekly Contest 253`
 
 You are given a **0-indexed** string `s` of **even** length `n`. The string consists of **exactly** `n / 2` opening brackets `'['` and `n / 2` closing brackets `']'`.
 
@@ -53,6 +53,13 @@ Return _the **minimum** number of swaps to make `s` **balanced**_.
 1. Iterate over the string and keep track of the number of opening and closing brackets on each step.
 2. If the number of closing brackets is ever larger, you need to make a swap.
 3. Swap it with the opening bracket closest to the end of s.
+
+
+**Similar Questions:**
+1. [301. Remove Invalid Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000301-remove-invalid-parentheses)
+2. [921. Minimum Add to Make Parentheses Valid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000921-minimum-add-to-make-parentheses-valid)
+3. [1249. Minimum Remove to Make Valid Parentheses](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001249-minimum-remove-to-make-valid-parentheses)
+4. [1541. Minimum Insertions to Balance a Parentheses String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001541-minimum-insertions-to-balance-a-parentheses-string)
 
 
 
