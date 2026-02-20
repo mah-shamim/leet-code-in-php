@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `String`, `Stack`, `Greedy`
+**Topics:** `Senior`, `String`, `Stack`, `Greedy`, `Weekly Contest 106`
 
 A parentheses string is valid if and only if:
 
@@ -30,6 +30,10 @@ Return _the minimum number of moves required to make `s` valid_.
 
 - `1 <= s.length <= 1000`
 - `s[i]` is either `'('` or `')'`.
+
+
+**Similar Questions:**
+1. [1963. Minimum Number of Swaps to Make the String Balanced](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001963-minimum-number-of-swaps-to-make-the-string-balanced)
 
 
 
