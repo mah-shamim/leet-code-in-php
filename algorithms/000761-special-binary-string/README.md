@@ -41,7 +41,7 @@ Return _the lexicographically largest resulting string possible after applying t
 
 
 **Hint:**
-1. Draw a line from (x, y) to (x+1, y+1) if we see a "1", else to (x+1, y-1). A special substring is just a line that starts and ends at the same y-coordinate, and that is the lowest y-coordinate reached. Call a mountain a special substring with no special prefixes - ie. only at the beginning and end is the lowest y-coordinate reached. If F is the answer function, and S has mountain decomposition M1,M2,M3,...,Mk, then the answer is: reverse_sorted(F(M1), F(M2), ..., F(Mk)). However, you'll also need to deal with the case that S is a mountain, such as 11011000 -> 11100100.
+1. Draw a line from (x, y) to (x+1, y+1) if we see a "1", else to (x+1, y-1). A special substring is just a line that starts and ends at the same y-coordinate, and that is the lowest y-coordinate reached. Call a mountain a special substring with no special prefixes - i.e. only at the beginning and end is the lowest y-coordinate reached. If F is the answer function, and S has mountain decomposition M1,M2,M3,...,Mk, then the answer is: reverse_sorted(F(M1), F(M2), ..., F(Mk)). However, you'll also need to deal with the case that S is a mountain, such as `11011000 -> 11100100`.
 
 
 
