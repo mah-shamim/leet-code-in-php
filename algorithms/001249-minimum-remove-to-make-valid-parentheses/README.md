@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `String`, `Stack`
+**Topics:** `Staff`, `String`, `Stack`, `Weekly Contest 161`
 
 Given a string s of `'('` , `')'` and lowercase English characters.
 
@@ -44,6 +44,11 @@ Formally, a <i>parentheses string</i> is valid if and only if:
 **Hint:**
 1. Each prefix of a balanced parentheses has a number of open parentheses greater or equal than closed parentheses, similar idea with each suffix.
 2. Check the array from left to right, remove characters that do not meet the property mentioned above, same idea in backward way.
+
+
+**Similar Questions:**
+1. [1963. Minimum Number of Swaps to Make the String Balanced](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001963-minimum-number-of-swaps-to-make-the-string-balanced)
+2. [2116. Check if a Parentheses String Can Be Valid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002116-check-if-a-parentheses-string-can-be-valid)
 
 
 
