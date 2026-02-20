@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `String`, `Dynamic Programming`, `Stack`, `Greedy`
+**Topics:** `Principal`, `String`, `Dynamic Programming`, `Stack`, `Greedy`
 
 Given a string `s` containing only three types of characters: `'('`, `')'` and `'*'`, return `true` if `s` is **valid**.
 
@@ -40,6 +40,10 @@ The following rules define a **valid** string:
 3. Keep track of the count of open parentheses encountered so far. If you encounter a close parenthesis, it should balance with an open parenthesis. Utilize a stack to handle this effectively.
 4. How about using 2 stacks instead of 1? Think about it.
 
+
+**Similar Questions:**
+1. [761. Special Binary String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000761-special-binary-string)
+2. [2116. Check if a Parentheses String Can Be Valid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002116-check-if-a-parentheses-string-can-be-valid)
 
 
 **Solution:**
