@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `Array`, `Hash Table`, `Sorting`, `Heap (Priority Queue)`
+**Topics:** `Mid Level`, `Array`, `Hash Table`, `Sorting`, `Heap (Priority Queue)`, `Biweekly Contest 67`
 
 You are given an integer array `nums` and an integer `k`. You want to find a **subsequence** of `nums` of length `k` that has the **largest** sum.
 
