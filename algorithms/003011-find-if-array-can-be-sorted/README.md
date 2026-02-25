@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Bit Manipulation`, `Sorting`
+**Topics:** `Senior`, `Array`, `Bit Manipulation`, `Sorting`, `Biweekly Contest 122`
 
 You are given a **0-indexed** array of **positive** integers `nums`.
 
@@ -52,6 +52,11 @@ Return _`true` if you can sort the array, else return `false`_.
 **Hint:**
 1. Split the array into segments. Each segment contains consecutive elements with the same number of set bits.
 2. From left to right, the previous segment’s largest element should be smaller than the current segment’s smallest element.
+
+
+
+**Similar Questions:**
+1. [1356. Sort Integers by The Number of 1 Bits](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001356-sort-integers-by-the-number-of-1-bits)
 
 [^1]: **Set Bit** A set bit refers to a bit in the binary representation of a number that has a value of `1`.
 
