@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `String`, `Bit Manipulation`
+**Topics:** `Senior`, `String`, `Bit Manipulation`, `Weekly Contest 183`
 
 Given the binary representation of an integer as a string `s`, return _the number of steps to reduce it to `1` under the following rules:_
 
@@ -15,7 +15,7 @@ It is guaranteed that you can always reach one for all test cases.
 
 - **Input:** "1101"
 - **Output:** 6
-- **Explanation:** "1101" corressponds to number 13 in their decimal representation.
+- **Explanation:** "1101" corresponds to number 13 in their decimal representation.
   - Step 1) 13 is odd, add 1 and obtain 14.
   - Step 2) 14 is even, divide by 2 and obtain 7.
   - Step 3) 7 is odd, add 1 and obtain 8.
@@ -27,7 +27,7 @@ It is guaranteed that you can always reach one for all test cases.
 
 - **Input:** s = "10"
 - **Output:** 1
-- **Explanation:** "10" corressponds to number 2 in their decimal representation.
+- **Explanation:** "10" corresponds to number 2 in their decimal representation.
   - Step 1) 2 is even, divide by 2 and obtain 1.
 
 **Example 3:**
@@ -37,14 +37,18 @@ It is guaranteed that you can always reach one for all test cases.
 
 **Constraints:**
 
-- <code>1 <= s.length <= 500</code>
-- <code>s</code> consists of characters '0' or '1'
-- <code>s[0] == '1'</code>
+- `1 <= s.length <= 500`
+- `s` consists of characters `'0'` or `'1'`
+- `s[0] == '1'`
 
 
 **Hint:**
 1. Read the string from right to left, if the string ends in '0' then the number is even otherwise it is odd.
 2. Simulate the steps described in the binary string.
+
+
+**Similar Questions:**
+1. [2139. Minimum Moves to Reach Target Score](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002139-minimum-moves-to-reach-target-score)
 
 
 
@@ -65,8 +69,8 @@ We need to determine how many steps it takes to achieve this.
 Simulate the process step by step:
 1. Start from the least significant bit (rightmost character of the string).
 2. Check if the number is odd or even:
-  - If odd: Add `1`. This might propagate a carry, modifying the preceding bits.
-  - If even: Divide by `2`, which removes the last digit.
+   - If odd: Add `1`. This might propagate a carry, modifying the preceding bits.
+   - If even: Divide by `2`, which removes the last digit.
 3. Continue the simulation until the number is reduced to `1`.
 4. Keep a counter to track the number of steps.
 
@@ -101,15 +105,13 @@ echo numSteps($s3) . "\n"; // Output: 0
 ### Explanation:
 
 1. **Variables**:
-  - `steps`: Keeps track of the total number of operations performed.
-  - `carry`: Tracks if there is a carry after adding `1` to a binary number.
-
+   - `steps`: Keeps track of the total number of operations performed.
+   - `carry`: Tracks if there is a carry after adding `1` to a binary number.
 2. **Iteration**:
-  - Start from the rightmost bit and process each bit up to the second bit (skip the first bit for now).
-  - For each bit:
-    - If it’s `1`: Adding `1` makes it `0`, but it propagates a carry to the next bit. This requires two operations (add and divide).
-    - If it’s `0`: Division directly removes the bit. However, if there is a carry from the previous bit, the `0` effectively acts as a `1`, requiring extra operations.
-
+   - Start from the rightmost bit and process each bit up to the second bit (skip the first bit for now).
+   - For each bit:
+     - If it’s `1`: Adding `1` makes it `0`, but it propagates a carry to the next bit. This requires two operations (add and divide).
+     - If it’s `0`: Division directly removes the bit. However, if there is a carry from the previous bit, the `0` effectively acts as a `1`, requiring extra operations.
 3. **Final Step**:
   - After processing all bits except the first, check if there’s a carry for the most significant bit. If so, add one final step.
 
@@ -132,11 +134,9 @@ echo numSteps($s3) . "\n"; // Output: 0
 
 ### Edge Cases
 1. **Input `"1"`**:
-  - Already `1`, no steps needed. Output: `0`.
-
+   - Already `1`, no steps needed. Output: `0`.
 2. **Input `"10"`**:
-  - `"10"` → `"1"` in one step. Output: `1`.
-
+   - `"10"` → `"1"` in one step. Output: `1`.
 3. **Large Binary Strings**:
   - The algorithm handles large inputs efficiently due to its linear time complexity.
 
@@ -144,7 +144,8 @@ This solution is robust, optimized, and adheres to the problem constraints.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
