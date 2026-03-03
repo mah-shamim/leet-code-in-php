@@ -7,7 +7,8 @@ class Solution {
      * @param Integer $k
      * @return String
      */
-    function findKthBit($n, $k) {
+    function findKthBit(int $n, int $k): string
+    {
         if ($n == 1) {
             return "0";
         }
