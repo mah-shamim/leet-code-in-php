@@ -6,7 +6,8 @@ class Solution {
      * @param String[] $nums
      * @return String
      */
-    function findDifferentBinaryString($nums) {
+    function findDifferentBinaryString(array $nums): string
+    {
         $n = count($nums);
         $result = '';
         for ($i = 0; $i < $n; $i++) {
