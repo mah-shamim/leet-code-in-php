@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Hash Table`, `String`, `Backtracking`
+**Topics:** `Senior`, `Array`, `Hash Table`, `String`, `Backtracking`, `Weekly Contest 255`
 
 Given an array of strings `nums` containing `n` **unique** binary strings each of length `n`, return _a binary string of length `n` that **does not appear** in `nums`. If there are multiple answers, you may return **any** of them_.
 
@@ -39,6 +39,12 @@ Given an array of strings `nums` containing `n` **unique** binary strings each o
 **Hint:**
 1. We can convert the given strings into base 10 integers.
 2. Can we use recursion to generate all possible strings?
+
+
+**Similar Questions:**
+1. [268. Missing Number](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000268-missing-number)
+2. [448. Find All Numbers Disappeared in an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000448-find-all-numbers-disappeared-in-an-array)
+3. [710. Random Pick with Blacklist](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000710-random-pick-with-blacklist)
 
 
 
@@ -88,7 +94,8 @@ This approach efficiently constructs the required string in O(n) time complexity
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
