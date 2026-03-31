@@ -57,6 +57,10 @@ Return _the lexicographically smallest equivalent string of `baseStr` by using t
 3. Finally convert the string with the precalculated information.
 
 
+**Similar Questions:**
+1. [3474. Lexicographically Smallest Generated String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003474-lexicographically-smallest-generated-string)
+
+
 
 **Solution:**
 
