@@ -1,6 +1,8 @@
 2751\. Robot Collisions
 
-Hard 
+**Difficulty:** Hard
+
+**Topics:** `Senior Staff`, `Array`, `Stack`, `Sorting`, `Simulation`, `Weekly Contest 351`
 
 There are `n` **1-indexed** robots, each having a position on a line, health, and movement direction.
 
@@ -18,7 +20,7 @@ Return _an array containing the health of the remaining robots (in the order the
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2023/05/15/image-20230516011718-12.png)
+![image-20230516011718-12](https://assets.leetcode.com/uploads/2023/05/15/image-20230516011718-12.png)
 
 - **Input:** positions = [5,4,3,2,1], healths = [2,17,9,15,10], directions = "RRRRR"
 - **Output:** [2,17,9,15,10]
@@ -26,7 +28,7 @@ Return _an array containing the health of the remaining robots (in the order the
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2023/05/15/image-20230516004433-7.png)
+![image-20230516004433-7](https://assets.leetcode.com/uploads/2023/05/15/image-20230516004433-7.png)
 
 - **Input:** positions = [3,5,2,6], healths = [10,10,15,12], directions = "RLRL"
 - **Output:** [14]
@@ -34,7 +36,7 @@ Return _an array containing the health of the remaining robots (in the order the
 
 **Example 3:**
 
-![](https://assets.leetcode.com/uploads/2023/05/15/image-20230516005114-9.png)
+![image-20230516005114-9](https://assets.leetcode.com/uploads/2023/05/15/image-20230516005114-9.png)
 
 - **Input:** positions = [1,2,5,6], healths = [10,10,11,11], directions = "RLRL"
 - **Output:** []
@@ -54,6 +56,10 @@ Return _an array containing the health of the remaining robots (in the order the
 2. To optimize the solution, use a stack to keep track of the surviving robots as we iterate through the positions.
 3. Instead of simulating each collision, check the current robot against the top of the stack (if it exists) to determine if a collision occurs.
 
+
+**Similar Questions:**
+1. [735. Asteroid Collision](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000735-asteroid-collision)
+
 **Solution:**
 
 
@@ -67,12 +73,28 @@ Here's the implementation in PHP: **[2751. Robot Collisions](https://github.com/
 
 ```php
 <?php
+/**
+ * @param Integer[] $positions
+ * @param Integer[] $healths
+ * @param String $directions
+ * @return Integer[]
+ */
+function survivedRobotsHealths(array $positions, array $healths, string $directions): array
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Example1 usage
 $positions = [1, 2, 5, 6];
 $healths = [10, 10, 11, 11];
 $directions = "RLRL";
 
-print_r(robotCollisions($positions, $healths, $directions));
+print_r(survivedRobotsHealths($positions, $healths, $directions));
 //Output: [2,17,9,15,10]
 
 
@@ -81,7 +103,7 @@ $positions = [3,5,2,6];
 $healths = [10,10,15,12];
 $directions = "RLRL";
 
-print_r(robotCollisions($positions, $healths, $directions));
+print_r(survivedRobotsHealths($positions, $healths, $directions));
 //Output: [14]
 
 
@@ -90,7 +112,7 @@ $positions = [1,2,5,6];
 $healths = [10,10,11,11];
 $directions = "RLRL";
 
-print_r(robotCollisions($positions, $healths, $directions));
+print_r(survivedRobotsHealths($positions, $healths, $directions));
 //Output: []
 
 ?>
@@ -107,7 +129,8 @@ This solution ensures that we efficiently handle up to <code>(10<sup>5</sup>)</c
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
