@@ -8,7 +8,8 @@ class Solution {
      * @param String $directions
      * @return Integer[]
      */
-    function survivedRobotsHealths($positions, $healths, $directions) {
+    function survivedRobotsHealths(array $positions, array $healths, string $directions): array
+    {
         // Combine all robot data into a single array
         $robots = [];
         for ($i = 0; $i < count($positions); $i++) {
