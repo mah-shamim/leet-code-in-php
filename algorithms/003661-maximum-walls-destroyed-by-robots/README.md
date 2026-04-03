@@ -46,6 +46,13 @@ Return the **maximum** number of **unique** walls that can be destroyed by the r
 - **Output:** 0
 - **Explanation:** In this example, only `robots[0]` can reach the wall, but its shot to the **right** is blocked by `robots[1]`; thus the answer is 0.
 
+
+**Example 4:**
+
+- **Input:** robots = [17,59,32,11,72,18], distance = [5,7,6,5,2,10], walls = [17,25,33,29,54,53,18,35,39,37,20,14,34,13,16,58,22,51,56,27,10,15,12,23,45,43,21,2,42,7,32,40,8,9,1,5,55,30,38,4,3,31,36,41,57,28,11,49,26,19,50,52,6,47,46,44,24,48]
+- **Output:** 37
+
+
 **Constraints:**
 
 - `1 <= robots.length == distance.length <= 10⁵`
@@ -85,13 +92,12 @@ Let's implement this solution in PHP: **[3661. Maximum Walls Destroyed by Robots
 ```php
 <?php
 /**
- * @param Integer[] $robots
- * @param Integer[] $distance
- * @param Integer[] $walls
- * @return Integer
+ * @param integer[] $robots
+ * @param integer[] $distance
+ * @param integer[] $walls
+ * @return integer
  */
-function maxWalls(array $robots, array $distance, array $walls): int
-{
+function maxWalls(array $robots, array $distance, array $walls): int {
     ...
     ...
     ...
@@ -101,27 +107,12 @@ function maxWalls(array $robots, array $distance, array $walls): int
 }
 
 /**
- * @param $arr
- * @param $target
- * @return int
+ * Binary search: find first index where value >= target
+ * @param integer[] $arr
+ * @param integer $target
+ * @return integer
  */
-function lower_bound($arr, $target): int
-{
-    ...
-    ...
-    ...
-    /**
-     * go to ./solution.php
-     */
-}
-
-/**
- * @param $arr
- * @param $target
- * @return int
- */
-function upper_bound($arr, $target): int
-{
+function lowerBound(array $arr, int $target): int {
     ...
     ...
     ...
@@ -134,6 +125,7 @@ function upper_bound($arr, $target): int
 echo maxWallsDestroyed([4], [3], [1,10]) . "\n";                // Output: 1
 echo maxWallsDestroyed([10,2], [5,1], [5,2,7]) . "\n";          // Output: 3
 echo maxWallsDestroyed([1,2], [100,1], [10]) . "\n";            // Output: 0
+echo maxWallsDestroyed([17,59,32,11,72,18], [5,7,6,5,2,10], [17,25,33,29,54,53,18,35,39,37,20,14,34,13,16,58,22,51,56,27,10,15,12,23,45,43,21,2,42,7,32,40,8,9,1,5,55,30,38,4,3,31,36,41,57,28,11,49,26,19,50,52,6,47,46,44,24,48]) . "\n";            // Output: 37
 ?>
 ```
 

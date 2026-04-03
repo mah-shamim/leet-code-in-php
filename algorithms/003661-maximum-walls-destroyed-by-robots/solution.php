@@ -1,140 +1,117 @@
 <?php
 
 class Solution {
-
     /**
-     * @param Integer[] $robots
-     * @param Integer[] $distance
-     * @param Integer[] $walls
-     * @return Integer
+     * @param integer[] $robots
+     * @param integer[] $distance
+     * @param integer[] $walls
+     * @return integer
      */
-    function maxWalls(array $robots, array $distance, array $walls): int
-    {
-        sort($robots);
+    function maxWalls(array $robots, array $distance, array $walls): int {
+        $n = count($robots);
+
+        // Create pairs of (robot_position, robot_distance) for easier handling
+        $robotInfo = [];
+        for ($i = 0; $i < $n; $i++) {
+            $robotInfo[] = [$robots[$i], $distance[$i]];
+        }
+
+        // Sort robots by their positions
+        usort($robotInfo, function($a, $b) {
+            return $a[0] - $b[0];
+        });
+
+        // Sort walls for binary search
         sort($walls);
 
-        $n = count($robots);
-        $m = count($walls);
+        // DP memoization table
+        // dp[i][direction]: maximum walls destroyed considering robots 0 to i
+        // direction = 0: robot i moves left, direction = 1: robot i moves right
+        $dp = array_fill(0, $n, array_fill(0, 2, -1));
 
-        // Precompute nearest robot positions
-        $prevRobot = array_fill(0, $n, -1);
-        $nextRobot = array_fill(0, $n, -1);
-
-        for ($i = 0; $i < $n; $i++) {
-            if ($i > 0) $prevRobot[$i] = $robots[$i - 1];
-            if ($i < $n - 1) $nextRobot[$i] = $robots[$i + 1];
-        }
-
-        // left and right reachable ranges in wall indices
-        $leftRange = [];
-        $rightRange = [];
-
-        for ($i = 0; $i < $n; $i++) {
-            // left range
-            $leftLimit = $robots[$i] - $distance[$i];
-            if ($prevRobot[$i] != -1) {
-                $leftLimit = max($leftLimit, $prevRobot[$i] + 1);
-            }
-            // walls in [$leftLimit, $robots[$i]]
-            $leftIdx = $this->lower_bound($walls, $leftLimit);
-            $rightIdx = $this->upper_bound($walls, $robots[$i]) - 1;
-            if ($leftIdx <= $rightIdx) {
-                $leftRange[$i] = [$leftIdx, $rightIdx];
-            } else {
-                $leftRange[$i] = null;
+        // Recursive function with memoization using a closure
+        $solve = function($robotIdx, $prevDirection) use (&$solve, &$dp, $robotInfo, $walls, $n) {
+            // Base case: no robots left to consider
+            if ($robotIdx < 0) {
+                return 0;
             }
 
-            // right range
-            $rightLimit = $robots[$i] + $distance[$i];
-            if ($nextRobot[$i] != -1) {
-                $rightLimit = min($rightLimit, $nextRobot[$i] - 1);
+            // Return memoized result if already computed
+            if ($dp[$robotIdx][$prevDirection] != -1) {
+                return $dp[$robotIdx][$prevDirection];
             }
-            // walls in [$robots[$i], $rightLimit]
-            $leftIdx = $this->lower_bound($walls, $robots[$i]);
-            $rightIdx = $this->upper_bound($walls, $rightLimit) - 1;
-            if ($leftIdx <= $rightIdx) {
-                $rightRange[$i] = [$leftIdx, $rightIdx];
-            } else {
-                $rightRange[$i] = null;
-            }
-        }
 
-        // DP: dp[i][0] = max walls destroyed considering first i+1 robots, last shot left
-        // dp[i][1] = last shot right
-        $dp = array_fill(0, $n, [0, 0]);
+            $maxDestroyed = 0;
 
-        for ($i = 0; $i < $n; $i++) {
-            if ($i > 0) {
-                $dp[$i][0] = $dp[$i - 1][0];
-                $dp[$i][1] = $dp[$i - 1][1];
+            // Option 1: Current robot moves LEFT
+            // Calculate the leftmost position this robot can reach
+            $leftBound = $robotInfo[$robotIdx][0] - $robotInfo[$robotIdx][1];
+
+            // Ensure no overlap with previous robot (if exists)
+            if ($robotIdx > 0) {
+                $leftBound = max($leftBound, $robotInfo[$robotIdx - 1][0] + 1);
             }
-            if ($leftRange[$i]) {
-                list($l, $r) = $leftRange[$i];
-                $cnt = $r - $l + 1;
-                // if previous robot's right range didn't cover these walls
-                // we need to add uncovered ones
-                $prevCovered = 0;
-                if ($i > 0 && $rightRange[$i - 1]) {
-                    list($pl, $pr) = $rightRange[$i - 1];
-                    $prevCovered = max(0, $pr - $l + 1);
+
+            // Count walls that can be destroyed when moving left
+            $leftWallIdx = $this->lowerBound($walls, $leftBound);
+            $rightWallIdx = $this->lowerBound($walls, $robotInfo[$robotIdx][0] + 1);
+            $wallsDestroyedLeft = $rightWallIdx - $leftWallIdx;
+
+            // Recurse for previous robots (current robot chose left, so prev can choose any direction)
+            $maxDestroyed = $solve($robotIdx - 1, 0) + $wallsDestroyedLeft;
+
+            // Option 2: Current robot moves RIGHT
+            // Calculate the rightmost position this robot can reach
+            $rightBound = $robotInfo[$robotIdx][0] + $robotInfo[$robotIdx][1];
+
+            // Ensure no overlap with next robot (if exists)
+            if ($robotIdx + 1 < $n) {
+                if ($prevDirection == 0) {
+                    // If next robot will move left, consider its leftmost reach
+                    $rightBound = min($rightBound, $robotInfo[$robotIdx + 1][0] - $robotInfo[$robotIdx + 1][1] - 1);
+                } else {
+                    // If next robot will move right, just avoid its starting position
+                    $rightBound = min($rightBound, $robotInfo[$robotIdx + 1][0] - 1);
                 }
-                $newCnt = max($cnt, $cnt - $prevCovered);
-                $dp[$i][0] = max($dp[$i][0], $dp[$i][0] + $newCnt);
             }
-            if ($rightRange[$i]) {
-                list($l, $r) = $rightRange[$i];
-                $cnt = $r - $l + 1;
-                // similar check
-                $prevCovered = 0;
-                if ($i > 0 && $rightRange[$i - 1]) {
-                    list($pl, $pr) = $rightRange[$i - 1];
-                    $prevCovered = max(0, $pr - $l + 1);
-                }
-                $newCnt = max($cnt, $cnt - $prevCovered);
-                $dp[$i][1] = max($dp[$i][1], $dp[$i][1] + $newCnt);
-            }
-        }
 
-        return max($dp[$n - 1][0], $dp[$n - 1][1]);
+            // Count walls that can be destroyed when moving right
+            $leftWallIdx = $this->lowerBound($walls, $robotInfo[$robotIdx][0]);
+            $rightWallIdx = $this->lowerBound($walls, $rightBound + 1);
+            $wallsDestroyedRight = $rightWallIdx - $leftWallIdx;
+
+            // Recurse for previous robots (current robot chose right, so pass direction = 1)
+            $maxDestroyed = max($maxDestroyed, $solve($robotIdx - 1, 1) + $wallsDestroyedRight);
+
+            // Store and return the result
+            $dp[$robotIdx][$prevDirection] = $maxDestroyed;
+            return $maxDestroyed;
+        };
+
+        // Start solving from the last robot, assuming it moves right
+        // (The last robot's direction doesn't affect next robots since there are none)
+        return $solve($n - 1, 1);
     }
 
     /**
-     * @param $arr
-     * @param $target
-     * @return int
+     * Binary search: find first index where value >= target
+     * @param integer[] $arr
+     * @param integer $target
+     * @return integer
      */
-    function lower_bound($arr, $target): int
-    {
-        $l = 0;
-        $r = count($arr);
-        while ($l < $r) {
-            $m = intdiv($l + $r, 2);
-            if ($arr[$m] < $target) {
-                $l = $m + 1;
-            } else {
-                $r = $m;
-            }
-        }
-        return $l;
-    }
+    private function lowerBound(array $arr, int $target): int {
+        $left = 0;
+        $right = count($arr);
 
-    /**
-     * @param $arr
-     * @param $target
-     * @return int
-     */
-    function upper_bound($arr, $target): int
-    {
-        $l = 0;
-        $r = count($arr);
-        while ($l < $r) {
-            $m = intdiv($l + $r, 2);
-            if ($arr[$m] <= $target) {
-                $l = $m + 1;
+        while ($left < $right) {
+            $mid = $left + (int)(($right - $left) / 2);
+            if ($arr[$mid] < $target) {
+                $left = $mid + 1;
             } else {
-                $r = $m;
+                $right = $mid;
             }
         }
-        return $l;
+
+        return $left;
     }
 }
