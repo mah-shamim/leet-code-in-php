@@ -131,8 +131,8 @@ function upper_bound($arr, $target): int
 }
 
 // Test cases
-echo maxWallsDestroyed([4], [3], [1,10]) . "\n";                // Output: 3
-echo maxWallsDestroyed([10,2], [5,1], [5,2,7]) . "\n";          // Output: 4
+echo maxWallsDestroyed([4], [3], [1,10]) . "\n";                // Output: 1
+echo maxWallsDestroyed([10,2], [5,1], [5,2,7]) . "\n";          // Output: 3
 echo maxWallsDestroyed([1,2], [100,1], [10]) . "\n";            // Output: 0
 ?>
 ```
