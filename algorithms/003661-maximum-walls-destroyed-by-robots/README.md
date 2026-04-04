@@ -46,6 +46,13 @@ Return the **maximum** number of **unique** walls that can be destroyed by the r
 - **Output:** 0
 - **Explanation:** In this example, only `robots[0]` can reach the wall, but its shot to the **right** is blocked by `robots[1]`; thus the answer is 0.
 
+
+**Example 4:**
+
+- **Input:** robots = [17,59,32,11,72,18], distance = [5,7,6,5,2,10], walls = [17,25,33,29,54,53,18,35,39,37,20,14,34,13,16,58,22,51,56,27,10,15,12,23,45,43,21,2,42,7,32,40,8,9,1,5,55,30,38,4,3,31,36,41,57,28,11,49,26,19,50,52,6,47,46,44,24,48]
+- **Output:** 37
+
+
 **Constraints:**
 
 - `1 <= robots.length == distance.length <= 10⁵`
@@ -70,28 +77,34 @@ Return the **maximum** number of **unique** walls that can be destroyed by the r
 
 **Solution:**
 
-This problem requires finding the maximum number of unique walls that can be destroyed by robots firing bullets left or right, with bullets stopping when they encounter another robot. The solution uses sorting, binary search for range queries, and dynamic programming to track optimal wall destruction counts while accounting for bullet-blocking interactions between robots.
+The problem requires maximizing the number of unique walls destroyed by robots, each with a single bullet that travels left or right up to a given distance. Bullets stop if they hit another robot.  
+The solution uses **sorting**, **binary search** for efficient range queries, and **dynamic programming (DP) with memoization** to handle the state of whether a robot shoots left or right, while respecting blockage constraints from adjacent robots.
 
 ### Approach:
 
-- **Sorting** — Sort both robots and walls arrays to enable efficient range-based queries using binary search.
-- **Neighbor identification** — Precompute previous and next robot positions to determine stopping boundaries for bullets.
-- **Range calculation** — For each robot, compute the index ranges of walls it can destroy when shooting left or right, considering neighboring robots as blockers.
-- **Dynamic Programming** — Use DP where `dp[i][0]` represents max walls destroyed using first `i+1` robots with the last robot shooting left, and `dp[i][1]` for shooting right.
-- **Overlap handling** — When adding a new robot's destroyed walls, subtract walls already destroyed by previous robots to avoid double-counting.
+- **Sorting:** Both robots and walls are sorted by position to allow binary search and linear DP processing.
+
+- **DP State Definition:** `dp[i][direction]` = maximum walls destroyed considering robots from `0..i`, where `direction` indicates whether robot `i` shoots left (`0`) or right (`1`).
+
+- **Range Limiting Due to Adjacent Robots**  
+  - When a robot shoots left, the left bound is capped by the next robot to its left (if any) plus one, to avoid being blocked.  
+  - When shooting right, the right bound is capped by the next robot to its right, depending on its planned direction.
+
+- **Wall Counting via Binary Search:** For a given interval `[leftBound, rightBound]`, the number of walls destroyed is found using `lowerBound` on the sorted walls array.
+
+- **Memoized Recursion:** Start from the last robot and work backwards, trying both shooting directions and taking the maximum over all possibilities.
 
 Let's implement this solution in PHP: **[3661. Maximum Walls Destroyed by Robots](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003661-maximum-walls-destroyed-by-robots/solution.php)**
 
 ```php
 <?php
 /**
- * @param Integer[] $robots
- * @param Integer[] $distance
- * @param Integer[] $walls
- * @return Integer
+ * @param integer[] $robots
+ * @param integer[] $distance
+ * @param integer[] $walls
+ * @return integer
  */
-function maxWalls(array $robots, array $distance, array $walls): int
-{
+function maxWalls(array $robots, array $distance, array $walls): int {
     ...
     ...
     ...
@@ -101,27 +114,12 @@ function maxWalls(array $robots, array $distance, array $walls): int
 }
 
 /**
- * @param $arr
- * @param $target
- * @return int
+ * Binary search: find first index where value >= target
+ * @param integer[] $arr
+ * @param integer $target
+ * @return integer
  */
-function lower_bound($arr, $target): int
-{
-    ...
-    ...
-    ...
-    /**
-     * go to ./solution.php
-     */
-}
-
-/**
- * @param $arr
- * @param $target
- * @return int
- */
-function upper_bound($arr, $target): int
-{
+function lowerBound(array $arr, int $target): int {
     ...
     ...
     ...
@@ -134,32 +132,38 @@ function upper_bound($arr, $target): int
 echo maxWallsDestroyed([4], [3], [1,10]) . "\n";                // Output: 1
 echo maxWallsDestroyed([10,2], [5,1], [5,2,7]) . "\n";          // Output: 3
 echo maxWallsDestroyed([1,2], [100,1], [10]) . "\n";            // Output: 0
+echo maxWallsDestroyed([17,59,32,11,72,18], [5,7,6,5,2,10], [17,25,33,29,54,53,18,35,39,37,20,14,34,13,16,58,22,51,56,27,10,15,12,23,45,43,21,2,42,7,32,40,8,9,1,5,55,30,38,4,3,31,36,41,57,28,11,49,26,19,50,52,6,47,46,44,24,48]) . "\n";            // Output: 37
 ?>
 ```
 
 ### Explanation:
 
-- **Sorting:** Both `robots` and `walls` arrays are sorted to allow binary search operations. This transforms position-based queries into index-based range queries.
-- **Neighbor blocking:** For each robot at position `pos` with distance `d`:
-   - **Left shot** reaches from `pos - d` to `pos`, but cannot go past the previous robot (if exists), so the leftmost reachable position is `max(pos - d, prev_robot + 1)`.
-   - **Right shot** reaches from `pos` to `pos + d`, but cannot go past the next robot, so the rightmost reachable position is `min(pos + d, next_robot - 1)`.
-- **Wall range indexing:** Using `lower_bound` and `upper_bound` on the sorted `walls` array, each robot's left and right shooting ranges are converted to inclusive index ranges `[left_idx, right_idx]` in the walls array.
-- **DP state transition:** For robot `i`:
-   - `dp[i][0]` (shoot left): can be based on `dp[i-1][0]` or `dp[i-1][1]`, but walls that were already destroyed by robot `i-1`'s right shot should not be counted again.
-   - `dp[i][1]` (shoot right): similar logic applies.
-   - The actual count added is `range_length` minus walls already covered by previous robots.
-- **Overlap subtraction:** When calculating new walls destroyed by robot `i` shooting left, if robot `i-1` shot right, some walls may overlap. The overlap is calculated by finding how many walls in robot `i`'s left range were already in robot `i-1`'s right range.
-- **Final answer:** Return `max(dp[n-1][0], dp[n-1][1])` — the best result after processing all robots.
+- **Step 1: Preprocessing:** Pair each robot with its distance, then sort robots by position. Sort walls array for binary search.
+
+- **Step 2: DP Base Case:** If no robots remain, return 0 walls destroyed.
+
+- **Step 3: Left Shot Calculation**  
+  - Leftmost reach = `robotPos - distance`.  
+  - If there’s a robot to the left, limit left reach to `leftRobotPos + 1`.  
+  - Count walls in `[leftBound, robotPos]` via binary search.
+
+- **Step 4: Right Shot Calculation**  
+  - Rightmost reach = `robotPos + distance`.  
+  - If there’s a robot to the right, limit right reach based on whether that robot will shoot left (then use its left bound) or right (then avoid its position).  
+  - Count walls in `[robotPos, rightBound]` via binary search.
+
+- **Step 5: Memoization:** Store results in `dp` to avoid recomputation.
+
+- **Step 6: Final Answer:** Start recursion from the last robot with direction = 1 (right), since the last robot has no right neighbor to block.
 
 ### Complexity
-- **Time Complexity**:  `O((n + m) log m)`  
-  - Sorting robots and walls: `O(n log n + m log m)`.  
-  - For each robot (n up to 1e5), binary search operations: `O(log m)`.  
-  - DP transitions: `O(n)`.
-- **Space Complexity**: `O(n + m)`  
-  - Storing sorted arrays: `O(n + m)`.  
-  - DP table: `O(n)`.  
-  - Range arrays: `O(n)`.
+- **Time Complexity**:
+  - Sorting robots and walls: `O(n log n + m log m)` where `n` = robots length, `m` = walls length.
+  - Each DP state `(n, 2)` computed once, each using `O(log m)` for binary search.
+  - Total: `O(n log m + n log n + m log m)` ≈ `O(n log n + m log m)`.
+- **Space Complexity**:
+  - `O(n + m)` for DP table and sorted arrays.
+  - Recursion stack depth up to `O(n)`.
 
 
 **Contact Links**
