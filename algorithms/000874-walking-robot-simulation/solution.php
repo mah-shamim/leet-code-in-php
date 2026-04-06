@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[][] $obstacles
      * @return Integer
      */
-    function robotSim($commands, $obstacles) {
+    function robotSim(array $commands, array $obstacles): int
+    {
         // Directions: North, East, South, West
         $directions = [[0, 1], [1, 0], [0, -1], [-1, 0]];
         $currentDirection = 0; // Start facing North
