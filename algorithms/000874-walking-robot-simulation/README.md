@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Hash Table`, `Simulation`
+**Topics:** `Senior`, `Array`, `Hash Table`, `Simulation`, Weekly Contest 94
 
 A robot on an infinite XY-plane starts at point `(0, 0)` facing north. The robot can receive a sequence of these three possible types of `commands`:
 
@@ -68,6 +68,12 @@ Return _the **maximum Euclidean distance** that the robot ever gets from the ori
 - The answer is guaranteed to be less than <code>2<sup>31</sup></code>
 
 
+
+**Similar Questions:**
+
+- [2069. Walking Robot Simulation II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002069-walking-robot-simulation-ii)
+
+
 **Solution:**
 
 We need to simulate the robot's movement on an infinite 2D grid based on a sequence of commands and avoid obstacles if any. The goal is to determine the maximum Euclidean distance squared that the robot reaches from the origin.
@@ -95,7 +101,7 @@ We need to simulate the robot's movement on an infinite 2D grid based on a seque
 5. **Distance Calculation**:
    - Track the maximum distance squared from the origin that the robot reaches during its movements.
 
-Let's implement this solution in PHP: **[874\. Walking Robot Simulation](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000874-walking-robot-simulation/solution.php)**
+Let's implement this solution in PHP: **[874. Walking Robot Simulation](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000874-walking-robot-simulation/solution.php)**
 
 ```php
 <?php
@@ -136,7 +142,8 @@ This solution efficiently handles the problem constraints and calculates the max
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
