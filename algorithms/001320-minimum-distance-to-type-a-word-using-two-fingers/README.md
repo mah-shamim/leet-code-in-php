@@ -24,7 +24,7 @@ The **distance** between coordinates `(x₁, y₁)` and `(x₂, y₂)` is `|x₁
   - Using two fingers, one optimal way to type "CAKE" is:
     - Finger 1 on letter `'C' -> cost = 0`
     - Finger 1 on letter `'A' -> cost = Distance` from letter `'C'` to letter `'A' = 2`
-    - Finger 2 on letter `'K' -> cost = 0
+    - Finger 2 on letter `'K' -> cost = 0`
     - Finger 2 on letter `'E' -> cost = Distance` from letter `'K'` to letter `'E' = 1`
     - Total distance = `3`
 
