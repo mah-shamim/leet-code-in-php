@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[][] $factory
      * @return Integer
      */
-    function minimumTotalDistance($robot, $factory) {
+    function minimumTotalDistance(array $robot, array $factory): int
+    {
         sort($robot);
         usort($factory, function($a, $b) {
             return $a[0] - $b[0];
