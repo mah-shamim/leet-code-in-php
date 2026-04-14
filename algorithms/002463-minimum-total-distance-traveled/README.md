@@ -18,7 +18,7 @@ Return _the minimum total distance traveled by all the robots_. The test cases a
 
 - All robots move at the same speed.
 - If two robots move in the same direction, they will never collide.
-- If two robots move in opposite directions and they meet at some point, they do not collide. They cross each other.
+- If two robots move in opposite directions, and they meet at some point, they do not collide. They cross each other.
 - If a robot passes by a factory that reached its limits, it crosses it as if it does not exist.
 - If the robot moved from a position `x` to a position `y`, the distance it moved is `|y - x|`.
 
