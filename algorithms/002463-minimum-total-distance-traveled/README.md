@@ -2,9 +2,9 @@
 
 **Difficulty:** Hard
 
-**Topics:** `Array`, `Dynamic Programming`, `Sorting`
+**Topics:** `Senior Staff`, `Array`, `Dynamic Programming`, `Sorting`, `Weekly Contest 318`
 
-There are some robots and factories on the X-axis. You are given an integer array `robot` where `robot[i]` is the position of the <code>i<sup>th</sup></code> robot. You are also given a 2D integer array factory where <code>factory[j] = [position<sub>j</sub>, limit<sub>j</sub>]</code> indicates that <code>position<sub>j</sub></code> is the position of the <code>j<sub>th</sub></code> factory and that the <code>j<sub>th</sub></code> factory can repair at most <code>limit<sub>j</sub></code> robots.
+There are some robots and factories on the X-axis. You are given an integer array `robot` where `robot[i]` is the position of the <code>i<sup>th</sup></code> robot. You are also given a 2D integer array factory where <code>factory[j] = [position<sub>j</sub>, limit<sub>j</sub>]</code> indicates that <code>position<sub>j</sub></code> is the position of the <code>j<sup>th</sup></code> factory and that the <code>j<sup>th</sup></code> factory can repair at most <code>limit<sub>j</sub></code> robots.
 
 The positions of each robot are **unique**. The positions of each factory are also **unique**. Note that a robot can be **in the same position** as a factory initially.
 
@@ -64,6 +64,11 @@ Return _the minimum total distance traveled by all the robots_. The test cases a
 1. Sort robots and factories by their positions.
 2. After sorting, notice that each factory should repair some subsegment of robots.
 3. Find the minimum total distance to repair first i robots with first j factories.
+
+
+**Similar Questions:**
+1. [1011. Capacity To Ship Packages Within D Days](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001011-capacity-to-ship-packages-within-d-days)
+2. [2585. Number of Ways to Earn Points](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002585-number-of-ways-to-earn-points)
 
 
 
@@ -128,8 +133,8 @@ echo minimumTotalDistance($robot, $factory);  // Output: 2
 This solution efficiently calculates the minimum travel distance for all robots to be repaired within their factory limits.
 
 **Contact Links**
-
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
