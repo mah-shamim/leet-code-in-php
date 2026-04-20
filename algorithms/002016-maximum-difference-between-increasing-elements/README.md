@@ -41,6 +41,12 @@ Return the **maximum difference**. If no such `i` and `j` exists, return `-1`.
 
 
 
+**Similar Questions:**
+1. [121. Best Time to Buy and Sell Stock](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000121-best-time-to-buy-and-sell-stock)
+2. [2078. Two Furthest Houses With Different Colors](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002078-two-furthest-houses-with-different-colors)
+
+
+
 
 
 
