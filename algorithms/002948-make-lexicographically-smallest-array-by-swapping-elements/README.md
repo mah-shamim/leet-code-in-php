@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Union Find`, `Sorting`
+**Topics:** `Staff`, `Array`, `Union Find`, `Sorting`, `Weekly Contest 373`
 
 You are given a **0-indexed** array of **positive** integers `nums` and a positive integer `limit`.
 
@@ -60,6 +60,12 @@ An array `a` is lexicographically smaller than an array `b` if in the first posi
 3. Can we use DSU?
 4. Sort `nums`. Now we just need to consider if the consecutive elements have an edge to check if they belong to the same connected component. Hence, all connected components become a list of position-consecutive elements after sorting.
 5. For each index of `nums` from `0` to `nums.length - 1` we can change it to the current minimum value we have in its connected component and remove that value from the connected component.
+
+
+
+**Similar Questions:**
+1. [1202. Smallest String With Swaps](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001202-smallest-string-with-swaps)
+2. [1722. Minimize Hamming Distance After Swap Operations](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001722-minimize-hamming-distance-after-swap-operations)
 
 
 
