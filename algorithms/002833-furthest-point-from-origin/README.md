@@ -86,14 +86,12 @@ Let's implement this solution in PHP: **[2833. Furthest Point From Origin](https
  */
 function furthestDistanceFromOrigin(string $moves): int
 {
-    $r = substr_count($moves, 'R');
-    $l = substr_count($moves, 'L');
-    $underscore = substr_count($moves, '_');
-
-    $maxPos = ($r - $l) + $underscore;
-    $minPos = ($r - $l) - $underscore;
-
-    return max(abs($maxPos), abs($minPos));
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Test cases
