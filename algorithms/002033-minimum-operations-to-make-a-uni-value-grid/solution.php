@@ -5,9 +5,10 @@ class Solution {
     /**
      * @param Integer[][] $grid
      * @param Integer $x
-     * @return Integer
+     * @return float|int
      */
-    function minOperations($grid, $x) {
+    function minOperations(array $grid, int $x): float|int
+    {
         $arr = array();
         // Efficiently flatten the grid using element-by-element pushing
         foreach ($grid as $row) {

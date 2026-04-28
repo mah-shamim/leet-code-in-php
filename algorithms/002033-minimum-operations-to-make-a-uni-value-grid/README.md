@@ -55,9 +55,9 @@ Return _the **minimum** number of operations to make the grid **uni-value**_. If
 
 - `m == grid.length`
 - `n == grid[i].length`
-- <code>1 <= m, n <= 10<sup>5</sup></code>
-- <code>1 <= m * n <= 10<sup>5</sup></code>
-- <code>1 <= x, grid[i][j] <= 10<sup>4</sup></code>
+- `1 <= m, n <= 10⁵`
+- `1 <= m * n <= 10⁵`
+- `1 <= x, grid[i][j] <= 10⁴`
 
 
 **Hint:**
@@ -95,9 +95,10 @@ Let's implement this solution in PHP: **[2033. Minimum Operations to Make a Uni-
 /**
  * @param Integer[][] $grid
  * @param Integer $x
- * @return Integer
+ * @return float|int
  */
-function minOperations($grid, $x) {
+function minOperations(array $grid, int $x): float|int
+{
     ...
     ...
     ...
@@ -148,7 +149,8 @@ This approach efficiently handles the problem constraints and ensures optimal pe
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
