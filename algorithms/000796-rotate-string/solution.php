@@ -7,7 +7,8 @@ class Solution {
      * @param String $goal
      * @return Boolean
      */
-    function rotateString($s, $goal) {
+    function rotateString(string $s, string $goal): bool
+    {
         // Check if lengths are equal; if not, return false
         if (strlen($s) !== strlen($goal)) {
             return false;
