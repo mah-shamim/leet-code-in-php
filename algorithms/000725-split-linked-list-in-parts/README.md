@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Linked List`
+**Topics:** `Staff`, `Linked List`, `Weekly Contest 58`
 
 Given the `head` of a singly linked list and an integer `k`, split the linked list into k consecutive linked list parts.
 
@@ -41,6 +41,13 @@ Return _an array of the `k` parts_.
 
 **Hint:**
 1. If there are N nodes in the list, and k parts, then every part has N/k elements, except the first N%k parts have an extra one.
+
+
+
+**Similar Questions:**
+1. [61. Rotate List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000061-rotate-list)
+2. [328. Odd Even Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000328-odd-even-linked-list)
+3. [2674. Split a Circular Linked List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002674-split-a-circular-linked-list)
 
 
 
