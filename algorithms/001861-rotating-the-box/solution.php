@@ -6,7 +6,8 @@ class Solution {
      * @param String[][] $box
      * @return String[][]
      */
-    function rotateTheBox($box) {
+    function rotateTheBox(array $box): array
+    {
         $m = count($box); // Number of rows
         $n = count($box[0]); // Number of columns
 
