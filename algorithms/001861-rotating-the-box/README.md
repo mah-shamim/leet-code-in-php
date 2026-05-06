@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Two Pointers`, `Matrix`
+**Topics:** `Staff`, `Array`, `Two Pointers`, `Matrix`, `Biweekly Contest 52`
 
 You are given an `m x n` matrix of characters `box` representing a side-view of a box. Each cell of the box is one of the following:
 
@@ -80,7 +80,8 @@ Let's implement this solution in PHP: **[1861. Rotating the Box](https://github.
 
 ```php
 <?php
-function rotateTheBox($box) {
+function rotateTheBox(array $box): array
+{
     ...
     ...
     ...
@@ -156,9 +157,7 @@ $box = [
 
 ### Time Complexity
 1. Gravity simulation: _**O(m x n)**_, as we iterate through each element in the matrix.
-2. Rotation: _**O(m x n)**_, as we create the rotated matrix.
-
-**Total**: _**O(m x n)**_.
+2. Rotation: _**O(m x n)**_, as we create the rotated matrix. **Total**: _**O(m x n)**_.
 
 ### Space Complexity
 - _**O(m x n)**_ for the rotated matrix.
@@ -167,7 +166,8 @@ This solution is efficient and adheres to the constraints of the problem.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
