@@ -65,6 +65,13 @@ Return the **minimum** possible **non-negative** value of `k`, such that after p
 
 
 
+**Similar Questions:**
+1. [1109. Corporate Flight Bookings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001109-corporate-flight-bookings)
+2. [1674. Minimum Moves to Make Array Complementary](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001674-minimum-moves-to-make-array-complementary)
+3. [3489. Zero Array Transformation IV](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003489-zero-array-transformation-iv)
+
+
+
 **Solution:**
 
 We need to determine the minimum number of queries that need to be processed in sequence to transform the given array into a zero array. Each query allows decrementing elements in a specified range by a certain value, but the actual decrement can be any amount up to the specified value. The goal is to find the earliest point where all elements in the array become zero.
