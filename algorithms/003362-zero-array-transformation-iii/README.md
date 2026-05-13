@@ -70,6 +70,13 @@ queries = [[6187,99742],[9900,96888],[4230,93922],[9934,99785],[6363,98517],[151
 
 
 
+**Similar Questions:**
+1. [1109. Corporate Flight Bookings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001109-corporate-flight-bookings)
+2. [1674. Minimum Moves to Make Array Complementary](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001674-minimum-moves-to-make-array-complementary)
+3. [3489. Zero Array Transformation IV](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003489-zero-array-transformation-iv)
+
+
+
 **Solution:**
 
 We need to determine the maximum number of queries that can be removed such that the remaining queries can still convert the given array into a zero array. Each query allows decrementing elements in a specified range by at most 1. The solution involves a greedy approach to select the most effective queries first.
