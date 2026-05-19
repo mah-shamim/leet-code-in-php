@@ -23,6 +23,11 @@ Given a string array `words`, return _an array of all characters that show up in
 - <code>words[i]</code> consists of lowercase English letters.
 
 
+
+**Similar Questions:**
+1. [350. Intersection of Two Arrays II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000350-intersection-of-two-arrays-ii)
+
+
 **Solution:**
 
 The problem asks us to find the common characters that appear in all the strings of a given array. This includes duplicates, meaning if a character appears twice in all strings, it should appear twice in the output. The result can be in any order.
