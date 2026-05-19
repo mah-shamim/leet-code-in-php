@@ -29,6 +29,16 @@ Given two integer arrays `nums1` and `nums2`, return _an array of their intersec
 - What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 
+
+**Similar Questions:**
+1. [349. Intersection of Two Arrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000349-intersection-of-two-arrays)
+2. [1002. Find Common Characters](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001002-find-common-characters)
+3. [2215. Find the Difference of Two Arrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002215-find-the-difference-of-two-arrays)
+4. [2143. Choose Numbers From Two Arrays in Range](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002143-choose-numbers-from-two-arrays-in-range)
+5. [2248. Intersection of Multiple Arrays](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002248-intersection-of-multiple-arrays)
+6. [2540. Minimum Common Value](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002540-minimum-common-value)
+
+
 **Solution:**
 
 
