@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Hash Table`, `Bit Manipulation`
+**Topics:** `Senior`, `Array`, `Hash Table`, `Bit Manipulation`, `Biweekly Contest 103`
 
 You are given two **0-indexed** integer permutations `A` and `B` of length `n`.
 
@@ -48,7 +48,7 @@ A sequence of `n` integers is called a **permutation** if it contains all intege
 
 We can iterate over the two arrays A and B while keeping track of the numbers that have occurred at or before the current index in both arrays. Since both arrays are permutations of the same set of numbers, we can utilize two hash sets (or arrays) to store which numbers have appeared at or before the current index in both arrays. For each index, we can count the common numbers that have appeared in both arrays up to that point.
 
-### Solution Approach:
+### Approach:
 1. Use two arrays to keep track of the occurrences of numbers in both `A` and `B` up to index `i`.
 2. For each index `i`, check if both `A[i]` and `B[i]` have been seen before. If so, increment the common count.
 3. Use a frequency array to track the presence of numbers from `1` to `n` in both arrays.
@@ -62,7 +62,8 @@ Let's implement this solution in PHP: **[2657. Find the Prefix Common Array of T
  * @param Integer[] $B
  * @return Integer[]
  */
-function findThePrefixCommonArray($A, $B) {
+function findThePrefixCommonArray(array $A, array $B): array 
+{
     ...
     ...
     ...
@@ -105,13 +106,14 @@ $B = [3, 1, 2, 4];
 Output: `[0, 2, 3, 4]`
 
 ### Time Complexity:
-- **O(n<sup>2)</sup>**: For each index `i`, we are checking every element from `1` to `n` to see if it's common, making this solution quadratic in time complexity. This is acceptable given the constraint _**n ≤ 50**_.
+- **O(n<sup>2</sup>)**: For each index `i`, we are checking every element from `1` to `n` to see if it's common, making this solution quadratic in time complexity. This is acceptable given the constraint _**n ≤ 50**_.
 
 This should work within the given constraints effectively.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
