@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[] $B
      * @return Integer[]
      */
-    function findThePrefixCommonArray($A, $B) {
+    function findThePrefixCommonArray(array $A, array $B): array
+    {
         $n = count($A); // Length of arrays
         $freqA = array_fill(0, $n + 1, 0); // Frequency array for A
         $freqB = array_fill(0, $n + 1, 0); // Frequency array for B
