@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[] $arr2
      * @return Integer
      */
-    function longestCommonPrefix($arr1, $arr2) {
+    function longestCommonPrefix(array $arr1, array $arr2): int
+    {
         $prefixSet = [];
 
         // Step 1: Generate all prefixes for elements in arr1 and store them in a HashSet
