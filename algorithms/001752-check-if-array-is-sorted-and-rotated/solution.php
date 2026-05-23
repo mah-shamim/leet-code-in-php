@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[] $nums
      * @return Boolean
      */
-    function check($nums) {
+    function check(array $nums): bool
+    {
         $n = count($nums);
         $pivot = -1;
 
