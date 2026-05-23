@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `Array`
+**Topics:** `Mid Level`, `Array`, `Weekly Contest 227`
 
 Given an array `nums`, return `true` _if the array was originally sorted in non-decreasing order, then rotated **some** number of positions (including zero)_. Otherwise, return `false`.
 
@@ -23,7 +23,6 @@ There may be **duplicates** in the original array.
 - **Output:** false
 - **Explanation:** There is no sorted array once rotated that can make nums.
 
-
 **Example 3:**
 
 - **Input:** nums = [1,2,3]
@@ -43,6 +42,10 @@ There may be **duplicates** in the original array.
 1. Brute force and check if it is possible for a sorted array to start from each position.
 
 
+**Similar Questions:**
+1. [2124. Check if All A's Appears Before All B's](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002124-check-if-all-as-appears-before-all-bs)
+
+
 
 **Solution:**
 
@@ -60,7 +63,12 @@ Let's implement this solution in PHP: **[1752. Check if Array Is Sorted and Rota
 
 ```php
 <?php
-function check($nums) {
+/**
+ * @param Integer[] $nums
+ * @return Boolean
+ */
+function check(array $nums): bool
+{
     ...
     ...
     ...
@@ -100,7 +108,8 @@ This approach ensures that we correctly identify if the array can be obtained by
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
