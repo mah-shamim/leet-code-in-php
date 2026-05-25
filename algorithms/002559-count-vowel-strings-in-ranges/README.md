@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `String`, `Prefix Sum`
+**Topics:** `Senior`, `Array`, `String`, `Prefix Sum`, `Weekly Contest 331`
 
 You are given a **0-indexed** array of strings `words` and a 2D array of integers `queries`.
 
@@ -44,6 +44,11 @@ Return _an array `ans` of size `queries.length`, where `ans[i]` is the answer to
 2. Use unordered_set to store vowels.
 3. Check if the first and last characters of the string are present in the vowels set.
 4. Subtract prefix sum for range `[l-1, r]` to find the number of strings starting and ending with vowels.
+
+
+
+**Similar Questions:**
+1. [1871. Jump Game VII](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001871-jump-game-vii/solution.php)
 
 
 
