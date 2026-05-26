@@ -1,0 +1,108 @@
+3120\. Count the Number of Special Characters I
+
+**Difficulty:** Easy
+
+**Topics:** `Mid Level`, `Hash Table`, `String`, `Weekly Contest 394`
+
+You are given a string `word`. A letter is called **special** if it appears **both** in lowercase and uppercase in `word`.
+
+Return the number of **special** letters in `word`.
+
+**Example 1:**
+
+- **Input:** word = "aaAbcBC"
+- **Output:** 3
+- **Explanation:** The special characters in `word` are `'a'`, `'b'`, and `'c'`.
+
+**Example 2:**
+
+- **Input:** word = "abc"
+- **Output:** 0
+- **Explanation:** No character in `word` appears in uppercase.
+
+**Example 3:**
+
+- **Input:** word = "abBCab"
+- **Output:** 1
+- **Explanation:** The only special character in `word` is `'b'`.
+
+**Constraints:**
+
+- `1 <= word.length <= 50`
+- `word` consists of only lowercase and uppercase English letters.
+
+
+
+**Hint:**
+1. The constraints are small. For all 52 characters, check if they are present in `word`.
+
+
+
+**Similar Questions:**
+1. [520. Detect Capital](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000520-detect-capital)
+2. [2309. Greatest English Letter in Upper and Lower Case](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002309-greatest-english-letter-in-upper-and-lower-case)
+3. [3121. Count the Number of Special Characters II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003121-count-the-number-of-special-characters-ii)
+
+
+
+
+
+
+**Solution:**
+
+The solution determines how many English letters appear in both lowercase and uppercase forms within a given string. It uses two boolean arrays to track the presence of each letter (a–z) in lowercase and uppercase separately, then counts the letters that appear in both arrays.
+
+### Approach:
+
+- **Track lowercase and uppercase letters separately** using two fixed-size boolean arrays (size 26).
+- **Iterate through the string** and mark the appropriate array based on whether the character is lowercase or uppercase.
+- **Count matches** by checking both arrays for the same letter index.
+
+Let's implement this solution in PHP: **[3120. Count the Number of Special Characters I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003120-count-the-number-of-special-characters-i/solution.php)**
+
+```php
+<?php
+/**
+ * @param String $word
+ * @return Integer
+ */
+function numberOfSpecialChars(string $word): int
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+// Test cases
+echo numberOfSpecialChars("aaAbcBC") . "\n";            // Output: 3
+echo numberOfSpecialChars("abc") . "\n";                // Output: 0
+echo numberOfSpecialChars("abBCab") . "\n";             // Output: 1
+?>
+```
+
+### Explanation:
+
+- **Initialize two arrays** `$lower` and `$upper` of size 26, all set to `false`. Index 0 represents `'a'`/`'A'`, index 1 represents `'b'`/`'B'`, etc.
+- **Loop through each character** in the string:
+   - If the character is lowercase, mark `$lower[index] = true`.
+   - If the character is uppercase, mark `$upper[index] = true`.
+- **After processing** the string, loop through indexes 0 to 25:
+   - If both `$lower[i]` and `$upper[i]` are `true`, increment the count.
+- **Return the total count** of special characters.
+
+### Complexity
+- **Time Complexity**: _**O(n)**_, One pass through the string (n = length of `word`) and one pass through the 26 letters → O(n + 26) → O(n).
+- **Space Complexity**: _**O(1)**_, Two fixed-size arrays of 26 booleans → constant space.
+
+**Contact Links**
+
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+If you want more helpful content like this, feel free to follow me:
+
+- **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
+- **[GitHub](https://github.com/mah-shamim)**
