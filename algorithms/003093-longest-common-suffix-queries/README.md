@@ -139,7 +139,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#3167, #3168 leetcode problems 003093-longest-common-suffix-queries submissions 2015652626
-
