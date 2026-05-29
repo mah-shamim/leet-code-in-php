@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `String`, `Simulation`
+**Topics:** `Mid Level`, `String`, `Simulation`, `Weekly Contest 251`
 
 You are given a string `s` consisting of lowercase English letters, and an integer `k`.
 
@@ -53,6 +53,13 @@ Return _the resulting integer after performing the operations described above_.
 **Hint:**
 1. First, let's note that after the first transform the value will be at most `100 * 10` which is not much
 2. After The first transform, we can just do the rest of the transforms by brute force
+
+
+**Similar Questions:**
+1. [202. Happy Number](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000202-happy-number)
+2. [258. Add Digits](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000258-add-digits)
+3. [2180. Count Integers With Even Digit Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002180-count-integers-with-even-digit-sum)
+4. [3300. Minimum Element After Replacement With Digit Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003300-minimum-element-after-replacement-with-digit-sum)
 
 
 
