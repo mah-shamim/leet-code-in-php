@@ -36,6 +36,13 @@ Return _the minimum number of candies you need to have to distribute the candies
 
 
 
+**Similar Questions:**
+1. [2371. Minimize Maximum Value in a Grid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/0002371-minimize-maximum-value-in-a-grid)
+2. [3122. Minimum Number of Operations to Satisfy Conditions](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/0003122-minimum-number-of-operations-to-satisfy-conditions)
+3. [3142. Check if Grid Satisfies Conditions](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003142-check-if-grid-satisfies-conditions)
+
+
+
 **Solution:**
 
 We need to distribute candies to children standing in a line such that each child gets at least one candy, and children with higher ratings than their neighbors receive more candies. The goal is to determine the minimum number of candies required to meet these conditions.
