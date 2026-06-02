@@ -7,11 +7,11 @@
 You are given two categories of theme park attractions: land rides and water rides.
 
 - **Land rides**
-  - `landStartTime[i]` – the earliest time the `ith` land ride can be boarded.
-  - `landDuration[i]` – how long the `ith` land ride lasts.
+  - `landStartTime[i]` – the earliest time the `iᵗʰ` land ride can be boarded.
+  - `landDuration[i]` – how long the `iᵗʰ` land ride lasts.
 - **Water rides**
-  - `waterStartTime[j]` – the earliest time the `jth` water ride can be boarded.
-  - `waterDuration[j]` – how long the `jth` water ride lasts.
+  - `waterStartTime[j]` – the earliest time the `jᵗʰ` water ride can be boarded.
+  - `waterDuration[j]` – how long the `jᵗʰ` water ride lasts.
 
 A tourist must experience **exactly one** ride from **each** category, in **either order**.
 
