@@ -1,6 +1,8 @@
 2196\. Create Binary Tree From Descriptions
 
-Medium 
+**Difficulty:** Medium
+
+**Topics:** `Senior`, `Array`, `Hash Table`, `Tree`, `Binary Tree`, `Weekly Contest 283`
 
 You are given a 2D integer array `descriptions` where <code>descriptions[i] = [parent<sub>i</sub>, child<sub>i</sub>, isLeft<sub>i</sub>]</code> indicates that <code>parent<sub>i</sub></code> is the **parent** of <code>child<sub>i</sub></code> in a **binary** tree of **unique** values. Furthermore,
 
@@ -43,6 +45,11 @@ The test cases will be generated such that the binary tree is **valid**.
 2. Could you find the root node?
 3. The node that is not a child in any of the descriptions is the root node.
 
+
+**Similar Questions:**
+1. [109. Convert Sorted List to Binary Search Tree](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000109-convert-sorted-list-to-binary-search-tree)
+2. [1719. Number Of Ways To Reconstruct A Tree](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001719-number-of-ways-to-reconstruct-a-tree)
+
 **Solution:**
 
 
@@ -57,6 +64,20 @@ Let's implement this solution in PHP: **[2196. Create Binary Tree From Descripti
 
 ```php
 <?php
+/**
+ * @param Integer[][] $descriptions
+ * @return TreeNode|null
+ */
+function createBinaryTree(array $descriptions): ?TreeNode
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Example usage:
 $descriptions1 = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]];
 $descriptions2 = [[1,2,1],[2,3,0],[3,4,1]];
@@ -84,7 +105,8 @@ This code defines a TreeNode class to represent each node in the binary tree. Th
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
