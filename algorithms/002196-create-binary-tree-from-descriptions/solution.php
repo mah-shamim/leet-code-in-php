@@ -17,9 +17,10 @@ class Solution {
 
     /**
      * @param Integer[][] $descriptions
-     * @return TreeNode
+     * @return TreeNode|null
      */
-    function createBinaryTree($descriptions) {
+    function createBinaryTree(array $descriptions): ?TreeNode
+    {
         $nodes = [];
         $children = [];
 
