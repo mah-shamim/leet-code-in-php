@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Two Pointers`, `Simulation`
+**Topics:** `Senior`, `Array`, `Two Pointers`, `Simulation`, `Biweekly Contest 71`
 
 You are given a **0-indexed** integer array `nums` and an integer `pivot`. Rearrange `nums` such that the following conditions are satisfied:
 
@@ -45,6 +45,11 @@ Return _`nums` after the rearrangement_.
 2. With the separate lists generated, could you then generate the result?
 
 
+**Similar Questions:**
+1. [86. Partition List](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000086-partition-list)
+2. [2149. Rearrange Array Elements by Sign](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002149-rearrange-array-elements-by-sign)
+
+
 
 **Solution:**
 
@@ -71,7 +76,8 @@ Let's implement this solution in PHP: **[2161. Partition Array According to Give
  * @param Integer $pivot
  * @return Integer[]
  */
-function pivotArray($nums, $pivot) {
+function pivotArray(array $nums, int $pivot): array
+{
     ...
     ...
     ...
@@ -96,7 +102,8 @@ This approach efficiently rearranges the array in O(n) time and O(n) space, whic
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 

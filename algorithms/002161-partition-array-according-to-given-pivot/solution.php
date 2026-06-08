@@ -7,7 +7,8 @@ class Solution {
      * @param Integer $pivot
      * @return Integer[]
      */
-    function pivotArray($nums, $pivot) {
+    function pivotArray(array $nums, int $pivot): array
+    {
         $less = [];
         $equal = [];
         $greater = [];
