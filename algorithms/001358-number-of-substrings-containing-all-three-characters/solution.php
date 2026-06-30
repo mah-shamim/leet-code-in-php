@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return Integer
      */
-    function numberOfSubstrings($s) {
+    function numberOfSubstrings(string $s): int
+    {
         $last_a = -1;
         $last_b = -1;
         $last_c = -1;

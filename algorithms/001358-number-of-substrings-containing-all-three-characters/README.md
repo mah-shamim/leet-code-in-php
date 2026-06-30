@@ -39,6 +39,11 @@ Return _the number of substrings containing **at least** one occurrence of all t
 2. So we can pre-compute three link-list of indices of each a, b, and c.
 
 
+**Similar Questions:**
+1. [2063. Vowels of All Substrings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002063-vowels-of-all-substrings)
+2. [2953. Count Complete Substrings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002953-count-complete-substrings)
+
+
 
 **Solution:**
 
