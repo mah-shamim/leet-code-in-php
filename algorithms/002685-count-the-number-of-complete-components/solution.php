@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[][] $edges
      * @return Integer
      */
-    function countCompleteComponents($n, $edges) {
+    function countCompleteComponents(int $n, array $edges): int
+    {
         $adj = array_fill(0, $n, array());
         $edgeSet = array();
 
