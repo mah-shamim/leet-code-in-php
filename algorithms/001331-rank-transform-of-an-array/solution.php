@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[] $arr
      * @return Integer[]
      */
-    function arrayRankTransform($arr) {
+    function arrayRankTransform(array $arr): array
+    {
         // If the array is empty, return an empty array
         if (empty($arr)) {
             return [];
