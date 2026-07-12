@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `Array`, `Hash Table`, `Sorting`
+**Topics:** `Mid Level`, `Array`, `Hash Table`, `Sorting`, `Biweekly Contest 18`
 
 Given an array of integers `arr`, replace each element with its rank.
 
@@ -32,6 +32,36 @@ The rank represents how large the element is. The rank has the following rules:
 - **Output:** [5,3,4,2,8,6,7,1,3]
 
 
+**Example 4:**
+
+- **Input:** arr = []
+- **Output:** []
+
+
+**Example 5:**
+
+- **Input:** arr = [42]
+- **Output:** [1]
+
+
+**Example 6:**
+
+- **Input:** arr = [-5,-10,0,5]
+- **Output:** [2,1,3,4]
+
+
+**Example 7:**
+
+- **Input:** arr = [3,1,4,2]
+- **Output:** [3,1,4,2]
+
+
+**Example 8:**
+
+- **Input:** arr = [-10⁹, 10⁹, 0]
+- **Output:** [2,3,1]
+
+
 
 **Constraints:**
 
@@ -45,14 +75,22 @@ The rank represents how large the element is. The rank has the following rules:
 2. The rank of each element is the number of unique elements smaller than it in the sorted array plus one.
 
 
+**Similar Questions:**
+1. [1632. Rank Transform of a Matrix](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001632-rank-transform-of-a-matrix)
+2. [2089. Find Target Indices After Sorting Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002089-find-target-indices-after-sorting-array)
+
+
 
 **Solution:**
 
-We can break it down into the following steps:
+We implement an efficient rank transformation algorithm that replaces each element in the input array with its rank (**1-based**), where equal elements share the same rank and ranks are assigned in ascending order based on element values. Our solution uses sorting to determine ranks and a hash map for _**O(1)**_ lookups, achieving _**O(n log n)**_ time complexity.
 
-1. **Copy and sort the array:** This helps in determining the rank of each unique element.
-2. **Use a hash map to assign ranks to elements:** Since multiple elements can share the same value, a hash map (associative array in PHP) will help map each element to its rank.
-3. **Replace the original elements with their ranks:** Using the hash map, we can replace each element in the original array with its corresponding rank.
+## Approach
+
+- **Copy and Sort**: Create a sorted copy of the input array to determine the order of elements
+- **Rank Assignment**: Iterate through the sorted array and assign ranks starting from 1, incrementing only when a new distinct value is encountered
+- **Hash Map Storage**: Store the rank for each unique value in a hash map for fast retrieval
+- **Transform**: Replace each element in the original array with its corresponding rank from the hash map
 
 Let's implement this solution in PHP: **[1331. Rank Transform of an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001331-rank-transform-of-an-array/solution.php)**
 
@@ -62,7 +100,8 @@ Let's implement this solution in PHP: **[1331. Rank Transform of an Array](https
  * @param Integer[] $arr
  * @return Integer[]
  */
-function arrayRankTransform($arr) {
+function arrayRankTransform(array $arr): array
+{
     ...
     ...
     ...
@@ -72,39 +111,35 @@ function arrayRankTransform($arr) {
 }
 
 // Example usage:
-$arr1 = [40, 10, 20, 30];
-print_r(arrayRankTransform($arr1)); // Output: [4, 1, 2, 3]
 
-$arr2 = [100, 100, 100];
-print_r(arrayRankTransform($arr2)); // Output: [1, 1, 1]
-
-$arr3 = [37, 12, 28, 9, 100, 56, 80, 5, 12];
-print_r(arrayRankTransform($arr3)); // Output: [5, 3, 4, 2, 8, 6, 7, 1, 3]
+print_r(arrayRankTransform([40, 10, 20, 30])); // Output: [4, 1, 2, 3]
+print_r(arrayRankTransform([100, 100, 100])); // Output: [1, 1, 1]
+print_r(arrayRankTransform([37, 12, 28, 9, 100, 56, 80, 5, 12])); // Output: [5, 3, 4, 2, 8, 6, 7, 1, 3]
+print_r(arrayRankTransform([])); // Output: []
+print_r(arrayRankTransform([42])); // Output: [1]
+print_r(arrayRankTransform([-5,-10,0,5])); // Output: [2,1,3,4]
+print_r(arrayRankTransform([3,1,4,2])); // Output: [3,1,4,2]
+print_r(arrayRankTransform([-10⁹, 10⁹, 0])); // Output: [2,3,1]
 ?>
 ```
 
 ### Explanation:
 
-1. **Copy and sort the array:**
-   - We create a copy of the input array `$sorted` and sort it. This helps in determining the rank of each unique element.
-
-2. **Assign ranks to elements:**
-   - We iterate through the sorted array and use a hash map `$rank` to store the rank of each unique element.
-   - We use `isset` to check if an element has already been assigned a rank. If not, we assign the current rank and increment it.
-
-3. **Replace elements with their ranks:**
-   - We then iterate through the original array and replace each element with its corresponding rank by looking it up in the `$rank` hash map.
+- **Empty Array Handling**: Returns an empty array immediately if the input is empty, as there are no elements to rank
+- **Sorting Strategy**: The sorted array allows us to process elements from smallest to largest, ensuring ranks are assigned in the correct order
+- **Unique Rank Assignment**: The hash map's `isset()` check ensures each distinct value receives exactly one rank, with the rank incrementing only when a new value appears
+- **Rank Formula**: Each element's rank equals the number of distinct values smaller than it plus one, which naturally emerges from the sorted processing
+- **Preserving Original Order**: The final step iterates through the original array (not the sorted copy) to maintain the original sequence while replacing values with their ranks
 
 ### Time Complexity:
-- Sorting the array takes _**`O(n log n)`**_, where _**`n`**_ is the size of the array.
-- Assigning ranks and replacing values takes _**`O(n`**_).
-- Overall time complexity is _**`O(n log n)`**_.
 
-This solution efficiently handles large arrays while maintaining simplicity.
+- **Time Complexity**: _**O(n log n)**_ where n is the array length, dominated by the sorting operation
+- **Space Complexity**: _**O(n)**_ for storing the sorted copy, hash map, and result array
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
