@@ -28,6 +28,14 @@ Return _the shortest palindrome you can find by performing this transformation_.
 [^1]: **Palindrome** A **palindrome** is a string that reads the same forward and backward.
 
 
+**Similar Questions:**
+1. [5. Longest Palindromic Substring](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000005-longest-palindromic-substring)
+2. [28. Find the Index of the First Occurrence in a String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000028-find-the-index-of-the-first-occurrence-in-a-string)
+3. [336. Palindrome Pairs](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000336-palindrome-pairs)
+4. [2430. Maximum Deletions on a String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002430-maximum-deletions-on-a-string)
+5. [3517. Smallest Palindromic Rearrangement I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003517-smallest-palindromic-rearrangement-i)
+
+
 **Solution:**
 
 We need to find the shortest palindrome by adding characters in front of a given string. We can approach this by identifying the longest prefix of the string that is already a palindrome. Once we have that, the remaining part can be reversed and added to the front to make the entire string a palindrome.
@@ -133,7 +141,8 @@ This solution efficiently finds the shortest palindrome by leveraging string mat
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
