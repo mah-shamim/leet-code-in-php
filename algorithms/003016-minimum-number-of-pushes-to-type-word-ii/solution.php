@@ -6,7 +6,8 @@ class Solution {
      * @param String $word
      * @return Integer
      */
-    function minimumPushes($word) {
+    function minimumPushes(string $word): int
+    {
         // Step 1: Count the frequency of each character
         $frequency = array();
         for ($i = 0; $i < strlen($word); $i++) {
