@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics** : `Hash Table`, `String`, `Greedy`, `Sorting`, `Counting`, `Weekly Contest 381`
+**Topics** : `Staff`, `Hash Table`, `String`, `Greedy`, `Sorting`, `Counting`, `Weekly Contest 381`
 
 You are given a string `word` containing lowercase English letters.
 
@@ -64,6 +64,26 @@ An example mapping of letters to keys on a telephone keypad is given below. Note
   Total cost is 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 1 * 2 + 2 * 2 + 6 * 1 = 24.\
   It can be shown that no other mapping can provide a lower cost.
 
+**Example 4:**
+
+- **Input:** word = "a"
+- **Output:** 1
+
+**Example 5:**
+
+- **Input:** word = "aaaa"
+- **Output:** 4
+
+**Example 6:**
+
+- **Input:** word = "abcdefghijklmnopqrstuvwxyz"
+- **Output:** 26
+
+**Example 7:**
+
+- **Input:** word = "aaaaabbbbbcccccdddddeeeeefffffggggghhhhh"
+- **Output:** 40
+
 **Constraints:**
 
 - <code>1 <= word.length <= 10<sup>5</sup></code>
@@ -81,49 +101,60 @@ An example mapping of letters to keys on a telephone keypad is given below. Note
 
 **Solution:**
 
+We first count the frequency of each character in the given string. Since we have 8 keys (2–9) and each key can hold multiple letters, the most frequent letters should be assigned to the smallest number of pushes (i.e., first 8 letters get 1 push, next 8 get 2 pushes, and so on). We sort frequencies in descending order and calculate the total pushes accordingly.
 
-To solve this problem, we can follow these steps:
+### Approach
 
-1. **Count the Frequency of Each Character**: Determine how often each character appears in the input word.
-2. **Sort the Characters by Frequency**: Sort these characters in descending order based on their frequency.
-3. **Assign Characters to Keys**: Allocate the characters to keys (2-9) such that the most frequent characters are assigned to the keys requiring the fewest pushes.
-
-### Step-by-Step Implementation in PHP
-
-1. **Count the Frequency of Each Character**:
-    - Use an associative array to store the frequency of each character.
-
-2. **Sort the Characters by Frequency**:
-    - Sort the characters based on their frequency in descending order.
-
-3. **Assign Characters to Keys**:
-    - Iterate through the sorted characters and assign them to keys. The first 8 characters get 1 push each, the next 8 characters get 2 pushes each, and so on.
+- **Count frequencies** of each character in `word`.
+- **Sort frequencies** in descending order.
+- **Assign pushes**:
+    - The 1st to 8th most frequent letters get 1 push each.
+    - The 9th to 16th get 2 pushes each, and so on.
+- **Calculate total pushes** by multiplying each frequency with its assigned push count and summing them.
 
 Let's implement this solution in PHP: **[3016. Minimum Number of Pushes to Type Word II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003016-minimum-number-of-pushes-to-type-word-ii/solution.php)**
 
 ```php
 <?php
+/**
+ * @param String $word
+ * @return Integer
+ */
+function minimumPushes(string $word): int
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Test cases
-echo minimumPushes("abcde") . "\n"; // Output: 5
-echo minimumPushes("xyzxyzxyzxyz") . "\n"; // Output: 12
-echo minimumPushes("aabbccddeeffgghhiiiiii") . "\n"; // Output: 24
+echo minimumPushes("abcde") . "\n";                                             // Output: 5
+echo minimumPushes("xyzxyzxyzxyz") . "\n";                                      // Output: 12
+echo minimumPushes("aabbccddeeffgghhiiiiii") . "\n";                            // Output: 24
+echo minimumPushes("a") . "\n";                                                 // Output: 1
+echo minimumPushes("aaaa") . "\n";                                              // Output: 4
+echo minimumPushes("abcdefghijklmnopqrstuvwxyz") . "\n";                        // Output: 26
+echo minimumPushes("aaaaabbbbbcccccdddddeeeeefffffggggghhhhh") . "\n";          // Output: 40
 ?>
 ```
 
 ### Explanation:
 
-1. **Counting Frequencies**:
-    - We iterate through the word and count the occurrences of each character using an associative array `$frequency`.
+- There are exactly 8 keys available for mapping (2 to 9).
+- To minimize pushes, we assign the most frequent letters to the keys that require the fewest pushes.
+- The first 8 distinct letters will need only 1 push each, the next 8 will need 2 pushes each, etc.
+- This is optimal because we maximize the benefit (low push count) for the most frequent letters.
+- Sorting frequencies in descending order ensures we assign smaller push counts to higher frequencies.
+- The position index (0-based) determines the push count: `floor(position / 8) + 1`.
 
-2. **Sorting by Frequency**:
-    - We use `arsort` to sort the associative array `$frequency` by its values in descending order.
 
-3. **Calculating Pushes**:
-    - We initialize `$pushes` to zero and iterate over the sorted frequency array.
-    - The number of pushes required for each character is calculated based on its position in the sorted array. Characters at positions 0-7 require 1 push, positions 8-15 require 2 pushes, and so on.
-    - We incrementally calculate the total number of pushes required to type the word.
+### Complexity Analysis
 
-This approach ensures that the most frequent characters are assigned to the keys that require the fewest pushes, thereby minimizing the total number of pushes needed.
+- **Time Complexity:** _**O(n + k log k)**_, where `n` = length of `word`, `k` = number of distinct characters (at most 26). Counting is _**O(n)**_, sorting is `O(26 log 26)` which is constant.
+- **Space Complexity:** _**O(k)**_ for storing frequencies, at most `O(26)`.
 
 **Contact Links**
 
