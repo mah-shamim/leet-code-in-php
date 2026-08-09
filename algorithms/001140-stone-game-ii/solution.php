@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[] $piles
      * @return Integer
      */
-    function stoneGameII($piles) {
+    function stoneGameII(array $piles): int
+    {
         $n = count($piles);
         $suffix = $piles;
         $mem = array_fill(0, $n, array_fill(0, $n + 1, 0));
@@ -26,7 +27,8 @@ class Solution {
      * @param $mem
      * @return mixed
      */
-    private function stoneGameIIHelper($suffix, $i, $M, &$mem) {
+    private function stoneGameIIHelper($suffix, $i, $M, &$mem): mixed
+    {
         $n = count($suffix);
 
         // Base case: If we can take all remaining piles
