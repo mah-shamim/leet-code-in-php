@@ -86,22 +86,12 @@ Let's implement this solution in PHP: **[3090. Maximum Length Substring With Two
  */
 function maximumLengthSubstring(string $s): int
 {
-    $maxLen = 0;
-    $n = strlen($s);
-
-    for ($i = 0; $i < $n; $i++) {
-        $freq = array_fill(0, 26, 0);
-        for ($j = $i; $j < $n; $j++) {
-            $index = ord($s[$j]) - ord('a');
-            $freq[$index]++;
-            if ($freq[$index] > 2) {
-                break;
-            }
-            $maxLen = max($maxLen, $j - $i + 1);
-        }
-    }
-
-    return $maxLen;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Test cases
@@ -140,9 +130,3 @@ If you want more helpful content like this, feel free to follow me:
 
 - **[LinkedIn](https://www.linkedin.com/in/arifulhaque/)**
 - **[GitHub](https://github.com/mah-shamim)**
-
-
-#3235, #3236 leetcode problems 003090-maximum-length-substring-with-two-occurrences submissions 2107035869
-
-
-Thanks for solving the problem of "Maximum Length Substring With Two Occurrences"
