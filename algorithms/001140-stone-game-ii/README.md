@@ -64,6 +64,40 @@ Let's implement this solution in PHP: **[1140. Stone Game II](https://github.com
 
 ```php
 <?php
+class Solution {
+
+    /**
+     * @param Integer[] $piles
+     * @return Integer
+     */
+    function stoneGameII(array $piles): int
+    {
+       ...
+       ...
+       ...
+       /**
+        * go to ./solution.php
+        */
+    }
+
+    /**
+     * @param $suffix
+     * @param $i
+     * @param $M
+     * @param $mem
+     * @return mixed
+     */
+    private function stoneGameIIHelper($suffix, $i, $M, &$mem): mixed
+    {
+       ...
+       ...
+       ...
+       /**
+        * go to ./solution.php
+        */
+    }
+}
+
 // Example usage
 $solution = new Solution();
 $piles1 = [2, 7, 9, 4, 4];
