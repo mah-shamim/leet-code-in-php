@@ -1,6 +1,8 @@
 1636\. Sort Array by Increasing Frequency
 
-Easy
+**Difficulty:** Easy
+
+**Topics:** `Mid Level`, `Array`, `Hash Table`, `Sorting`, `Biweekly Contest 38`
 
 Given an array of integers `nums`, sort the array in **increasing** order based on the frequency of the values. If multiple values have the same frequency, sort them in **decreasing** order.
 
@@ -31,6 +33,15 @@ _Return the sorted array_.
 **Hint:**
 1. Count the frequency of each value.
 2. Use a custom comparator to compare values by their frequency. If two values have the same frequency, compare their values.
+
+
+**Similar Questions:**
+1. [451. Sort Characters By Frequency](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/00451-sort-characters-by-frequency)
+2. [2206. Divide Array Into Equal Pairs](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002206-divide-array-into-equal-pairs)
+3. [2190. Most Frequent Number Following Key In an Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002190-most-frequent-number-following-key-in-an-array)
+4. [2341. Maximum Number of Pairs in Array](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002341-maximum-number-of-pairs-in-array)
+5. [2374. Node With Highest Edge Score](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002374-node-with-highest-edge-score)
+6. [2418. Sort the People](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002418-sort-the-people)
 
 
 **Solution:**

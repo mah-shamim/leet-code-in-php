@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[] $nums
      * @return Integer[]
      */
-    function frequencySort($nums) {
+    function frequencySort(array $nums): array
+    {
         // Step 1: Count the frequency of each value in the array
         $frequency = array_count_values($nums);
 
