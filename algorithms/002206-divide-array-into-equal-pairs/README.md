@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `Array`, `Hash Table`, `Bit Manipulation`, `Counting`
+**Topics:** `Mid Level`, `Array`, `Hash Table`, `Bit Manipulation`, `Counting`, `Biweekly Contest 74`
 
 You are given an integer array `nums` consisting of `2 * n` integers.
 
@@ -18,15 +18,14 @@ Return _`true` if nums can be divided into `n` pairs, otherwise return `false`_.
 - **Input:** nums = [3,2,3,2,2,2]
 - **Output:** true
 - **Explanation:**
-  There are 6 elements in nums, so they should be divided into 6 / 2 = 3 pairs.
-  If nums is divided into the pairs (2, 2), (3, 3), and (2, 2), it will satisfy all the conditions.
+  - There are 6 elements in nums, so they should be divided into 6 / 2 = 3 pairs.
+  - If nums is divided into the pairs (2, 2), (3, 3), and (2, 2), it will satisfy all the conditions.
 
 **Example 2:**
 
 - **Input:** nums = [1,2,3,4]
 - **Output:** false
-- **Explanation:**
-  There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition.
+- **Explanation:** There is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition.
 
 
 
@@ -40,6 +39,12 @@ Return _`true` if nums can be divided into `n` pairs, otherwise return `false`_.
 **Hint:**
 1. For any number x in the range [1, 500], count the number of elements in nums whose values are equal to x.
 2. The elements with equal value can be divided completely into pairs if and only if their count is even.
+
+
+**Similar Questions:**
+1. [1636. Sort Array by Increasing Frequency](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001636-sort-array-by-increasing-frequency)
+2. [3069. Distribute Elements Into Two Arrays I](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003069-distribute-elements-into-two-arrays-i)
+3. [3072. Distribute Elements Into Two Arrays II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003072-distribute-elements-into-two-arrays-ii)
 
 
 
