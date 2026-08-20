@@ -1,6 +1,8 @@
 2418\. Sort the People
 
-Easy
+**Difficulty:** Easy
+
+**Topics:** `Mid Level`, `Array`, `Hash Table`, `String`, `Sorting`, `Weekly Contest 312`
 
 You are given an array of strings `names`, and an array `heights` that consists of **distinct** positive integers. Both arrays are of length `n`.
 
@@ -32,6 +34,11 @@ Return _`names` sorted in **descending** order by the people's heights_.
 
 **Hint:**
 1. Find the tallest person and swap with the first person, then find the second tallest person and swap with the second person, etc. Repeat until you fix all n people.
+
+
+**Similar Questions:**
+1. [1636. Sort Array by Increasing Frequency](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001636-sort-array-by-increasing-frequency)
+2. [2545. Sort the Students by Their Kth Score](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002545-sort-the-students-by-their-kth-score)
 
 
 **Solution:**

@@ -7,7 +7,8 @@ class Solution {
      * @param Integer[] $heights
      * @return String[]
      */
-    function sortPeople($names, $heights) {
+    function sortPeople(array $names, array $heights): array
+    {
         // Combine names and heights into an array of pairs
         $combined = [];
         for ($i = 0; $i < count($names); $i++) {
