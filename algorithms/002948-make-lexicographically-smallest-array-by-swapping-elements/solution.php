@@ -7,7 +7,8 @@ class Solution {
      * @param Integer $limit
      * @return Integer[]
      */
-    function lexicographicallySmallestArray($nums, $limit) {
+    function lexicographicallySmallestArray(array $nums, int $limit): array
+    {
         $n = count($nums);
         $ans = array_fill(0, $n, 0);
 
