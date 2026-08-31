@@ -19,7 +19,8 @@ class Solution {
      * @param ListNode $head
      * @return Integer[]
      */
-    function nodesBetweenCriticalPoints($head) {
+    function nodesBetweenCriticalPoints(ListNode $head): array
+    {
         $result = [-1, -1];
 
         // Initialize minimum distance to the maximum possible value
