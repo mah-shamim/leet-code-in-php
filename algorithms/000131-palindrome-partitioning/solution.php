@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return String[][]
      */
-    function partition($s) {
+    function partition(string $s): array
+    {
         $result = [];
         $current = [];
         $this->backtrack($s, 0, $current, $result);
@@ -14,13 +15,14 @@ class Solution {
     }
 
     /**
-     * @param $s
-     * @param $start
-     * @param $current
-     * @param $result
+     * @param string $s
+     * @param int $start
+     * @param array $current
+     * @param array $result
      * @return void
      */
-    function backtrack($s, $start, &$current, &$result) {
+    function backtrack(string $s, int $start, array &$current, array &$result): void
+    {
         if ($start >= strlen($s)) {
             $result[] = $current;
             return;
@@ -36,10 +38,11 @@ class Solution {
     }
 
     /**
-     * @param $s
+     * @param string $s
      * @return bool
      */
-    function isPalindrome($s) {
+    function isPalindrome(string $s): bool
+    {
         $n = strlen($s);
         for ($i = 0; $i < $n / 2; $i++) {
             if ($s[$i] !== $s[$n - $i - 1]) {
@@ -48,5 +51,4 @@ class Solution {
         }
         return true;
     }
-
 }

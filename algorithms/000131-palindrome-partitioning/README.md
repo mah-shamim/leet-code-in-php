@@ -6,6 +6,10 @@
 
 Given a string `s`, partition `s` such that every substring[^1] of the partition is a palindrome[^2]. Return all possible palindrome partitioning of `s`.
 
+[^1]: **Substring** A **substring** is a contiguous non-empty sequence of characters within a string.
+
+[^2]: **Palindrome** A **palindrome** is a string that reads the same forward and backward.
+
 **Example 1:**
 
 - **Input:** s = "aab"
@@ -21,9 +25,13 @@ Given a string `s`, partition `s` such that every substring[^1] of the partition
 - <code>1 <= s.length <= 16</code>
 - `s` contains only lowercase English letters.
 
-[^1]: **Substring** A **substring** is a contiguous non-empty sequence of characters within a string.
 
-[^2]: **Palindrome** A **palindrome** is a string that reads the same forward and backward.
+**Similar Questions:**
+
+1. [132. Palindrome Partitioning II](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000132-palindrome-partitioning-ii)
+2. [1745. Palindrome Partitioning IV](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001745-palindrome-partitioning-iv)
+3. [1520. Maximum Number of Non-Overlapping Substrings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001520-maximum-number-of-non-overlapping-substrings)
+
 
 
 **Solution:**
@@ -48,6 +56,51 @@ Let's implement this solution in PHP: **[131. Palindrome Partitioning](https://g
 
 ```php
 <?php
+/**
+ * @param String $s
+ * @return String[][]
+ */
+function partition(string $s): array
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+/**
+ * @param string $s
+ * @param int $start
+ * @param array $current
+ * @param array $result
+ * @return void
+ */
+function backtrack(string $s, int $start, array &$current, array &$result): void
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
+/**
+ * @param string $s
+ * @return bool
+ */
+function isPalindrome(string $s): bool
+{
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
+}
+
 // Example usage:
 $s1 = "aab";
 $s2 = "a";
@@ -73,7 +126,8 @@ This solution works efficiently for the given constraint where the maximum lengt
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
