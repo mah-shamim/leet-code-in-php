@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return String
      */
-    function reverseParentheses($s) {
+    function reverseParentheses(string $s): string
+    {
         $stack = [];
 
         // Traverse each character in the string
