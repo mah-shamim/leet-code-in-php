@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return Integer
      */
-    function maxDepth($s) {
+    function maxDepth(string $s): int
+    {
         $maxDepth = 0;
         $currentDepth = 0;
         $length = strlen($s);

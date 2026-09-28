@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Topics:** `String`, `Stack`, `Weekly Contest 210`
+**Topics:** `Mid Level`, `String`, `Stack`, `Bracket Sequences`, `Weekly Contest 210`
 
 A string is a **valid parentheses string** (denoted **VPS**) if it meets one of the following:
 
@@ -35,6 +35,12 @@ Given a **valid parentheses string** `s`, return the **nesting depth** of `s`. T
 
 - **Input:** <code>**s = "(1)+((2))+(((3)))"**</code>
 - **Output:** <code>**3**</code>
+- **Explanation:** <code>**Digit 3 is inside of 3 nested parentheses in the string.**</code>
+
+**Example 3:**
+
+- **Input:** <code>**s = "()(())((()()))"**</code>
+- **Output:** <code>**3**</code>
 
 
 
@@ -46,14 +52,14 @@ Given a **valid parentheses string** `s`, return the **nesting depth** of `s`. T
 
 
 **Hint:**
+
 1. The depth of any character in the VPS is the ( number of left brackets before it ) - ( number of right brackets before it )
 
 
 
 **Similar Questions:**
+
 1. [1111. Maximum Nesting Depth of Two Valid Parentheses Strings](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/001111-maximum-nesting-depth-of-two-valid-parentheses-strings)
-
-
 
 
 
@@ -79,7 +85,8 @@ Let's implement this solution in PHP: **[1614. Maximum Nesting Depth of the Pare
  * @param String $s
  * @return Integer
  */
-function maxDepth($s) {
+function maxDepth(string $s): int
+{
     ...
     ...
     ...
@@ -89,8 +96,9 @@ function maxDepth($s) {
 }
 
 // Test cases
-echo maxDepth("(1+(2*3)+((8)/4))+1") . "\n"; // Output: 3
-echo maxDepth("(1)+((2))+(((3)))") . "\n";   // Output: 3
+echo maxDepth("(1+(2*3)+((8)/4))+1") . "\n";    // Output: 3
+echo maxDepth("(1)+((2))+(((3)))") . "\n";      // Output: 3
+echo maxDepth("()(())((()()))") . "\n";         // Output: 3
 ?>
 ```
 
@@ -107,7 +115,8 @@ This approach efficiently tracks the nesting depth in real-time as we traverse t
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. [Your support would mean a lot to me!](https://isolatedcompliments.com/v09uayg6h?key=a647d02f1aafcddaf10536d7cd00bd7c)
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
