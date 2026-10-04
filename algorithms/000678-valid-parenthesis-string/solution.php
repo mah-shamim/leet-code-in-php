@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return Boolean
      */
-    function checkValidString($s) {
+    function checkValidString(string $s): bool
+    {
         $minOpen = 0;  // Minimum number of open parentheses
         $maxOpen = 0;  // Maximum number of open parentheses
 
