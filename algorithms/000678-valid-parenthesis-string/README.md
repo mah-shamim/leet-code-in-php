@@ -35,6 +35,7 @@ The following rules define a **valid** string:
 
 
 **Hint:**
+
 1. Use backtracking to explore all possible combinations of treating '*' as either '(', ')', or an empty string. If any combination leads to a valid string, return true.
 2. DP[i][j] represents whether the substring s[i:j] is valid.
 3. Keep track of the count of open parentheses encountered so far. If you encounter a close parenthesis, it should balance with an open parenthesis. Utilize a stack to handle this effectively.
@@ -42,6 +43,7 @@ The following rules define a **valid** string:
 
 
 **Similar Questions:**
+
 1. [761. Special Binary String](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/000761-special-binary-string)
 2. [2116. Check if a Parentheses String Can Be Valid](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002116-check-if-a-parentheses-string-can-be-valid)
 
@@ -96,10 +98,10 @@ echo checkValidString("(*))") ? "true" : "false";  // Output: true
 4. Finally, we return `true` only if `minOpen` is 0, meaning all open parentheses are properly closed.
 
 ### Time Complexity:
-- The time complexity is \(O(n)\), where \(n\) is the length of the string `s`, because we only traverse the string once.
+- The time complexity is _**O(n)**_, where _**n**_ is the length of the string `s`, because we only traverse the string once.
 
 ### Space Complexity:
-- The space complexity is \(O(1)\) because we use only two integer variables (`minOpen` and `maxOpen`), regardless of the size of the input.
+- The space complexity is _**O(1)**_ because we use only two integer variables (`minOpen` and `maxOpen`), regardless of the size of the input.
 
 ### Output:
 - For `s = "()"`, the output is `true`.
@@ -108,7 +110,8 @@ echo checkValidString("(*))") ? "true" : "false";  // Output: true
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
