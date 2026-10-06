@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return Integer
      */
-    function minAddToMakeValid($s) {
+    function minAddToMakeValid(string $s): int
+    {
         $balance = 0;  // Keeps track of the balance between '(' and ')'
         $additions = 0;  // Number of additions needed to balance the parentheses
 
