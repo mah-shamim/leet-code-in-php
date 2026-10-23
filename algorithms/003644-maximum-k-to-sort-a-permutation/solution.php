@@ -26,5 +26,3 @@ class Solution {
         return $sorted ? 0 : $ans;
     }
 }
-
-
