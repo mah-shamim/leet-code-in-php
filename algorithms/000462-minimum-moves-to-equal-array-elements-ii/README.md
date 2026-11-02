@@ -110,14 +110,12 @@ Let's implement this solution in PHP: **[462. Minimum Moves to Equal Array Eleme
  */
 function minMoves2(array $nums): int
 {
-    sort($nums);
-    $n = count($nums);
-    $median = $nums[intdiv($n, 2)]; // works for odd and even n
-    $moves = 0;
-    foreach ($nums as $num) {
-        $moves += abs($num - $median);
-    }
-    return $moves;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Test cases
