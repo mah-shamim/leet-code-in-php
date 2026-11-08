@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union Find`, `Matrix`, `Counting`
+**Topics:** `Senior`, `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`, `Counting`, `Weekly Contest 164`
 
 You are given a map of a server center, represented as a `m * n` integer matrix `grid`, where `1` means that on that cell there is a server and `0` means that it is no server. Two servers are said to communicate if they are on the same row or on the same column.
 

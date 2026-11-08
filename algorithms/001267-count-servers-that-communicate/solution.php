@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[][] $grid
      * @return Integer
      */
-    function countServers($grid) {
+    function countServers(array $grid): int
+    {
         $m = count($grid); // Number of rows
         $n = count($grid[0]); // Number of columns
 
