@@ -34,6 +34,41 @@ You are given an array of integers `nums`. Return _the length of the **longest**
    - The strictly decreasing subarrays of `nums` are `[3]`, `[2]`, `[1]`, `[3,2]`, `[2,1]`, and `[3,2,1]`.
    - Hence, we return `3`.
 
+**Example 4:**
+
+- **Input:** nums = [1]
+- **Output:** 1
+
+**Example 5:**
+
+- **Input:** nums = [1,2,3,4,5]
+- **Output:** 5
+
+**Example 6:**
+
+- **Input:** nums = [5,4,3,2,1]
+- **Output:** 5
+
+**Example 7:**
+
+- **Input:** nums = [1,3,2,4,3]
+- **Output:** 2
+
+**Example 8:**
+
+- **Input:** nums = [2,2,1,2,3]
+- **Output:** 3
+
+**Example 9:**
+
+- **Input:** nums = [1,2,1,2,3,4]
+- **Output:** 4
+
+**Example 10:**
+
+- **Input:** nums = [10,9,8,7,1,2]
+- **Output:** 4
+
 
 
 **Constraints:**
@@ -49,17 +84,18 @@ You are given an array of integers `nums`. Return _the length of the **longest**
 
 **Solution:**
 
-We need to find the length of the longest subarray that is either strictly increasing or strictly decreasing. Here's a step-by-step approach to achieve this:
+We use a single left-to-right pass over `nums`, maintaining the current length of a strictly increasing run and a strictly decreasing run. Whenever a comparison breaks a run, the corresponding counter resets to `1`. The answer is the maximum run length seen.
 
-1. **Initialize Variables**: We'll need variables to keep track of the lengths of the current increasing and decreasing subarrays, as well as the maximum length found so far.
+## Approach
 
-2. **Iterate Through the Array**: We'll loop through the array and compare each element with the previous one to determine if the current subarray is increasing, decreasing, or neither.
-
-3. **Update Lengths**: Depending on the comparison, we'll update the lengths of the current increasing or decreasing subarrays.
-
-4. **Update Maximum Length**: After each comparison, we'll update the maximum length if the current subarray length is greater than the previously recorded maximum.
-
-5. **Return the Result**: Finally, we'll return the maximum length found.
+- Initialize `inc = 1` and `dec = 1` because every single element is a valid monotonic subarray of length `1`.
+- Initialize `ans = 1` for the same reason.
+- Iterate from index `1` to `n - 1`:
+  - If `nums[i] > nums[i - 1]`, extend the increasing run: `inc++`, and reset `dec = 1`.
+  - If `nums[i] < nums[i - 1]`, extend the decreasing run: `dec++`, and reset `inc = 1`.
+  - If `nums[i] == nums[i - 1]`, both strict runs are broken: reset `inc = 1` and `dec = 1`.
+- After each step, update `ans = max(ans, inc, dec)`.
+- Return `ans`.
 
 Let's implement this solution in PHP: **[3105. Longest Strictly Increasing or Strictly Decreasing Subarray](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/003105-longest-strictly-increasing-or-strictly-decreasing-subarray/solution.php)**
 
@@ -71,54 +107,45 @@ Let's implement this solution in PHP: **[3105. Longest Strictly Increasing or St
  */
 function longestMonotonicSubarray(array $nums): int
 {
-    $n = count($nums);
-    if ($n == 0) return 0;
-
-    $inc = 1;
-    $dec = 1;
-    $ans = 1;
-
-    for ($i = 1; $i < $n; $i++) {
-        if ($nums[$i] > $nums[$i - 1]) {
-            $inc++;
-            $dec = 1;
-        } elseif ($nums[$i] < $nums[$i - 1]) {
-            $dec++;
-            $inc = 1;
-        } else {
-            // Equal elements break both strict increasing and decreasing runs.
-            $inc = 1;
-            $dec = 1;
-        }
-
-        $ans = max($ans, $inc, $dec);
-    }
-
-    return $ans;
+    ...
+    ...
+    ...
+    /**
+     * go to ./solution.php
+     */
 }
 
 // Example usage:
 echo longestMonotonicSubarray([1, 4, 3, 3, 2]);     // Output: 2
 echo longestMonotonicSubarray([3, 3, 3, 3]);        // Output: 1
 echo longestMonotonicSubarray([3, 2, 1]);           // Output: 3
+echo longestMonotonicSubarray([1]);                 // Output: 1
+echo longestMonotonicSubarray([1, 2, 3, 4, 5]);     // Output: 5
+echo longestMonotonicSubarray([5, 4, 3, 2, 1]);     // Output: 5
+echo longestMonotonicSubarray([1, 3, 2, 4, 3]);     // Output: 2
+echo longestMonotonicSubarray([2, 2, 1, 2, 3]);     // Output: 3
+echo longestMonotonicSubarray([1, 2, 1, 2, 3, 4]);  // Output: 4
+echo longestMonotonicSubarray([10, 9, 8, 7, 1, 2]); // Output: 4
 ?>
 ```
 
 ### Explanation:
 
-- **Initialization**: We start by checking if the array is empty. If it is, we return 0. Otherwise, we initialize `maxLen`, `incLen`, and `decLen` to 1.
-- **Loop Through Array**: We loop through the array starting from the second element. For each element, we compare it with the previous element.
-   - If the current element is greater than the previous, it means the subarray is increasing, so we increment `incLen` and reset `decLen`.
-   - If the current element is less than the previous, it means the subarray is decreasing, so we increment `decLen` and reset `incLen`.
-   - If the current element is equal to the previous, we reset both `incLen` and `decLen`.
-- **Update Maximum Length**: After each comparison, we check if the current `incLen` or `decLen` is greater than `maxLen` and update `maxLen` accordingly.
-- **Return Result**: Finally, we return `maxLen`, which holds the length of the longest strictly increasing or decreasing subarray.
+- A strictly increasing subarray can only continue when each next element is greater than the previous element.
+- A strictly decreasing subarray can only continue when each next element is smaller than the previous element.
+- Equal adjacent elements break both strict conditions, so both counters must reset.
+- The variable `ans` always stores the longest valid run found so far.
+- The algorithm handles the entire array in one pass and does not need extra storage.
 
-This approach ensures that we efficiently find the longest subarray that is either strictly increasing or strictly decreasing in linear time complexity, O(n), where n is the length of the array.
+## Complexity Analysis
+
+- **Time Complexity:** `O(n)`, where `n` is the length of `nums`. The array is scanned once.
+- **Space Complexity:** `O(1)`, because only a constant number of counters are used.
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 

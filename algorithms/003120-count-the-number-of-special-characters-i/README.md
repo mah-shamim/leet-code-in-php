@@ -94,6 +94,7 @@ echo numberOfSpecialChars("abBCab") . "\n";             // Output: 1
 - **Return the total count** of special characters.
 
 ### Complexity
+
 - **Time Complexity**: _**O(n)**_, One pass through the string (n = length of `word`) and one pass through the 26 letters → O(n + 26) → O(n).
 - **Space Complexity**: _**O(1)**_, Two fixed-size arrays of 26 booleans → constant space.
 
