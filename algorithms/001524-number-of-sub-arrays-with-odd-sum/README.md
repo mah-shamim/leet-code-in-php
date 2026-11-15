@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Math`, `Dynamic Programming`, `Prefix Sum`
+**Topics:** `Senior`, `Array`, `Math`, `Dynamic Programming`, `Prefix Sum`, `Biweekly Contest 31`
 
 Given an array of integers `arr`, return _the number of subarrays with an **odd** sum_.
 
@@ -39,8 +39,14 @@ Since the answer can be very large, return it modulo <code>10<sup>9</sup> + 7</c
 
 
 **Hint:**
+
 1. Can we use the accumulative sum to keep track of all the odd-sum sub-arrays ?
-2. if the current accu sum is odd, we care only about previous even accu sums and vice versa.
+2. if the current `accu` sum is odd, we care only about previous even `accu` sums and vice versa.
+
+
+**Similar Questions:**
+
+1. [2098. Subsequence of Size K With the Largest Even Sum](https://github.com/mah-shamim/leet-code-in-php/tree/main/algorithms/002098-subsequence-of-size-k-with-the-largest-even-sum)
 
 
 
@@ -88,7 +94,8 @@ This approach efficiently computes the number of subarrays with an odd sum in O(
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 

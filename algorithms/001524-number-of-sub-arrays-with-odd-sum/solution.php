@@ -6,7 +6,8 @@ class Solution {
      * @param Integer[] $arr
      * @return Integer
      */
-    function numOfSubarrays($arr) {
+    function numOfSubarrays(array $arr): int
+    {
         $mod = 1000000007;
         $even = 1; // starts with prefix sum 0 (even)
         $odd = 0;
