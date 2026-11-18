@@ -6,7 +6,8 @@ class Solution {
      * @param String $s
      * @return Integer
      */
-    function minChanges($s) {
+    function minChanges(string $s): int
+    {
         $changes = 0;
         $n = strlen($s);
 
