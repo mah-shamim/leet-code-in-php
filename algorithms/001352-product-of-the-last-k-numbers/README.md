@@ -2,7 +2,7 @@
 
 **Difficulty:** Medium
 
-**Topics:** `Array`, `Math`, `Design`, `Data Stream`, `Prefix Sum`
+**Topics:** `Staff`, `Array`, `Math`, `Design`, `Data Stream`, `Prefix Sum`, `Weekly Contest 176`
 
 Design an algorithm that accepts a stream of integers and retrieves the product of the last `k` integers of the stream.
 
@@ -45,6 +45,7 @@ The test cases are generated so that, at any time, the product of any contiguous
 - At most <code>4 * 10<sup>4</sup></code> calls will be made to `add` and `getProduct`.
 - The product of the stream at any point in time will fit in a **32-bit** integer.
 
+**Follow-up:** Can you implement **both** `GetProduct` and `Add` to work in `O(1)` time complexity instead of `O(k)` time complexity?
 
 **Hint:**
 1. Keep all prefix products of numbers in an array, then calculate the product of last K elements in O(1) complexity.
@@ -135,7 +136,8 @@ This approach ensures that both adding numbers and retrieving products are done 
 
 **Contact Links**
 
-If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me!
+If you found this series helpful, please consider giving the **[repository](https://github.com/mah-shamim/leet-code-in-php)** a star on GitHub or sharing the post on your favorite social networks 😍. Your support would mean a lot to me[!](https://chaindoorman.com/hzk8jsphf8?key=5ba736283dafd7f94a84865e3cc3d775)
+<a href="https://buymeacoffee.com/mah.shamim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 If you want more helpful content like this, feel free to follow me:
 
