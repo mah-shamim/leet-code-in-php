@@ -4,7 +4,7 @@ class ProductOfNumbers {
     /**
      * @var int[]
      */
-    private $prefixProducts;
+    private array $prefixProducts;
 
     /**
      */
@@ -16,7 +16,7 @@ class ProductOfNumbers {
      * @param Integer $num
      * @return NULL
      */
-    function add($num) {
+    function add(int $num) {
         if ($num == 0) {
             $this->prefixProducts = [1];
         } else {
@@ -29,7 +29,8 @@ class ProductOfNumbers {
      * @param Integer $k
      * @return Integer
      */
-    function getProduct($k) {
+    function getProduct(int $k): int
+    {
         $n = count($this->prefixProducts) - 1;
         if ($k > $n) {
             return 0;
